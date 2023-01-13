@@ -50,7 +50,7 @@ To quickly try out the code:
 and place it under the root of the cloned repository. 
 - Execute the command below:
   ```bash
-  python3 main.py --inference samples/test.png --height 128 --width 416 --model kitty_banet.pt
+  python3 main.py --inference samples/test.png --height 128 --width 416 --model kitti_banet.pt
   ```
 
 ### Training
