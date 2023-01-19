@@ -1,0 +1,519 @@
+Namespace(architecture='banet', augmentation=False, check_dataset=False, cuda=True, height=192, inference='', jit='', model='', onnx='', sleep_after_epoch=0.0, tensorboard_logs='', train=True, train_csv='train.csv', val_csv='val.csv', width=256)
+
+------------------- Epoch 0 -------------------
+Train Loss: 6.780342
+Train SILog: 65.664726
+
+Elapsed 323.10s, 323.10 s/epoch, 0.31 s/batch, eta 15831.78s
+
+Test Loss : 5.345068
+Test SILog: 52.752903
+
+Model saved to models/model.pt
+Model saved to models/epoch_0.pt
+
+------------------- Epoch 1 -------------------
+Train Loss: 5.496663
+Train SILog: 54.703308
+
+Elapsed 653.36s, 326.68 s/epoch, 0.31 s/batch, eta 15680.74s
+
+Test Loss : 5.484082
+Test SILog: 54.366314
+
+
+------------------- Epoch 2 -------------------
+Train Loss: 5.208643
+Train SILog: 51.876148
+
+Elapsed 983.41s, 327.80 s/epoch, 0.31 s/batch, eta 15406.73s
+
+Test Loss : 5.182320
+Test SILog: 51.294163
+
+Model saved to models/model.pt
+
+------------------- Epoch 3 -------------------
+Train Loss: 5.050148
+Train SILog: 50.337025
+
+Elapsed 1314.10s, 328.53 s/epoch, 0.31 s/batch, eta 15112.18s
+
+Test Loss : 5.074738
+Test SILog: 50.171871
+
+Model saved to models/model.pt
+
+------------------- Epoch 4 -------------------
+Train Loss: 4.929616
+Train SILog: 49.172298
+
+Elapsed 1643.93s, 328.79 s/epoch, 0.31 s/batch, eta 14795.33s
+
+Test Loss : 5.115550
+Test SILog: 50.696690
+
+
+------------------- Epoch 5 -------------------
+Train Loss: 4.841709
+Train SILog: 48.320862
+
+Elapsed 1975.11s, 329.18 s/epoch, 0.31 s/batch, eta 14484.12s
+
+Test Loss : 5.115081
+Test SILog: 50.549324
+
+Model saved to models/epoch_5.pt
+
+------------------- Epoch 6 -------------------
+Train Loss: 4.775546
+Train SILog: 47.688759
+
+Elapsed 2305.96s, 329.42 s/epoch, 0.31 s/batch, eta 14165.19s
+
+Test Loss : 4.994932
+Test SILog: 49.490093
+
+Model saved to models/model.pt
+
+------------------- Epoch 7 -------------------
+Train Loss: 4.720817
+Train SILog: 47.150658
+
+Elapsed 2640.46s, 330.06 s/epoch, 0.31 s/batch, eta 13862.41s
+
+Test Loss : 4.971349
+Test SILog: 49.304348
+
+Model saved to models/model.pt
+
+------------------- Epoch 8 -------------------
+Train Loss: 4.702716
+Train SILog: 46.960190
+
+Elapsed 2970.19s, 330.02 s/epoch, 0.31 s/batch, eta 13530.87s
+
+Test Loss : 5.152424
+Test SILog: 50.936176
+
+
+------------------- Epoch 9 -------------------
+Train Loss: 4.630836
+Train SILog: 46.268272
+
+Elapsed 3300.23s, 330.02 s/epoch, 0.31 s/batch, eta 13200.90s
+
+Test Loss : 4.874802
+Test SILog: 48.286598
+
+Model saved to models/model.pt
+
+------------------- Epoch 10 -------------------
+Train Loss: 4.593469
+Train SILog: 45.896641
+
+Elapsed 3631.34s, 330.12 s/epoch, 0.31 s/batch, eta 12874.77s
+
+Test Loss : 4.992789
+Test SILog: 49.354675
+
+Model saved to models/epoch_10.pt
+
+------------------- Epoch 11 -------------------
+Train Loss: 4.567820
+Train SILog: 45.642406
+
+Elapsed 3961.61s, 330.13 s/epoch, 0.31 s/batch, eta 12545.10s
+
+Test Loss : 4.929309
+Test SILog: 48.759373
+
+
+------------------- Epoch 12 -------------------
+Train Loss: 4.539176
+Train SILog: 45.361137
+
+Elapsed 4292.83s, 330.22 s/epoch, 0.31 s/batch, eta 12218.06s
+
+Test Loss : 4.901161
+Test SILog: 48.512810
+
+
+------------------- Epoch 13 -------------------
+Train Loss: 4.531237
+Train SILog: 45.277874
+
+Elapsed 4623.02s, 330.22 s/epoch, 0.31 s/batch, eta 11887.78s
+
+Test Loss : 4.951194
+Test SILog: 49.063290
+
+
+------------------- Epoch 14 -------------------
+Train Loss: 4.489628
+Train SILog: 44.871040
+
+Elapsed 4952.00s, 330.13 s/epoch, 0.31 s/batch, eta 11554.66s
+
+Test Loss : 4.929282
+Test SILog: 48.921284
+
+
+------------------- Epoch 15 -------------------
+Train Loss: 4.469811
+Train SILog: 44.676029
+
+Elapsed 5282.18s, 330.14 s/epoch, 0.31 s/batch, eta 11224.64s
+
+Test Loss : 4.927030
+Test SILog: 48.775116
+
+Model saved to models/epoch_15.pt
+
+------------------- Epoch 16 -------------------
+Train Loss: 4.455370
+Train SILog: 44.530479
+
+Elapsed 5614.00s, 330.24 s/epoch, 0.31 s/batch, eta 10897.77s
+
+Test Loss : 4.829902
+Test SILog: 47.911961
+
+Model saved to models/model.pt
+
+------------------- Epoch 17 -------------------
+Train Loss: 4.434660
+Train SILog: 44.325233
+
+Elapsed 5944.98s, 330.28 s/epoch, 0.31 s/batch, eta 10568.86s
+
+Test Loss : 4.988917
+Test SILog: 49.438015
+
+
+------------------- Epoch 18 -------------------
+Train Loss: 4.418671
+Train SILog: 44.163456
+
+Elapsed 6275.14s, 330.27 s/epoch, 0.31 s/batch, eta 10238.39s
+
+Test Loss : 4.965321
+Test SILog: 49.199482
+
+
+------------------- Epoch 19 -------------------
+Train Loss: 4.399986
+Train SILog: 43.980354
+
+Elapsed 6605.99s, 330.30 s/epoch, 0.31 s/batch, eta 9908.98s
+
+Test Loss : 4.947968
+Test SILog: 49.039585
+
+
+------------------- Epoch 20 -------------------
+Train Loss: 4.467632
+Train SILog: 44.641296
+
+Elapsed 6938.18s, 330.39 s/epoch, 0.31 s/batch, eta 9581.30s
+
+Test Loss : 4.866664
+Test SILog: 48.335606
+
+Model saved to models/epoch_20.pt
+
+------------------- Epoch 21 -------------------
+Train Loss: 4.366019
+Train SILog: 43.644791
+
+Elapsed 7269.64s, 330.44 s/epoch, 0.31 s/batch, eta 9252.27s
+
+Test Loss : 4.846257
+Test SILog: 48.066509
+
+
+------------------- Epoch 22 -------------------
+Train Loss: 4.368177
+Train SILog: 43.663685
+
+Elapsed 7599.59s, 330.42 s/epoch, 0.31 s/batch, eta 8921.25s
+
+Test Loss : 4.892404
+Test SILog: 48.453648
+
+
+------------------- Epoch 23 -------------------
+Train Loss: 4.348158
+Train SILog: 43.465347
+
+Elapsed 7930.35s, 330.43 s/epoch, 0.31 s/batch, eta 8591.21s
+
+Test Loss : 4.912591
+Test SILog: 48.729496
+
+
+------------------- Epoch 24 -------------------
+Train Loss: 4.338351
+Train SILog: 43.366180
+
+Elapsed 8260.51s, 330.42 s/epoch, 0.31 s/batch, eta 8260.51s
+
+Test Loss : 4.869725
+Test SILog: 48.320587
+
+
+------------------- Epoch 25 -------------------
+Train Loss: 4.291226
+Train SILog: 42.904453
+
+Elapsed 8592.41s, 330.48 s/epoch, 0.31 s/batch, eta 7931.46s
+
+Test Loss : 4.855933
+Test SILog: 48.166039
+
+Model saved to models/epoch_25.pt
+
+------------------- Epoch 26 -------------------
+Train Loss: 4.277828
+Train SILog: 42.771351
+
+Elapsed 8923.29s, 330.49 s/epoch, 0.31 s/batch, eta 7601.32s
+
+Test Loss : 4.874364
+Test SILog: 48.330627
+
+
+------------------- Epoch 27 -------------------
+Train Loss: 4.268279
+Train SILog: 42.676495
+
+Elapsed 9254.68s, 330.52 s/epoch, 0.31 s/batch, eta 7271.53s
+
+Test Loss : 4.857280
+Test SILog: 48.168369
+
+
+------------------- Epoch 28 -------------------
+Train Loss: 4.264478
+Train SILog: 42.638565
+
+Elapsed 9584.19s, 330.49 s/epoch, 0.31 s/batch, eta 6940.28s
+
+Test Loss : 4.884512
+Test SILog: 48.414318
+
+
+------------------- Epoch 29 -------------------
+Train Loss: 4.257042
+Train SILog: 42.564621
+
+Elapsed 9914.73s, 330.49 s/epoch, 0.31 s/batch, eta 6609.82s
+
+Test Loss : 4.828099
+Test SILog: 47.883667
+
+Model saved to models/model.pt
+
+------------------- Epoch 30 -------------------
+Train Loss: 4.255312
+Train SILog: 42.547672
+
+Elapsed 10244.83s, 330.48 s/epoch, 0.31 s/batch, eta 6279.09s
+
+Test Loss : 4.880715
+Test SILog: 48.389381
+
+Model saved to models/epoch_30.pt
+
+------------------- Epoch 31 -------------------
+Train Loss: 4.250335
+Train SILog: 42.497974
+
+Elapsed 10575.58s, 330.49 s/epoch, 0.31 s/batch, eta 5948.76s
+
+Test Loss : 4.876435
+Test SILog: 48.337883
+
+
+------------------- Epoch 32 -------------------
+Train Loss: 4.249272
+Train SILog: 42.485386
+
+Elapsed 10905.17s, 330.46 s/epoch, 0.31 s/batch, eta 5617.82s
+
+Test Loss : 4.843588
+Test SILog: 48.006599
+
+
+------------------- Epoch 33 -------------------
+Train Loss: 4.249095
+Train SILog: 42.484921
+
+Elapsed 11235.43s, 330.45 s/epoch, 0.31 s/batch, eta 5287.26s
+
+Test Loss : 4.850342
+Test SILog: 48.084015
+
+
+------------------- Epoch 34 -------------------
+Train Loss: 4.242773
+Train SILog: 42.421070
+
+Elapsed 11566.40s, 330.47 s/epoch, 0.31 s/batch, eta 4957.03s
+
+Test Loss : 4.848361
+Test SILog: 48.060112
+
+
+------------------- Epoch 35 -------------------
+Train Loss: 4.240944
+Train SILog: 42.404327
+
+Elapsed 11897.12s, 330.48 s/epoch, 0.31 s/batch, eta 4626.66s
+
+Test Loss : 4.877532
+Test SILog: 48.348454
+
+Model saved to models/epoch_35.pt
+
+------------------- Epoch 36 -------------------
+Train Loss: 4.237847
+Train SILog: 42.373024
+
+Elapsed 12229.09s, 330.52 s/epoch, 0.31 s/batch, eta 4296.71s
+
+Test Loss : 4.873910
+Test SILog: 48.310665
+
+
+------------------- Epoch 37 -------------------
+Train Loss: 4.234576
+Train SILog: 42.339672
+
+Elapsed 12560.27s, 330.53 s/epoch, 0.31 s/batch, eta 3966.40s
+
+Test Loss : 4.863801
+Test SILog: 48.199272
+
+
+------------------- Epoch 38 -------------------
+Train Loss: 4.236476
+Train SILog: 42.359287
+
+Elapsed 12890.99s, 330.54 s/epoch, 0.31 s/batch, eta 3635.92s
+
+Test Loss : 4.852111
+Test SILog: 48.116146
+
+
+------------------- Epoch 39 -------------------
+Train Loss: 4.232368
+Train SILog: 42.318714
+
+Elapsed 13221.85s, 330.55 s/epoch, 0.31 s/batch, eta 3305.46s
+
+Test Loss : 4.873818
+Test SILog: 48.293083
+
+
+------------------- Epoch 40 -------------------
+Train Loss: 4.225756
+Train SILog: 42.252708
+
+Elapsed 13552.21s, 330.54 s/epoch, 0.31 s/batch, eta 2974.88s
+
+Test Loss : 4.891800
+Test SILog: 48.475918
+
+Model saved to models/epoch_40.pt
+
+------------------- Epoch 41 -------------------
+Train Loss: 4.227809
+Train SILog: 42.272255
+
+Elapsed 13883.73s, 330.57 s/epoch, 0.31 s/batch, eta 2644.52s
+
+Test Loss : 4.883296
+Test SILog: 48.408302
+
+
+------------------- Epoch 42 -------------------
+Train Loss: 4.222906
+Train SILog: 42.222996
+
+Elapsed 14214.61s, 330.57 s/epoch, 0.31 s/batch, eta 2314.01s
+
+Test Loss : 4.852476
+Test SILog: 48.088909
+
+
+------------------- Epoch 43 -------------------
+Train Loss: 4.226464
+Train SILog: 42.260071
+
+Elapsed 14544.64s, 330.56 s/epoch, 0.31 s/batch, eta 1983.36s
+
+Test Loss : 4.871404
+Test SILog: 48.276558
+
+
+------------------- Epoch 44 -------------------
+Train Loss: 4.221810
+Train SILog: 42.213703
+
+Elapsed 14876.11s, 330.58 s/epoch, 0.31 s/batch, eta 1652.90s
+
+Test Loss : 4.868426
+Test SILog: 48.266354
+
+
+------------------- Epoch 45 -------------------
+Train Loss: 4.226031
+Train SILog: 42.255405
+
+Elapsed 15207.27s, 330.59 s/epoch, 0.31 s/batch, eta 1322.37s
+
+Test Loss : 4.861797
+Test SILog: 48.206318
+
+Model saved to models/epoch_45.pt
+
+------------------- Epoch 46 -------------------
+Train Loss: 4.225688
+Train SILog: 42.252464
+
+Elapsed 15536.43s, 330.56 s/epoch, 0.31 s/batch, eta 991.69s
+
+Test Loss : 4.858505
+Test SILog: 48.159344
+
+
+------------------- Epoch 47 -------------------
+Train Loss: 4.222529
+Train SILog: 42.221134
+
+Elapsed 15868.76s, 330.60 s/epoch, 0.31 s/batch, eta 661.20s
+
+Test Loss : 4.860054
+Test SILog: 48.174076
+
+
+------------------- Epoch 48 -------------------
+Train Loss: 4.222399
+Train SILog: 42.219139
+
+Elapsed 16200.13s, 330.61 s/epoch, 0.31 s/batch, eta 330.61s
+
+Test Loss : 4.882266
+Test SILog: 48.391743
+
+
+------------------- Epoch 49 -------------------
+Train Loss: 4.224507
+Train SILog: 42.239288
+
+Elapsed 16530.06s, 330.60 s/epoch, 0.31 s/batch, eta 0.00s
+
+Test Loss : 4.879842
+Test SILog: 48.377220
+
