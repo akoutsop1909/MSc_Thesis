@@ -19,6 +19,7 @@ from utils import save_model, save_model_quantized
 
 import progressbar
 import numpy as np
+import pandas as pd
 
 import torch
 import torch.nn as nn
@@ -98,6 +99,10 @@ class Trainer:
 
     def start_training(self) -> None:
 
+        # set metrics dataframe
+        tmetrics = pd.DataFrame(index=range(50), columns=range(4))
+        tmetrics.columns = ['Train Loss', 'Train SILog', 'Test Loss', 'Test SILog']
+
         # upload model to device
         self.model.to(SystemConfig.device)
 
@@ -119,6 +124,12 @@ class Trainer:
 
             # test updated model on validation set
             epoch_val_loss, epoch_val_metrics = self.validate()
+
+            # add metrics to dataframe
+            tmetrics['Train Loss'][epoch] = epoch_train_loss
+            tmetrics['Train SILog'][epoch] = epoch_train_metrics
+            tmetrics['Test Loss'][epoch] = epoch_val_loss
+            tmetrics['Test SILog'][epoch] = epoch_val_metrics
 
             # add data to tensorboard
             if self.tb_writer is not None:
@@ -179,6 +190,9 @@ class Trainer:
 
             # sleep if required
             time.sleep(self.sleep_after_epoch)
+
+        # export metrics to csv
+        tmetrics.to_csv('tmetrics.csv', index=False)
 
     def train(self) -> (ndarray, Any):
         """
