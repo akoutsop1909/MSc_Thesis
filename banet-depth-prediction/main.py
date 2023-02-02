@@ -13,6 +13,7 @@ import argparse
 import cv2
 import torch
 import torch.optim as optim
+from numpy import save
 
 from torch.utils.mobile_optimizer import optimize_for_mobile
 from torch.optim.lr_scheduler import MultiStepLR
@@ -196,6 +197,9 @@ def main():
             # perform prediction
             prediction = inference.predict_single(img)
             duration = inference.get_last_prediction_time()
+
+            # save prediction
+            save(val_dataset[idx] + '.npy', prediction)
 
             # print last elapsed time
             print("Inference time: {:.4f} sec".format(duration))
