@@ -13,6 +13,7 @@ import argparse
 import cv2
 import torch
 import torch.optim as optim
+import pandas as pd
 from numpy import save
 
 from torch.utils.mobile_optimizer import optimize_for_mobile
@@ -199,8 +200,11 @@ def main():
             duration = inference.get_last_prediction_time()
 
             # save prediction
-            print (val_dataset[idx])
-            #save(val_dataset[idx] + '.npy', prediction)
+            df = pd.read_csv('val_outdoor.csv')
+            df = df.drop(df.columns[[3]], axis=1)
+            df.columns = ['image', 'depth', 'mask']
+            temp = df['mask'][idx].split('/')
+            save(temp[5], prediction)
 
             # print last elapsed time
             print("Inference time: {:.4f} sec".format(duration))
