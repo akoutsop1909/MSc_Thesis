@@ -199,7 +199,8 @@ def main():
             duration = inference.get_last_prediction_time()
 
             # save prediction
-            save(val_dataset[idx] + '.npy', prediction)
+            print (val_dataset[idx])
+            #save(val_dataset[idx] + '.npy', prediction)
 
             # print last elapsed time
             print("Inference time: {:.4f} sec".format(duration))
