@@ -204,7 +204,7 @@ def main():
             df = df.drop(df.columns[[3]], axis=1)
             df.columns = ['image', 'depth', 'mask']
             temp = df['mask'][idx].split('/')
-            save(temp[5], prediction)
+            save('pred/' + temp[5], prediction)
 
             # print last elapsed time
             print("Inference time: {:.4f} sec".format(duration))
