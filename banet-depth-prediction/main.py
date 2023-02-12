@@ -202,7 +202,7 @@ def main():
             # save prediction
             df = pd.read_csv('val.csv')
             temp = df['depth_path'][idx].split('/')
-            save('pred/' + temp[6], prediction)
+            save('pred/' + temp[7], prediction)
 
             # print last elapsed time
             print("Inference time: {:.4f} sec".format(duration))
