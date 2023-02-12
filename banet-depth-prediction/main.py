@@ -200,11 +200,9 @@ def main():
             duration = inference.get_last_prediction_time()
 
             # save prediction
-            df = pd.read_csv('val_outdoor.csv')
-            df = df.drop(df.columns[[3]], axis=1)
-            df.columns = ['image', 'depth', 'mask']
-            temp = df['mask'][idx].split('/')
-            save('pred/' + temp[5], prediction)
+            df = pd.read_csv('val.csv')
+            temp = df['depth_path'][idx].split('/')
+            save('pred/' + temp[6], prediction)
 
             # print last elapsed time
             print("Inference time: {:.4f} sec".format(duration))
