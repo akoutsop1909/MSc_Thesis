@@ -49,9 +49,7 @@ def validate(args, val_loader, model, logger, dataset = 'KITTI'):
             output_depth_flip = torch.flip(output_depth_flip,[3])
             output_depth = 0.5*(output_depth + output_depth_flip)
 
-        filetest = open('filetest.txt', 'a')
-        filetest.write('ground truth ' + gt_data + ' pred ' + output_depth)
-        filetest.close()
+        print('ground truth ' + gt_data + ' pred ' + output_depth)
 
         if dataset == 'KITTI':
             err_result = compute_errors(gt_data, output_depth,crop=True, cap=args.cap)
