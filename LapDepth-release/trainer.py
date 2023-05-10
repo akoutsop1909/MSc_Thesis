@@ -205,7 +205,7 @@ def train_net(args,model, optimizer, dataset_loader,val_loader, n_epochs,logger)
             valid_gt_sparse = depths[valid_mask]
 
             ###################################### scale invariant loss #####################################
-            print('train ground truth ' + valid_out + ' pred ' + valid_gt_sparse)
+            #print('train ground truth ' + valid_out + ' pred ' + valid_gt_sparse)
 
             scale_inv_loss = scale_invariant_loss(valid_out, valid_gt_sparse)
             
