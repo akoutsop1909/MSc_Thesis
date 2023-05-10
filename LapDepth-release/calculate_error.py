@@ -47,8 +47,8 @@ def compute_errors(gt_sparse, pred, crop=True, cap=80.0):
         file1 = open('test.txt', 'a')
         file1.write(valid_gt.size() + '\n')
         file1.write(valid_pred.size() + '\n')
-        file1.write(valid_gt + '\n')
-        file1.write(valid_pred + '\n')
+        #file1.write(valid_gt + '\n')
+        #file1.write(valid_pred + '\n')
         file1.close()
         #print('validate in test ground truth ' + valid_gt.data[0] + ' pred ' + valid_pred.data[0])
 
