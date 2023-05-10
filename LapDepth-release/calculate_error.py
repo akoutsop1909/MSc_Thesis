@@ -42,14 +42,8 @@ def compute_errors(gt_sparse, pred, crop=True, cap=80.0):
         valid_pred = current_pred[valid]
         valid_pred = valid_pred.clamp(1e-3,cap)
 
-        valid_gt.size()
-        valid_pred.size()
-        file1 = open('test.txt', 'a')
-        file1.write(valid_gt.size() + '\n')
-        file1.write(valid_pred.size() + '\n')
-        #file1.write(valid_gt + '\n')
-        #file1.write(valid_pred + '\n')
-        file1.close()
+        print(valid_gt.size())
+        print(valid_pred.size())
         #print('validate in test ground truth ' + valid_gt.data[0] + ' pred ' + valid_pred.data[0])
 
         thresh = torch.max((valid_gt / valid_pred), (valid_pred / valid_gt))
