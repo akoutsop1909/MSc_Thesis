@@ -91,8 +91,6 @@ def validate_in_test(args, val_loader, model, logger, dataset = 'KITTI'):
         with torch.no_grad():
             _, output_depth = model(rgb_data)
 
-        print('validate in test ground truth ' + gt_data + ' pred ' + output_depth)
-
         if dataset == 'KITTI':
             err_result = compute_errors(gt_data, output_depth,crop=True, cap=args.cap)
         elif dataset == 'NYU':
