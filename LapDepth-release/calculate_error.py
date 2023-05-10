@@ -42,10 +42,6 @@ def compute_errors(gt_sparse, pred, crop=True, cap=80.0):
         valid_pred = current_pred[valid]
         valid_pred = valid_pred.clamp(1e-3,cap)
 
-        print(valid_gt.size())
-        print(valid_pred.size())
-        #print('validate in test ground truth ' + valid_gt.data[0] + ' pred ' + valid_pred.data[0])
-
         thresh = torch.max((valid_gt / valid_pred), (valid_pred / valid_gt))
         a1 += (thresh < 1.25).float().mean()
         a2 += (thresh < 1.25 ** 2).float().mean()
