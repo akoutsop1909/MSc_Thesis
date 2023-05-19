@@ -25,8 +25,8 @@
 --log_freq 100
 --do_online_eval
 --eval_freq 1000
---data_path_eval dataset/KITTI
---gt_path_eval kitti_gt
+--data_path_eval /workspace/KITTI
+--gt_path_eval /workspace/KITTI/data_depth_annotated
 --filenames_file_eval data_splits/eigen_test_files_with_gt.txt
 --min_depth_eval 1e-3
 --max_depth_eval 80
