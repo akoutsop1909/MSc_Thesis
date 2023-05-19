@@ -1,7 +1,7 @@
 --mode train
 --model_name pixelformer_kittieigen
 --encoder large07
---pretrain pretrained/swin_large_patch4_window7_224_22k.yaml
+--pretrain pretrained/swin_large_patch4_window7_224_22k.pth
 --dataset kitti
 --data_path dataset/KITTI
 --gt_path dataset/kitti_gt
