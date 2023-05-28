@@ -42,10 +42,12 @@ def compute_errors(gt_sparse, pred, crop=True, cap=80.0):
         valid_pred = current_pred[valid]
         valid_pred = valid_pred.clamp(1e-3,cap)
 
-        print("gt")
-        print(valid_gt.cpu().numpy())
-        print ("pred")
-        print(valid_pred.cpu().numpy())
+        file1 = open('debut.txt', 'a')
+        file1.write('ground truth\n')
+        file1.write(valid_gt.cpu().numpy() + '\n')
+        file1.write('prediction\n')
+        file1.write(valid_pred.cpu().numpy() + '\n')
+        file1.close()
 
         thresh = torch.max((valid_gt / valid_pred), (valid_pred / valid_gt))
         a1 += (thresh < 1.25).float().mean()
