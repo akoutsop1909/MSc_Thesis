@@ -1,6 +1,5 @@
 from __future__ import division
 import torch
-import numpy as np
 from torch import nn
 import torch.nn.functional as F
 from torch.autograd import Variable
@@ -43,6 +42,7 @@ def compute_errors(gt_sparse, pred, crop=True, cap=80.0):
         valid_pred = current_pred[valid]
         valid_pred = valid_pred.clamp(1e-3,cap)
 
+        print("save")
         np.save('gt.npy', valid_gt.cpu().numpy())
         np.save('pred.npy', valid_pred.cpu().numpy())
 
