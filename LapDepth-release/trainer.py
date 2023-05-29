@@ -204,8 +204,8 @@ def train_net(args,model, optimizer, dataset_loader,val_loader, n_epochs,logger)
 
             ###################################### scale invariant loss #####################################
             print("save")
-            np.save('gt.npy', valid_gt_sparse.cpu().numpy())
-            np.save('pred.npy', valid_out.cpu().numpy())
+            np.save('gt.npy', valid_gt_sparse.detach().numpy())
+            np.save('pred.npy', valid_out.detach().numpy())
 
             scale_inv_loss = scale_invariant_loss(valid_out, valid_gt_sparse)
             
