@@ -196,6 +196,11 @@ def train_net(args,model, optimizer, dataset_loader,val_loader, n_epochs,logger)
             else:
                 [lap5_pred, lap4_pred, lap3_pred, lap2_pred, lap1_pred] = d_res_list
             ##################################### Valid mask definition ####################################
+            # debugging
+            print("save")
+            np.save('gt2.npy', depths.cpu().numpy())
+            np.save('pred2.npy', outputs.cpu().numpy())
+
             # masking valied area
             valid_mask, final_mask = make_mask(depths, crop_mask, args.dataset)
 
@@ -203,10 +208,6 @@ def train_net(args,model, optimizer, dataset_loader,val_loader, n_epochs,logger)
             valid_gt_sparse = depths[valid_mask]
 
             ###################################### scale invariant loss #####################################
-            print("save")
-            np.save('gt.npy', valid_gt_sparse.cpu().detach().numpy())
-            np.save('pred.npy', valid_out.cpu().detach().numpy())
-
             scale_inv_loss = scale_invariant_loss(valid_out, valid_gt_sparse)
             
             ###################################### gradient loss ############################################
