@@ -198,8 +198,8 @@ def train_net(args,model, optimizer, dataset_loader,val_loader, n_epochs,logger)
             ##################################### Valid mask definition ####################################
             # debugging
             print("save")
-            np.save('gt4.npy', depths.cpu().detach().numpy())
-            np.save('pred4.npy', outputs.cpu().detach().numpy())
+            np.save('gt5.npy', depths.cpu().detach().numpy())
+            np.save('pred5.npy', outputs.cpu().detach().numpy())
 
             # masking valied area
             valid_mask, final_mask = make_mask(depths, crop_mask, args.dataset)
