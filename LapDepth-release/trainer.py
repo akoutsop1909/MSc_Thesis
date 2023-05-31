@@ -137,7 +137,6 @@ def train_net(args,model, optimizer, dataset_loader,val_loader, n_epochs,logger)
     rmse_pdf = "train_rmse.pdf"
     a1_pdf = "train_a1.pdf"        
 
-    """
     if args.dataset == "KITTI":
         # create mask for gradient loss
         y1_c,y2_c = int(0.40810811 * depth_fixed.size(2)), int(0.99189189 * depth_fixed.size(2))
@@ -151,9 +150,6 @@ def train_net(args,model, optimizer, dataset_loader,val_loader, n_epochs,logger)
         crop_mask_a1[:,:,y1_c:y2_c,x1_c:x2_c] = 1
     else:
         crop_mask = None
-    """
-
-    crop_mask = None
 
     loss_list = []
     rmse_list = []
