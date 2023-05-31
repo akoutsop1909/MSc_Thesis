@@ -100,10 +100,10 @@ class MyDataset(data.Dataset):
         if self.args.dataset == 'KITTI':
             h = rgb.height
             w = rgb.width
-            bound_left = (w - 1216)//2
-            bound_right = bound_left + 1216
-            bound_top = h - 480
-            bound_bottom = bound_top + 480
+            bound_left = (w - 960)//2
+            bound_right = bound_left + 960
+            bound_top = h - 640
+            bound_bottom = bound_top + 640
         elif self.args.dataset == 'NYU':
             if self.train is True:
                 bound_left = 43
