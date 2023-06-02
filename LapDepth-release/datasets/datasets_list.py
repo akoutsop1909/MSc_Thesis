@@ -154,6 +154,7 @@ class Transformer(object):
             self.train_transform = albu.Compose([
                 albu.Resize(args.height, args.width)
             ])
+            """
             self.train_transform = EnhancedCompose([
                 #RandomCropNumpy((args.height,args.width)),
                 RandomHorizontalFlip(),
@@ -161,6 +162,7 @@ class Transformer(object):
                 ArrayToTensorNumpy(),
                 [transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225]), None, None]
             ])
+            """
             self.test_transform = EnhancedCompose([
                 ArrayToTensorNumpy(),
                 [transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225]), None, None]
