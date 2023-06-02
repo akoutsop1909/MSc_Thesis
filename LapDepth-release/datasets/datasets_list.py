@@ -151,9 +151,11 @@ class MyDataset(data.Dataset):
 class Transformer(object):
     def __init__(self, args):
         if args.dataset == 'KITTI':
+            self.train_transform = albu.Compose([
+                albu.Resize(args.height, args.width)
+            ])
             self.train_transform = EnhancedCompose([
                 #RandomCropNumpy((args.height,args.width)),
-                albu.Resize(args.height, args.width),
                 RandomHorizontalFlip(),
                 [RandomColor(multiplier_range=(0.9, 1.1)), None, None],
                 ArrayToTensorNumpy(),
