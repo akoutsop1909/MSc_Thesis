@@ -1,6 +1,7 @@
 import torch.utils.data as data
 from PIL import Image
 import numpy as np
+import albumentations as albu
 from imageio import imread
 import random
 import torch
@@ -152,7 +153,7 @@ class Transformer(object):
         if args.dataset == 'KITTI':
             self.train_transform = EnhancedCompose([
                 #RandomCropNumpy((args.height,args.width)),
-                transforms.Resize((args.height, args.width)),
+                albu.Resize((args.height, args.width)),
                 RandomHorizontalFlip(),
                 [RandomColor(multiplier_range=(0.9, 1.1)), None, None],
                 ArrayToTensorNumpy(),
