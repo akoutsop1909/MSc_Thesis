@@ -152,6 +152,7 @@ class MyDataset(data.Dataset):
 class Transformer(object):
     def __init__(self, args):
         if args.dataset == 'KITTI':
+            """
             self.transform = albu.Compose([
                 albu.Resize(args.height, args.width),
                 albu.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225]),
@@ -160,12 +161,12 @@ class Transformer(object):
             """
             self.train_transform = EnhancedCompose([
                 #RandomCropNumpy((args.height,args.width)),
+                [transforms.Resize((args.height, args.width)), None, None],
                 RandomHorizontalFlip(),
                 [RandomColor(multiplier_range=(0.9, 1.1)), None, None],
                 ArrayToTensorNumpy(),
                 [transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225]), None, None]
             ])
-            """
             self.test_transform = EnhancedCompose([
                 ArrayToTensorNumpy(),
                 [transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225]), None, None]
@@ -184,6 +185,6 @@ class Transformer(object):
             ])
     def __call__(self, images, train=True):
         if train is True:
-            return self.transform(images)
+            return self.train_transform(images)
         else:
             return self.test_transform(images)
