@@ -9,7 +9,7 @@ import torch
 import time
 import cv2
 from PIL import ImageFile
-from transform_list import RandomCropNumpy,EnhancedCompose,RandomColor,RandomHorizontalFlip,ArrayToTensorNumpy,Normalize
+from transform_list import Resize,RandomCropNumpy,EnhancedCompose,RandomColor,RandomHorizontalFlip,ArrayToTensorNumpy,Normalize
 from torchvision import transforms
 ImageFile.LOAD_TRUNCATED_IMAGES = True
 
@@ -161,7 +161,7 @@ class Transformer(object):
             """
             self.train_transform = EnhancedCompose([
                 #RandomCropNumpy((args.height,args.width)),
-                transforms.Resize((args.height, args.width)),
+                Resize((args.height, args.width, None, None)),
                 RandomHorizontalFlip(),
                 [RandomColor(multiplier_range=(0.9, 1.1)), None, None],
                 ArrayToTensorNumpy(),
