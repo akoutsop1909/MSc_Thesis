@@ -153,9 +153,10 @@ class Transformer(object):
     def __init__(self, args):
         if args.dataset == 'KITTI':
             self.transform = albu.Compose([
-                albu.Resize(args.height, args.width),
-                #albu.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225]),
-                #ToTensorV2(),
+                #albu.Resize(args.height, args.width),
+                ToTensorV2(),
+                albu.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225]),
+                ToTensorV2(),
             ])
             """
             self.train_transform = EnhancedCompose([
