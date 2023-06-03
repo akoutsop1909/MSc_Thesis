@@ -187,6 +187,6 @@ class Transformer(object):
     def __call__(self, images, train=True):
         if train is True:
             print("ok")
-            return train_tf(image=images)['image']
+            return self.aug(image=images)
         else:
             return self.test_transform(images)
