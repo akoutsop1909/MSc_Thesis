@@ -187,6 +187,8 @@ class Transformer(object):
             ])
     def __call__(self, images, train=True):
         if train is True:
+            if isinstance(images, np.ndarray):
+                print("test")
             return self.aug(image=images) #self.train_transform(images)
         else:
             return self.test_transform(images)
