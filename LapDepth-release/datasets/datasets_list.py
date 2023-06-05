@@ -164,7 +164,7 @@ class Transformer(object):
             """
             self.train_transform = EnhancedCompose([
                 #RandomCropNumpy((args.height,args.width)),
-                Resize(()),
+                Resize(),
                 RandomHorizontalFlip(),
                 [RandomColor(multiplier_range=(0.9, 1.1)), None, None],
                 ArrayToTensorNumpy(),
@@ -190,7 +190,7 @@ class Transformer(object):
         if train is True:
             #images.detach().numpy()
             #images = np.array(images)
-            return self.train_transform(images, size=(192,256))
+            return self.train_transform(images)
         else:
             return self.test_transform(images)
         # self.aug(image=images)
