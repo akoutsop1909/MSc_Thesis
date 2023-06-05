@@ -52,7 +52,7 @@ class EnhancedCompose(object):
                         tmp_.append(im_)
                 img = tmp_
             elif callable(t):
-                img = t(img)
+                img = t(img, size=(192,256))
             elif t is None:
                 continue
             else:
