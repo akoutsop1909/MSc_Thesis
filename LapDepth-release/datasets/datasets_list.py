@@ -164,7 +164,7 @@ class Transformer(object):
             """
             self.train_transform = EnhancedCompose([
                 #RandomCropNumpy((args.height,args.width)),
-                Resize((args.height,args.width)),
+                Resize(size=(args.height,args.width)),
                 RandomHorizontalFlip(),
                 [RandomColor(multiplier_range=(0.9, 1.1)), None, None],
                 ArrayToTensorNumpy(),
