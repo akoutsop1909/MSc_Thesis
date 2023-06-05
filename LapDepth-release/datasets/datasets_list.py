@@ -187,7 +187,8 @@ class Transformer(object):
             ])
     def __call__(self, images, train=True):
         if train is True:
-            images.detach().numpy()
+            #images.detach().numpy()
+            images = np.array(images)
             return self.aug(image=images) #self.train_transform(images)
         else:
             return self.test_transform(images)
