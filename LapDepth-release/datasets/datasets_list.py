@@ -124,19 +124,19 @@ class MyDataset(data.Dataset):
         else:
             rgb = rgb.crop((bound_left,bound_top,bound_right,bound_bottom))
 
-        rgb.thumbnail((192, 256))
+        #rgb.thumbnail((192, 256))
         rgb = np.asarray(rgb, dtype=np.float32)/255.0
 
         if _is_pil_image(gt):
             gt = gt.crop((bound_left,bound_top,bound_right,bound_bottom))
-            gt.thumbnail((192, 256))
+            #gt.thumbnail((192, 256))
             gt = (np.asarray(gt, dtype=np.float32))/self.depth_scale
             gt = np.expand_dims(gt, axis=2)
             gt = np.clip(gt, 0, self.args.max_depth)
         if self.use_dense_depth is True:
             if _is_pil_image(gt_dense):
                 gt_dense = gt_dense.crop((bound_left,bound_top,bound_right,bound_bottom))
-                gt_dense.thumbnail((192, 256))
+                #gt_dense.thumbnail((192, 256))
                 gt_dense = (np.asarray(gt_dense, dtype=np.float32))/self.depth_scale
                 gt_dense = np.expand_dims(gt_dense, axis=2)
                 gt_dense = np.clip(gt_dense, 0, self.args.max_depth)
@@ -155,7 +155,6 @@ class MyDataset(data.Dataset):
 class Transformer(object):
     def __init__(self, args):
         if args.dataset == 'KITTI':
-            """
             self.aug = albu.Compose([
                 albu.Resize(args.height, args.width),
                 ArrayToTensorNumpy(),
@@ -169,6 +168,7 @@ class Transformer(object):
                 ArrayToTensorNumpy(),
                 [transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225]), None, None]
             ])
+            """
             self.test_transform = EnhancedCompose([
                 ArrayToTensorNumpy(),
                 [transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225]), None, None]
@@ -187,7 +187,7 @@ class Transformer(object):
             ])
     def __call__(self, images, train=True):
         if train is True:
-            return self.train_transform(images)
+            return self.aug(image=images) #self.train_transform(images)
         else:
             return self.test_transform(images)
         # self.aug(image=images)
