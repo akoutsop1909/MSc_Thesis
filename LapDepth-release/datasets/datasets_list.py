@@ -9,7 +9,7 @@ import torch
 import time
 import cv2
 from PIL import ImageFile
-from transform_list import RandomCropNumpy,EnhancedCompose,RandomColor,RandomHorizontalFlip,ArrayToTensorNumpy,Normalize
+from transform_list import Resize,RandomCropNumpy,EnhancedCompose,RandomColor,RandomHorizontalFlip,ArrayToTensorNumpy,Normalize
 from torchvision import transforms
 ImageFile.LOAD_TRUNCATED_IMAGES = True
 
@@ -155,6 +155,7 @@ class MyDataset(data.Dataset):
 class Transformer(object):
     def __init__(self, args):
         if args.dataset == 'KITTI':
+            """
             self.aug = albu.Compose([
                 albu.Resize(args.height, args.width),
                 ArrayToTensorNumpy(),
@@ -163,12 +164,12 @@ class Transformer(object):
             """
             self.train_transform = EnhancedCompose([
                 #RandomCropNumpy((args.height,args.width)),
+                Resize((args.height,args.width)),
                 RandomHorizontalFlip(),
                 [RandomColor(multiplier_range=(0.9, 1.1)), None, None],
                 ArrayToTensorNumpy(),
                 [transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225]), None, None]
             ])
-            """
             self.test_transform = EnhancedCompose([
                 ArrayToTensorNumpy(),
                 [transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225]), None, None]
@@ -188,8 +189,8 @@ class Transformer(object):
     def __call__(self, images, train=True):
         if train is True:
             #images.detach().numpy()
-            images = np.array(images)
-            return self.aug(image=images) #self.train_transform(images)
+            #images = np.array(images)
+            return self.train_transform(images)
         else:
             return self.test_transform(images)
         # self.aug(image=images)
