@@ -66,7 +66,7 @@ def validate(args, val_loader, model, logger, dataset = 'KITTI'):
 
     return errors.avg,error_names
 
-def validate_in_test(args, val_loader, model, logger, dataset = 'KITTI'):
+def validate_in_test(args, val_loader, model, logger, mask, dataset = 'KITTI'):
     
     # switch to evaluate mode
     model.eval()
@@ -100,10 +100,13 @@ def validate_in_test(args, val_loader, model, logger, dataset = 'KITTI'):
         errors.update(err_result)
         if i == 101:
             break
-    a1 = errors.avg[3]
+    #a1 = errors.avg[3]
     rmse_loss = errors.avg[6]
 
-    a1 = scale_invariant_loss(output_depth, gt_data)
+    valid_output = output_depth[mask]
+    valid_gt = gt_data[mask]
+
+    a1 = scale_invariant_loss(valid_output, valid_gt)
 
     # turn back to train mode
     model.train()
@@ -254,7 +257,7 @@ def train_net(args,model, optimizer, dataset_loader,val_loader, n_epochs,logger)
                 
                 if args.val_in_train is True:
                     print("=> validate...")
-                    a1_acc, rmse_test_loss, = validate_in_test(args, val_loader, model, logger, args.dataset)
+                    a1_acc, rmse_test_loss, = validate_in_test(args, val_loader, model, logger, valid_mask, args.dataset)
                     validate_plot(args.save_path,a1_acc, a1_acc_list, a1_acc_dir,a1_pdf, train_loss_cnt,True)         
 
         if (args.rank == 0):
