@@ -103,7 +103,10 @@ def validate_in_test(args, val_loader, model, logger, dataset = 'KITTI'):
     #a1 = errors.avg[3]
     rmse_loss = errors.avg[6]
 
-    a1 = scale_invariant_loss(output_depth.cpu(), gt_data.cpu())
+    non_zero_mask = (output_depth > 0) & (gt_data > 0)
+    output_depth[non_zero_mask]
+    gt_data[non_zero_mask]
+    a1 = scale_invariant_loss(output_depth, gt_data)
 
     # turn back to train mode
     model.train()
