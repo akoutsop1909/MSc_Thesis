@@ -101,10 +101,10 @@ class MyDataset(data.Dataset):
         if self.args.dataset == 'KITTI':
             h = rgb.height
             w = rgb.width
-            bound_left = (w - 1024)//2
-            bound_right = bound_left + 1024
-            bound_top = h - 768
-            bound_bottom = bound_top + 768
+            bound_left = (w - 1216)//2
+            bound_right = bound_left + 1216
+            bound_top = h - 352
+            bound_bottom = bound_top + 352
         elif self.args.dataset == 'NYU':
             if self.train is True:
                 bound_left = 43
@@ -136,7 +136,7 @@ class MyDataset(data.Dataset):
         if self.use_dense_depth is True:
             if _is_pil_image(gt_dense):
                 #gt_dense = gt_dense.crop((bound_left,bound_top,bound_right,bound_bottom))
-                gt_dense.thumbnail((192, 256))
+                gt_dense.thumbnail((256, 256))
                 gt_dense = (np.asarray(gt_dense, dtype=np.float32))/self.depth_scale
                 gt_dense = np.expand_dims(gt_dense, axis=2)
                 gt_dense = np.clip(gt_dense, 0, self.args.max_depth)
