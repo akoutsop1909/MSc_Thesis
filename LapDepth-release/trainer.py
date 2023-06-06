@@ -261,7 +261,7 @@ def train_net(args,model, optimizer, dataset_loader,val_loader, n_epochs,logger)
                 total_loss = loss.item()                    
                 rmse_loss = (torch.sqrt(torch.pow(valid_out.detach()-valid_gt_sparse,2))).mean()
                 rmse_loss = rmse_loss.item()
-                a1 = torch.mean(torch.abs(valid_gt_sparse - valid_out.detach) / valid_gt_sparse)
+                a1 = torch.mean(torch.abs(valid_gt_sparse.cpu() - valid_out.cpu()) / valid_gt_sparse.cpu())
                 a1 = a1.item()
                 train_loss_cnt = train_loss_cnt + 1
                 train_plot(args.save_path,total_loss, rmse_loss, train_loss_list, train_rmse_list, train_loss_dir,train_loss_dir_rmse,loss_pdf, rmse_pdf, train_loss_cnt,True)
