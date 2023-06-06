@@ -100,13 +100,8 @@ def validate_in_test(args, val_loader, model, logger, dataset = 'KITTI'):
         errors.update(err_result)
         if i == 101:
             break
-    #a1 = errors.avg[3]
+    a1 = errors.avg[1]
     rmse_loss = errors.avg[6]
-
-    non_zero_mask = (output_depth > 0) & (gt_data > 0)
-    output_depth[non_zero_mask]
-    gt_data[non_zero_mask]
-    a1 = scale_invariant_loss(output_depth.cpu(), gt_data.cpu())
 
     # turn back to train mode
     model.train()
@@ -142,6 +137,7 @@ def train_net(args,model, optimizer, dataset_loader,val_loader, n_epochs,logger)
     rmse_pdf = "train_rmse.pdf"
     a1_pdf = "train_a1.pdf"        
 
+    """
     if args.dataset == "KITTI":
         # create mask for gradient loss
         y1_c,y2_c = int(0.40810811 * depth_fixed.size(2)), int(0.99189189 * depth_fixed.size(2))
@@ -155,6 +151,7 @@ def train_net(args,model, optimizer, dataset_loader,val_loader, n_epochs,logger)
         crop_mask_a1[:,:,y1_c:y2_c,x1_c:x2_c] = 1
     else:
         crop_mask = None
+    """
 
     loss_list = []
     rmse_list = []
@@ -215,6 +212,7 @@ def train_net(args,model, optimizer, dataset_loader,val_loader, n_epochs,logger)
             valid_out = outputs[valid_mask]
             valid_gt_sparse = depths[valid_mask]
             """
+
             on_zero_mask = (outputs > 0) & (depths > 0)
             valid_out = outputs[on_zero_mask]
             valid_gt_sparse = depths[on_zero_mask]
@@ -228,7 +226,7 @@ def train_net(args,model, optimizer, dataset_loader,val_loader, n_epochs,logger)
                 if epoch < grad_epoch:
                     gradient_loss = torch.tensor(0.).cuda()
                 else:
-                    gradient_loss = imgrad_loss(outputs, dense_depths, final_mask)
+                    gradient_loss = imgrad_loss(outputs, dense_depths, on_zero_mask)
                     gradient_loss = 0.1*gradient_loss
             else:
                 gradient_loss = torch.tensor(0.).cuda()
@@ -263,7 +261,8 @@ def train_net(args,model, optimizer, dataset_loader,val_loader, n_epochs,logger)
                 if args.val_in_train is True:
                     print("=> validate...")
                     a1_acc, rmse_test_loss, = validate_in_test(args, val_loader, model, logger, args.dataset)
-                    validate_plot(args.save_path,a1_acc, a1_acc_list, a1_acc_dir,a1_pdf, train_loss_cnt,True)         
+                    validate_plot(args.save_path,a1_acc, a1_acc_list, a1_acc_dir,a1_pdf, train_loss_cnt,True)
+                    print(rmse_test_loss)
 
         if (args.rank == 0):
             print("=> learning decay... current lr: %.6f"%(current_lr))
