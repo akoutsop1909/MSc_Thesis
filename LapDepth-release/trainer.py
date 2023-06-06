@@ -157,16 +157,6 @@ def train_net(args,model, optimizer, dataset_loader,val_loader, n_epochs,logger)
         crop_mask = None
     """
 
-    ##global device
-    if args.dataset == 'KITTI':
-        error_names = ['abs_diff', 'abs_rel', 'sq_rel', 'a1', 'a2', 'a3', 'rmse', 'rmse_log']
-    elif args.dataset == 'NYU':
-        error_names = ['abs_diff', 'abs_rel', 'log10', 'a1', 'a2', 'a3', 'rmse', 'rmse_log']
-    elif args.dataset == 'Make3D':
-        error_names = ['abs_diff', 'abs_rel', 'ave_log10', 'rmse']
-    errors = AverageMeter(i=len(error_names))
-    # order: abs_diff, abs_rel, sq_rel, a1, a2, a3, rmse, rmse_log
-    errors = AverageMeter(i=len(error_names))
     loss_list = []
     rmse_list = []
     train_loss_list = []
@@ -271,20 +261,10 @@ def train_net(args,model, optimizer, dataset_loader,val_loader, n_epochs,logger)
                 total_loss = loss.item()                    
                 rmse_loss = (torch.sqrt(torch.pow(valid_out.detach()-valid_gt_sparse,2))).mean()
                 rmse_loss = rmse_loss.item()
+                a1 = torch.mean(torch.abs(valid_gt_sparse - valid_out) / valid_gt_sparse)
                 train_loss_cnt = train_loss_cnt + 1
                 train_plot(args.save_path,total_loss, rmse_loss, train_loss_list, train_rmse_list, train_loss_dir,train_loss_dir_rmse,loss_pdf, rmse_pdf, train_loss_cnt,True)
-
-                if args.dataset == 'KITTI':
-                    err_result = compute_errors(valid_gt_sparse, valid_out, crop=True, cap=args.cap)
-                elif args.dataset == 'NYU':
-                    err_result = compute_errors_NYU(valid_gt_sparse, valid_out, crop=True)
-                elif args.dataset == 'Make3D':
-                    err_result = compute_errors_Make3D(valid_gt_sparse, valid_out)
-                errors.update(err_result)
-
-                train_rmse = errors.avg[6]
-                validate_plot(args.save_path, train_rmse, a1_acc_list, a1_acc_dir, a1_pdf, train_loss_cnt, True)
-
+                validate_plot(args.save_path, a1, a1_acc_list, a1_acc_dir, a1_pdf, train_loss_cnt, True)
 
                 if args.val_in_train is True:
                     print("=> validate...")
