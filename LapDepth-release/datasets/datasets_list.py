@@ -7,7 +7,7 @@ import torch
 import time
 import cv2
 from PIL import ImageFile
-from transform_list import RandomRotate,RandomCropNumpy,EnhancedCompose,RandomColor,RandomHorizontalFlip,ArrayToTensorNumpy,Normalize
+from transform_list import RandomCropNumpy,EnhancedCompose,RandomColor,RandomHorizontalFlip,ArrayToTensorNumpy,Normalize
 from torchvision import transforms
 ImageFile.LOAD_TRUNCATED_IMAGES = True
 
@@ -157,7 +157,6 @@ class Transformer(object):
         if args.dataset == 'KITTI':
             self.train_transform = EnhancedCompose([
                 #RandomCropNumpy((args.height,args.width)),
-                RandomRotate(),
                 RandomHorizontalFlip(),
                 [RandomColor(multiplier_range=(0.9, 1.1)), None, None],
                 ArrayToTensorNumpy(),
