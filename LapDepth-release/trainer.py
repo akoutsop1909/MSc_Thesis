@@ -100,12 +100,12 @@ def validate_in_test(args, val_loader, model, logger, dataset = 'KITTI'):
         errors.update(err_result)
         if i == 101:
             break
-    a1 = errors.avg[1]
+    abs_rel = errors.avg[1]
     rmse_loss = errors.avg[6]
 
     # turn back to train mode
     model.train()
-    return a1, rmse_loss
+    return abs_rel, rmse_loss
 
 def train_net(args,model, optimizer, dataset_loader,val_loader, n_epochs,logger):
     num = 0
@@ -132,10 +132,14 @@ def train_net(args,model, optimizer, dataset_loader,val_loader, n_epochs,logger)
     train_loss_dir = Path(args.save_path)
     train_loss_dir_rmse = str(train_loss_dir/'train_rmse_list.txt')
     a1_acc_dir = str(train_loss_dir/'a1_acc_list.txt')
+    val_abs_rel_dir = str(train_loss_dir / 'val_abs_rel_list.txt')
+    val_rmse_dir = str(train_loss_dir / 'val_rmse_list.txt')
     train_loss_dir = str(train_loss_dir/'train_loss_list.txt')
     loss_pdf = "train_loss.pdf"
     rmse_pdf = "train_rmse.pdf"
-    a1_pdf = "train_a1.pdf"        
+    a1_pdf = "train_a1.pdf"
+    val_abs_rel_pdf = "val_abs_rel.pdf"
+    val_rmse_pdf = "val_rmse.pdf"
 
     """
     if args.dataset == "KITTI":
@@ -158,6 +162,8 @@ def train_net(args,model, optimizer, dataset_loader,val_loader, n_epochs,logger)
     train_loss_list = []
     train_rmse_list = []
     a1_acc_list = []
+    val_abs_rel_list = []
+    val_rmse_list = []
     num_cnt = 0
     train_loss_cnt = 0
 
@@ -260,9 +266,9 @@ def train_net(args,model, optimizer, dataset_loader,val_loader, n_epochs,logger)
                 
                 if args.val_in_train is True:
                     print("=> validate...")
-                    a1_acc, rmse_test_loss, = validate_in_test(args, val_loader, model, logger, args.dataset)
-                    validate_plot(args.save_path,a1_acc, a1_acc_list, a1_acc_dir,a1_pdf, train_loss_cnt,True)
-                    print(rmse_test_loss)
+                    val_abs_rel, val_rmse, = validate_in_test(args, val_loader, model, logger, args.dataset)
+                    validate_plot(args.save_path,val_abs_rel, val_abs_rel_list, val_abs_rel_dir,val_abs_rel_pdf, train_loss_cnt,True)
+                    validate_plot(args.save_path, val_rmse, val_rmse_list, val_rmse_dir, val_rmse_pdf,train_loss_cnt, True)
 
         if (args.rank == 0):
             print("=> learning decay... current lr: %.6f"%(current_lr))
