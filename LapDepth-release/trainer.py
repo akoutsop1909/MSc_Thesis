@@ -103,6 +103,7 @@ def validate_in_test(args, val_loader, model, logger, mask, dataset = 'KITTI'):
     #a1 = errors.avg[3]
     rmse_loss = errors.avg[6]
 
+    mask = np.reshape(mask, (1, 1, 192, 256))
     valid_output = output_depth[mask]
     valid_gt = gt_data[mask]
 
