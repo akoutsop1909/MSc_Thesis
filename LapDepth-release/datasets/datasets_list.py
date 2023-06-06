@@ -1,15 +1,13 @@
 import torch.utils.data as data
 from PIL import Image
 import numpy as np
-import albumentations as albu
-from albumentations.pytorch import ToTensorV2
 from imageio import imread
 import random
 import torch
 import time
 import cv2
 from PIL import ImageFile
-from transform_list import Resize,RandomCropNumpy,EnhancedCompose,RandomColor,RandomHorizontalFlip,ArrayToTensorNumpy,Normalize
+from transform_list import RandomRotate,RandomCropNumpy,EnhancedCompose,RandomColor,RandomHorizontalFlip,ArrayToTensorNumpy,Normalize
 from torchvision import transforms
 ImageFile.LOAD_TRUNCATED_IMAGES = True
 
@@ -98,6 +96,7 @@ class MyDataset(data.Dataset):
                 gt_dense = Image.open(gt_dense_file) 
                 gt_dense = gt_dense.rotate(angle, resample=Image.NEAREST)
 
+        """
         # cropping in size that can be divided by 16
         if self.args.dataset == 'KITTI':
             h = rgb.height
@@ -123,20 +122,21 @@ class MyDataset(data.Dataset):
             rgb = rgb.crop((40,42,616,474))
         else:
             rgb = rgb.crop((bound_left,bound_top,bound_right,bound_bottom))
+        """
 
-        #rgb.thumbnail((192, 256))
+        rgb.thumbnail((192, 256))
         rgb = np.asarray(rgb, dtype=np.float32)/255.0
 
         if _is_pil_image(gt):
-            gt = gt.crop((bound_left,bound_top,bound_right,bound_bottom))
-            #gt.thumbnail((192, 256))
+            #gt = gt.crop((bound_left,bound_top,bound_right,bound_bottom))
+            gt.thumbnail((256, 256))
             gt = (np.asarray(gt, dtype=np.float32))/self.depth_scale
             gt = np.expand_dims(gt, axis=2)
             gt = np.clip(gt, 0, self.args.max_depth)
         if self.use_dense_depth is True:
             if _is_pil_image(gt_dense):
-                gt_dense = gt_dense.crop((bound_left,bound_top,bound_right,bound_bottom))
-                #gt_dense.thumbnail((192, 256))
+                #gt_dense = gt_dense.crop((bound_left,bound_top,bound_right,bound_bottom))
+                gt_dense.thumbnail((192, 256))
                 gt_dense = (np.asarray(gt_dense, dtype=np.float32))/self.depth_scale
                 gt_dense = np.expand_dims(gt_dense, axis=2)
                 gt_dense = np.clip(gt_dense, 0, self.args.max_depth)
@@ -155,16 +155,9 @@ class MyDataset(data.Dataset):
 class Transformer(object):
     def __init__(self, args):
         if args.dataset == 'KITTI':
-            """
-            self.aug = albu.Compose([
-                albu.Resize(args.height, args.width),
-                ArrayToTensorNumpy(),
-                [transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225]), None, None]
-            ])
-            """
             self.train_transform = EnhancedCompose([
                 #RandomCropNumpy((args.height,args.width)),
-                Resize(),
+                RandomRotate(),
                 RandomHorizontalFlip(),
                 [RandomColor(multiplier_range=(0.9, 1.1)), None, None],
                 ArrayToTensorNumpy(),
@@ -188,9 +181,6 @@ class Transformer(object):
             ])
     def __call__(self, images, train=True):
         if train is True:
-            #images.detach().numpy()
-            #images = np.array(images)
             return self.train_transform(images)
         else:
             return self.test_transform(images)
-        # self.aug(image=images)
