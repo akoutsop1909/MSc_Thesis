@@ -103,10 +103,6 @@ def validate_in_test(args, val_loader, model, logger, dataset = 'KITTI'):
     #a1 = errors.avg[3]
     rmse_loss = errors.avg[6]
 
-    print("save")
-    np.save('gtval.npy', gt_data.cpu().detach().numpy())
-    np.save('predval.npy', output_depth.cpu().detach().numpy())
-
     non_zero_mask = (output_depth > 0) & (gt_data > 0)
     output_depth[non_zero_mask]
     gt_data[non_zero_mask]
@@ -212,11 +208,16 @@ def train_net(args,model, optimizer, dataset_loader,val_loader, n_epochs,logger)
             np.save('pred7.npy', outputs.cpu().detach().numpy())
             """
 
+            """
             # masking valied area
             valid_mask, final_mask = make_mask(depths, crop_mask, args.dataset)
 
             valid_out = outputs[valid_mask]
             valid_gt_sparse = depths[valid_mask]
+            """
+            on_zero_mask = (outputs > 0) & (depths > 0)
+            valid_out = outputs[on_zero_mask]
+            valid_gt_sparse = depths[on_zero_mask]
 
             ###################################### scale invariant loss #####################################
             scale_inv_loss = scale_invariant_loss(valid_out, valid_gt_sparse)
