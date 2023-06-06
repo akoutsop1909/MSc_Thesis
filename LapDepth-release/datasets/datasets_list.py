@@ -124,7 +124,7 @@ class MyDataset(data.Dataset):
             rgb = rgb.crop((bound_left,bound_top,bound_right,bound_bottom))
         """
 
-        rgb.thumbnail((192, 256))
+        rgb.thumbnail((256, 256))
         rgb = np.asarray(rgb, dtype=np.float32)/255.0
 
         if _is_pil_image(gt):
