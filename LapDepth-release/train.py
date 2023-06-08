@@ -56,7 +56,7 @@ def main_worker(gpu, ngpus_per_node, args):
 
     ##############################    Data loading part    ################################
     if args.dataset == 'KITTI':
-        args.max_depth = 80.0
+        args.max_depth = 100.0
     elif args.dataset == 'NYU':
         args.max_depth = 10.0
 
