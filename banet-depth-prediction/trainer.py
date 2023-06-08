@@ -7,7 +7,6 @@
 # Author: Denis Girard (denis.girard@enlens.net)
 
 import time
-import os
 
 from numpy import ndarray
 from torch.optim import Optimizer
@@ -101,8 +100,6 @@ class Trainer:
     def start_training(self) -> None:
 
         # set metrics dataframe
-        if not os.path.exists('metrics'):
-            os.makedirs('metrics')
         tmetrics = pd.DataFrame(index=range(60), columns=range(4))
         tmetrics.columns = ['train_loss', 'train_silog', 'val_loss', 'val_silog']
 
@@ -203,7 +200,7 @@ class Trainer:
             time.sleep(self.sleep_after_epoch)
 
         # export metrics to csv
-        tmetrics.to_csv('metrics/tmetrics.csv', index=False)
+        tmetrics.to_csv('tmetrics.csv', index=False)
 
     def train(self) -> (ndarray, Any):
         """
