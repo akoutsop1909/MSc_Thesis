@@ -103,8 +103,8 @@ class Trainer:
         # set metrics dataframe
         if not os.path.exists('metrics'):
             os.makedirs('metrics')
-        tmetrics = pd.DataFrame(index=range(60), columns=range(6))
-        tmetrics.columns = ['train_loss', 'train_silog', 'val_loss', 'val_silog', 'train_rmse_loss', 'val_rmse_loss']
+        tmetrics = pd.DataFrame(index=range(60), columns=range(4))
+        tmetrics.columns = ['train_loss', 'train_silog', 'val_loss', 'val_silog']
 
         # upload model to device
         self.model.to(SystemConfig.device)
@@ -119,22 +119,20 @@ class Trainer:
             print("\n------------------- Epoch {} -------------------".format(epoch))
 
             # train model
-            epoch_train_loss, epoch_train_metrics, train_rmse_loss = self.train()
+            epoch_train_loss, epoch_train_metrics = self.train()
 
             # compute elapsed time and ETA
             time_measure.tick_epoch(len(self.train_dataloader))
             time_measure.print_epoch_stats()
 
             # test updated model on validation set
-            epoch_val_loss, epoch_val_metrics, val_rmse_loss = self.validate()
+            epoch_val_loss, epoch_val_metrics = self.validate()
 
             # add metrics to dataframe
             tmetrics['train_loss'][epoch] = epoch_train_loss
             tmetrics['train_silog'][epoch] = epoch_train_metrics
             tmetrics['val_loss'][epoch] = epoch_val_loss
             tmetrics['val_silog'][epoch] = epoch_val_metrics
-            tmetrics['train_rmse_loss'][epoch] = train_rmse_loss
-            tmetrics['val_rmse_loss'][epoch] = val_rmse_loss
 
             # add data to tensorboard
             if self.tb_writer is not None:
@@ -270,12 +268,9 @@ class Trainer:
             # get metrics
             epoch_metrics = self.metrics.value()
 
-            rmse_loss = (torch.sqrt(torch.pow(output.detach() - target, 2))).mean()
-            rmse_loss = rmse_loss.item()
-
             print('Train Loss: {:.6f}\nTrain SILog: {:.6f}\n'.format(epoch_loss, epoch_metrics))
 
-            return epoch_loss, epoch_metrics, rmse_loss
+            return epoch_loss, epoch_metrics
 
     def validate(self) -> (ndarray, Any):
         """
@@ -321,12 +316,9 @@ class Trainer:
             # get metrics
             epoch_metrics = self.metrics.value()
 
-            rmse_loss = (torch.sqrt(torch.pow(output.detach() - target, 2))).mean()
-            rmse_loss = rmse_loss.item()
-
             print("Test Loss : {:.6f}\nTest SILog: {:.6f}\n".format(epoch_loss, epoch_metrics))
 
-            return epoch_loss, epoch_metrics, rmse_loss
+            return epoch_loss, epoch_metrics
 
     def update_scheduler(self, current_loss=None) -> None:
         """
