@@ -24,7 +24,7 @@ class ParametersConfig:
     batch_size: int = 16
 
     # number of epochs
-    num_epoch: int = 60
+    num_epoch: int = 50
 
     # learning rate
     learning_rate: float = 1e-4

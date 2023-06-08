@@ -149,14 +149,6 @@ class Trainer:
                 self.tb_writer.add_scalars('SILog/Train-Val',
                                            {'train': epoch_train_metrics, 'validation': epoch_val_metrics}, epoch)
 
-            # save model state
-            torch.save({
-                'epoch': epoch,
-                'model_state_dict': self.model.state_dict(),
-                'optimizer_state_dict': self.optimizer.state_dict(),
-                'loss': epoch_train_loss,
-            }, 'model.pt')
-
             # update best loss
             if epoch_val_loss < self.best_loss:
                 self.best_loss = epoch_val_loss
