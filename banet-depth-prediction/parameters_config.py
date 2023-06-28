@@ -18,7 +18,7 @@ class ParametersConfig:
     """
 
     # number of concurrent workers
-    num_workers: int = 4
+    num_workers: int = 3
 
     # batch size
     batch_size: int = 16
