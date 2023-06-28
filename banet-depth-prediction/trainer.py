@@ -20,6 +20,7 @@ from utils import save_model, save_model_quantized
 import progressbar
 import numpy as np
 import pandas as pd
+import os
 
 import torch
 import torch.nn as nn
@@ -100,6 +101,8 @@ class Trainer:
     def start_training(self) -> None:
 
         # set metrics dataframe
+        if not os.path.exists('metrics'):
+            os.makedirs('metrics')
         tmetrics = pd.DataFrame(index=range(60), columns=range(8))
         tmetrics.columns = ['train_loss', 'train_silog', 'val_loss', 'val_silog', 'train_rmse_loss', 'val_rmse_loss', 'train_abs_rel', 'val_abs_rel']
 
@@ -135,7 +138,7 @@ class Trainer:
             tmetrics['train_abs_rel'][epoch] = train_abs_rel
             tmetrics['val_abs_rel'][epoch] = val_abs_rel
 
-            tmetrics.to_csv('tmetrics.csv', index=False)
+            tmetrics.to_csv('metrics/tmetrics.csv', index=False)
 
             # add data to tensorboard
             if self.tb_writer is not None:
@@ -269,7 +272,9 @@ class Trainer:
             epoch_metrics = self.metrics.value()
 
             rmse_loss = (torch.sqrt(torch.pow(output.detach() - target, 2))).mean()
+            rmse_loss = rmse_loss.item()
             abs_rel = torch.mean(torch.abs(target.cpu() - output.cpu()) / target.cpu())
+            abs_rel = abs_rel.item()
 
             print('Train Loss: {:.6f}\nTrain SILog: {:.6f}\n'.format(epoch_loss, epoch_metrics))
 
@@ -320,7 +325,9 @@ class Trainer:
             epoch_metrics = self.metrics.value()
 
             rmse_loss = (torch.sqrt(torch.pow(output.detach() - target, 2))).mean()
+            rmse_loss = rmse_loss.item()
             abs_rel = torch.mean(torch.abs(target.cpu() - output.cpu()) / target.cpu())
+            abs_rel = abs_rel.item()
 
             print("Test Loss : {:.6f}\nTest SILog: {:.6f}\n".format(epoch_loss, epoch_metrics))
 
