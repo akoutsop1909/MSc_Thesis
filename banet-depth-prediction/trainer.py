@@ -205,7 +205,7 @@ class Trainer:
             time.sleep(self.sleep_after_epoch)
 
         # export metrics to csv
-        tmetrics.to_csv('metrics/tmetrics.csv', index=False)
+        tmetrics.to_csv(os.getcwd()+'metrics/tmetrics.csv', index=False)
 
     def train(self) -> (ndarray, Any):
         """
