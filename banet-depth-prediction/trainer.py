@@ -20,6 +20,7 @@ from utils import save_model, save_model_quantized
 import progressbar
 import numpy as np
 import pandas as pd
+import os
 
 import torch
 import torch.nn as nn
@@ -100,6 +101,8 @@ class Trainer:
     def start_training(self) -> None:
 
         # set metrics dataframe
+        if not os.path.exists('metrics'):
+            os.makedirs('metrics')
         tmetrics = pd.DataFrame(index=range(60), columns=range(4))
         tmetrics.columns = ['train_loss', 'train_silog', 'val_loss', 'val_silog']
 
@@ -153,6 +156,14 @@ class Trainer:
             if epoch_val_loss < self.best_loss:
                 self.best_loss = epoch_val_loss
 
+                # save model state
+                torch.save({
+                    'epoch': epoch,
+                    'model_state_dict': self.model.state_dict(),
+                    'optimizer_state_dict': self.optimizer.state_dict(),
+                    'loss': epoch_train_loss,
+                }, 'model.pt')
+
                 # save model if a new best loss is reached
                 save_model(self.model, device=SystemConfig.device)
 
@@ -192,7 +203,7 @@ class Trainer:
             time.sleep(self.sleep_after_epoch)
 
         # export metrics to csv
-        tmetrics.to_csv('tmetrics.csv', index=False)
+        tmetrics.to_csv('metrics/tmetrics.csv', index=False)
 
     def train(self) -> (ndarray, Any):
         """
