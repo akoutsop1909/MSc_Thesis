@@ -20,7 +20,6 @@ from utils import save_model, save_model_quantized
 import progressbar
 import numpy as np
 import pandas as pd
-import os
 
 import torch
 import torch.nn as nn
@@ -101,8 +100,6 @@ class Trainer:
     def start_training(self) -> None:
 
         # set metrics dataframe
-        if not os.path.exists('metrics'):
-            os.makedirs('metrics')
         tmetrics = pd.DataFrame(index=range(60), columns=range(6))
         tmetrics.columns = ['train_loss', 'train_silog', 'val_loss', 'val_silog', 'train_rmse_loss', 'val_rmse_loss']
 
@@ -205,7 +202,7 @@ class Trainer:
             time.sleep(self.sleep_after_epoch)
 
         # export metrics to csv
-        tmetrics.to_csv(os.getcwd()+'metrics/tmetrics.csv', index=False)
+        tmetrics.to_csv('tmetrics.csv', index=False)
 
     def train(self) -> (ndarray, Any):
         """
