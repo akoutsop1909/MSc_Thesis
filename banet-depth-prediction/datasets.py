@@ -162,12 +162,14 @@ class MyDataset(Dataset):
         # perform data augmentation
         if self.data_augmentation:
 
+            '''
             # select a random crop
             i, j, h, w = transforms.RandomCrop.get_params(img, output_size=(out_h, out_w))
 
             # apply the same random crop to img and depthmap
             img = tf.crop(img, i, j, h, w)
             depthmap = tf.crop(depthmap, i, j, h, w)
+            '''
 
             # random flip
             if random.random() > 0.5:

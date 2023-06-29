@@ -244,10 +244,12 @@ class Trainer:
                 # forward pass to the model
                 output = self.model(data)
 
+                '''
                 # code for debugging
                 print("save")
                 np.save('gt.npy', target.cpu().detach().numpy())
                 np.save('pred.npy', output.cpu().detach().numpy())
+                '''
 
                 # compute loss
                 loss = self.loss_function(output, target)
