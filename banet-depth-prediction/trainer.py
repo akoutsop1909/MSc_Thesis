@@ -103,8 +103,8 @@ class Trainer:
         # set metrics dataframe
         if not os.path.exists('metrics'):
             os.makedirs('metrics')
-        tmetrics = pd.DataFrame(index=range(60), columns=range(8))
-        tmetrics.columns = ['train_loss', 'train_silog', 'val_loss', 'val_silog', 'train_rmse_loss', 'val_rmse_loss', 'train_abs_rel', 'val_abs_rel']
+        tmetrics = pd.DataFrame(index=range(60), columns=range(6))
+        tmetrics.columns = ['train_loss', 'train_silog', 'train_rmse_loss', 'val_loss', 'val_silog', 'val_rmse_loss']
 
         # upload model to device
         self.model.to(SystemConfig.device)
@@ -119,24 +119,22 @@ class Trainer:
             print("\n------------------- Epoch {} -------------------".format(epoch))
 
             # train model
-            epoch_train_loss, epoch_train_metrics, train_rmse_loss, train_abs_rel = self.train()
+            epoch_train_loss, epoch_train_metrics, train_rmse_loss = self.train()
 
             # compute elapsed time and ETA
             time_measure.tick_epoch(len(self.train_dataloader))
             time_measure.print_epoch_stats()
 
             # test updated model on validation set
-            epoch_val_loss, epoch_val_metrics, val_rmse_loss, val_abs_rel = self.validate()
+            epoch_val_loss, epoch_val_metrics, val_rmse_loss = self.validate()
 
             # add metrics to dataframe
             tmetrics['train_loss'][epoch] = epoch_train_loss
             tmetrics['train_silog'][epoch] = epoch_train_metrics
+            tmetrics['train_rmse_loss'][epoch] = train_rmse_loss
             tmetrics['val_loss'][epoch] = epoch_val_loss
             tmetrics['val_silog'][epoch] = epoch_val_metrics
-            tmetrics['train_rmse_loss'][epoch] = train_rmse_loss
             tmetrics['val_rmse_loss'][epoch] = val_rmse_loss
-            tmetrics['train_abs_rel'][epoch] = train_abs_rel
-            tmetrics['val_abs_rel'][epoch] = val_abs_rel
 
             tmetrics.to_csv('metrics/tmetrics.csv', index=False)
 
@@ -158,10 +156,6 @@ class Trainer:
                 self.tb_writer.add_scalars('SILog/Train-Val',
                                            {'train': epoch_train_metrics, 'validation': epoch_val_metrics}, epoch)
 
-            # update best loss
-            if epoch_val_loss < self.best_loss:
-                self.best_loss = epoch_val_loss
-
                 # save model state
                 torch.save({
                     'epoch': epoch,
@@ -169,6 +163,10 @@ class Trainer:
                     'optimizer_state_dict': self.optimizer.state_dict(),
                     'loss': epoch_train_loss,
                 }, 'model.pt')
+
+            # update best loss
+            if epoch_val_loss < self.best_loss:
+                self.best_loss = epoch_val_loss
 
                 # save model if a new best loss is reached
                 save_model(self.model, device=SystemConfig.device)
@@ -273,12 +271,15 @@ class Trainer:
 
             rmse_loss = (torch.sqrt(torch.pow(output.detach() - target, 2))).mean()
             rmse_loss = rmse_loss.item()
-            abs_rel = torch.mean(torch.abs(target.cpu() - output.cpu()) / target.cpu())
-            abs_rel = abs_rel.item()
+
+            # code for debugging
+            print("save")
+            np.save('gt.npy', target.cpu().detach().numpy())
+            np.save('pred.npy', output.cpu().detach().numpy())
 
             print('Train Loss: {:.6f}\nTrain SILog: {:.6f}\n'.format(epoch_loss, epoch_metrics))
 
-            return epoch_loss, epoch_metrics, rmse_loss, abs_rel
+            return epoch_loss, epoch_metrics, rmse_loss
 
     def validate(self) -> (ndarray, Any):
         """
@@ -326,12 +327,10 @@ class Trainer:
 
             rmse_loss = (torch.sqrt(torch.pow(output.detach() - target, 2))).mean()
             rmse_loss = rmse_loss.item()
-            abs_rel = torch.mean(torch.abs(target.cpu() - output.cpu()) / target.cpu())
-            abs_rel = abs_rel.item()
 
             print("Test Loss : {:.6f}\nTest SILog: {:.6f}\n".format(epoch_loss, epoch_metrics))
 
-            return epoch_loss, epoch_metrics, rmse_loss, abs_rel
+            return epoch_loss, epoch_metrics, rmse_loss
 
     def update_scheduler(self, current_loss=None) -> None:
         """
