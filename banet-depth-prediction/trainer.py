@@ -244,6 +244,11 @@ class Trainer:
                 # forward pass to the model
                 output = self.model(data)
 
+                # code for debugging
+                print("save")
+                np.save('gt.npy', target.cpu().detach().numpy())
+                np.save('pred.npy', output.cpu().detach().numpy())
+
                 # compute loss
                 loss = self.loss_function(output, target)
 
@@ -271,11 +276,6 @@ class Trainer:
 
             rmse_loss = (torch.sqrt(torch.pow(output.detach() - target, 2))).mean()
             rmse_loss = rmse_loss.item()
-
-            # code for debugging
-            print("save")
-            np.save('gt.npy', target.cpu().detach().numpy())
-            np.save('pred.npy', output.cpu().detach().numpy())
 
             print('Train Loss: {:.6f}\nTrain SILog: {:.6f}\n'.format(epoch_loss, epoch_metrics))
 
