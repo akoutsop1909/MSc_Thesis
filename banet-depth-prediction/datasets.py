@@ -186,12 +186,14 @@ class MyDataset(Dataset):
             color_jitter = transforms.ColorJitter(brightness=0.5, contrast=0.5, saturation=0.5, hue=0.1)
             img = color_jitter(img)
 
+        '''
         else:
 
             # if no data augmentation, just center crop
             crop_transform = transforms.CenterCrop((out_h, out_w))
             img = crop_transform(img)
             depthmap = crop_transform(depthmap)
+        '''
 
         # transform image to tensor
         img = self.transform_to_tensor(np.array(img))
