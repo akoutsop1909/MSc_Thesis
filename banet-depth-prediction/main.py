@@ -203,15 +203,15 @@ def main():
             if not os.path.exists('prediction'):
                 os.makedirs('prediction')
 
+            '''
             df = pd.read_csv('datasets/kitti_selection.csv')
             temp = df['depth_path'][idx].split('/')
             save('prediction/' + temp[4], prediction)
+            '''
 
-            '''    
             df = pd.read_csv('datasets/diode_val.csv')
             temp = df['depth_path'][idx].split('/')
             save('prediction/' + temp[7], prediction)
-            '''
 
             # print last elapsed time
             print("Inference time: {:.4f} sec".format(duration))
