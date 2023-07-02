@@ -131,15 +131,11 @@ def train_net(args,model, optimizer, dataset_loader,val_loader, n_epochs,logger)
     test_loss_dir = str(test_loss_dir/'test_loss_list.txt')
     train_loss_dir = Path(args.save_path)
     train_loss_dir_rmse = str(train_loss_dir/'train_rmse_list.txt')
-    a1_acc_dir = str(train_loss_dir/'a1_acc_list.txt')
-    train_abs_rel_dir = str(train_loss_dir/'train_abs_rel_list.txt')
     val_abs_rel_dir = str(train_loss_dir / 'val_abs_rel_list.txt')
     val_rmse_dir = str(train_loss_dir / 'val_rmse_list.txt')
     train_loss_dir = str(train_loss_dir/'train_loss_list.txt')
     loss_pdf = "train_loss.pdf"
     rmse_pdf = "train_rmse.pdf"
-    a1_pdf = "train_a1.pdf"
-    train_abs_rel_pdf = "train_abs_rel.pdf"
     val_abs_rel_pdf = "val_abs_rel.pdf"
     val_rmse_pdf = "val_rmse.pdf"
 
@@ -163,8 +159,6 @@ def train_net(args,model, optimizer, dataset_loader,val_loader, n_epochs,logger)
     rmse_list = []
     train_loss_list = []
     train_rmse_list = []
-    a1_acc_list = []
-    train_abs_rel_list = []
     val_abs_rel_list = []
     val_rmse_list = []
     num_cnt = 0
@@ -264,11 +258,8 @@ def train_net(args,model, optimizer, dataset_loader,val_loader, n_epochs,logger)
                 total_loss = loss.item()                    
                 rmse_loss = (torch.sqrt(torch.pow(valid_out.detach()-valid_gt_sparse,2))).mean()
                 rmse_loss = rmse_loss.item()
-                train_abs_rel = torch.mean(torch.abs(valid_gt_sparse.cpu() - valid_out.cpu()) / valid_gt_sparse.cpu())
-                train_abs_rel = train_abs_rel.item()
                 train_loss_cnt = train_loss_cnt + 1
                 train_plot(args.save_path,total_loss, rmse_loss, train_loss_list, train_rmse_list, train_loss_dir,train_loss_dir_rmse,loss_pdf, rmse_pdf, train_loss_cnt,True)
-                validate_plot(args.save_path, train_abs_rel, train_abs_rel_list, train_abs_rel_dir, train_abs_rel_pdf, train_loss_cnt, True)
 
                 if args.val_in_train is True:
                     print("=> validate...")
