@@ -7,7 +7,7 @@ import torch
 import time
 import cv2
 from PIL import ImageFile
-from transform_list import RandomCropNumpy,EnhancedCompose,RandomColor,RandomHorizontalFlip,ArrayToTensorNumpy,Normalize
+from transform_list import CenterCrop,RandomCropNumpy,EnhancedCompose,RandomColor,RandomHorizontalFlip,ArrayToTensorNumpy,Normalize
 from torchvision import transforms
 ImageFile.LOAD_TRUNCATED_IMAGES = True
 
@@ -125,13 +125,11 @@ class MyDataset(data.Dataset):
         """
 
         rgb = rgb.resize((256, 192))
-        #rgb.thumbnail((256, 256))
         rgb = np.asarray(rgb, dtype=np.float32)/255.0
 
         if _is_pil_image(gt):
             #gt = gt.crop((bound_left,bound_top,bound_right,bound_bottom))
             gt = gt.resize((256, 192))
-            #gt.thumbnail((256, 256))
             gt = (np.asarray(gt, dtype=np.float32))/self.depth_scale
             gt = np.expand_dims(gt, axis=2)
             gt = np.clip(gt, 0, self.args.max_depth)
@@ -139,7 +137,6 @@ class MyDataset(data.Dataset):
             if _is_pil_image(gt_dense):
                 #gt_dense = gt_dense.crop((bound_left,bound_top,bound_right,bound_bottom))
                 gt_dense = gt_dense.resize((256, 192))
-                #gt_dense.thumbnail((256, 256))
                 gt_dense = (np.asarray(gt_dense, dtype=np.float32))/self.depth_scale
                 gt_dense = np.expand_dims(gt_dense, axis=2)
                 gt_dense = np.clip(gt_dense, 0, self.args.max_depth)
@@ -160,8 +157,9 @@ class Transformer(object):
         if args.dataset == 'KITTI':
             self.train_transform = EnhancedCompose([
                 #RandomCropNumpy((args.height,args.width)),
-                #RandomHorizontalFlip(),
-                #[RandomColor(multiplier_range=(0.9, 1.1)), None, None],
+                RandomHorizontalFlip(),
+                [RandomColor(multiplier_range=(0.9, 1.1)), None, None],
+                CenterCrop((768, 1024)),
                 ArrayToTensorNumpy(),
                 [transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225]), None, None]
             ])
