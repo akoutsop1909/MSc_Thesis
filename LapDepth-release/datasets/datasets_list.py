@@ -7,7 +7,7 @@ import torch
 import time
 import cv2
 from PIL import ImageFile
-from transform_list import CenterCrop,RandomCropNumpy,EnhancedCompose,RandomColor,RandomHorizontalFlip,ArrayToTensorNumpy,Normalize
+from transform_list import RandomCropNumpy,EnhancedCompose,RandomColor,RandomHorizontalFlip,ArrayToTensorNumpy,Normalize
 from torchvision import transforms
 ImageFile.LOAD_TRUNCATED_IMAGES = True
 
@@ -159,7 +159,7 @@ class Transformer(object):
                 #RandomCropNumpy((args.height,args.width)),
                 RandomHorizontalFlip(),
                 [RandomColor(multiplier_range=(0.9, 1.1)), None, None],
-                CenterCrop((768, 1024)),
+                transforms.CenterCrop((768, 1024)),
                 ArrayToTensorNumpy(),
                 [transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225]), None, None]
             ])
