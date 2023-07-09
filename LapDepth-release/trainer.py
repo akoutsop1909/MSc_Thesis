@@ -139,6 +139,7 @@ def train_net(args,model, optimizer, dataset_loader,val_loader, n_epochs,logger)
     val_abs_rel_pdf = "val_abs_rel.pdf"
     val_rmse_pdf = "val_rmse.pdf"
 
+    """
     if args.dataset == "KITTI":
         # create mask for gradient loss
         y1_c,y2_c = int(0.40810811 * depth_fixed.size(2)), int(0.99189189 * depth_fixed.size(2))
@@ -152,6 +153,7 @@ def train_net(args,model, optimizer, dataset_loader,val_loader, n_epochs,logger)
         crop_mask_a1[:,:,y1_c:y2_c,x1_c:x2_c] = 1
     else:
         crop_mask = None
+    """
 
     loss_list = []
     rmse_list = []
@@ -206,17 +208,17 @@ def train_net(args,model, optimizer, dataset_loader,val_loader, n_epochs,logger)
             np.save('pred7.npy', outputs.cpu().detach().numpy())
             """
 
+            """
             # masking valied area
             valid_mask, final_mask = make_mask(depths, crop_mask, args.dataset)
 
             valid_out = outputs[valid_mask]
             valid_gt_sparse = depths[valid_mask]
-
             """
+
             on_zero_mask = (outputs > 0) & (depths > 0)
             valid_out = outputs[on_zero_mask]
             valid_gt_sparse = depths[on_zero_mask]
-            """
 
             ###################################### scale invariant loss #####################################
             scale_inv_loss = scale_invariant_loss(valid_out, valid_gt_sparse)
@@ -227,7 +229,7 @@ def train_net(args,model, optimizer, dataset_loader,val_loader, n_epochs,logger)
                 if epoch < grad_epoch:
                     gradient_loss = torch.tensor(0.).cuda()
                 else:
-                    gradient_loss = imgrad_loss(outputs, dense_depths, final_mask)
+                    gradient_loss = imgrad_loss(outputs, dense_depths, on_zero_mask)
                     gradient_loss = 0.1*gradient_loss
             else:
                 gradient_loss = torch.tensor(0.).cuda()
