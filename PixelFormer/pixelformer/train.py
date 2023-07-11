@@ -286,15 +286,15 @@ def main_worker(gpu, ngpus_per_node, args):
 
             depth_est = model(image)
 
-            # code for debugging
-            print("save")
-            np.save('gt.npy', depth_gt.cpu().detach().numpy())
-            np.save('pred.npy', depth_est.cpu().detach().numpy())
-
             if args.dataset == 'nyu':
                 mask = depth_gt > 0.1
             else:
                 mask = depth_gt > 1.0
+
+            # code for debugging
+            print("save")
+            np.save('gt.npy', depth_gt.cpu().detach().numpy())
+            np.save('pred.npy', depth_est.cpu().detach().numpy())
 
             loss = silog_criterion.forward(depth_est, depth_gt, mask.to(torch.bool))
             loss.backward()
