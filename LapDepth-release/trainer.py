@@ -201,8 +201,8 @@ def train_net(args,model, optimizer, dataset_loader,val_loader, n_epochs,logger)
             else:
                 [lap5_pred, lap4_pred, lap3_pred, lap2_pred, lap1_pred] = d_res_list
             ##################################### Valid mask definition ####################################
-            # code for debugging
             """
+            # code for debugging
             print("save")
             np.save('gt7.npy', depths.cpu().detach().numpy())
             np.save('pred7.npy', outputs.cpu().detach().numpy())

@@ -291,6 +291,11 @@ def main_worker(gpu, ngpus_per_node, args):
             else:
                 mask = depth_gt > 1.0
 
+            # code for debugging
+            print("save")
+            np.save('gt.npy', depth_gt.cpu().detach().numpy())
+            np.save('pred.npy', depth_est.cpu().detach().numpy())
+
             loss = silog_criterion.forward(depth_est, depth_gt, mask.to(torch.bool))
             loss.backward()
             for param_group in optimizer.param_groups:
