@@ -15,7 +15,6 @@
 --input_height 192
 --input_width 256
 --max_depth 80
---do_kb_crop
 --do_random_rotate
 --degree 1.0
 --log_directory ./models/
