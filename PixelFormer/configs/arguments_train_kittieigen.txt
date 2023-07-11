@@ -6,14 +6,14 @@
 --data_path /workspace/KITTI
 --gt_path /workspace/KITTI/data_depth_annotated
 --filenames_file data_splits/eigen_train_files_with_gt.txt
---batch_size 8
---num_epochs 20
+--batch_size 16
+--num_epochs 60
 --learning_rate 4e-5
 --weight_decay 1e-2
 --adam_eps 1e-3
 --num_threads 1
---input_height 192
---input_width 256
+--input_height 256
+--input_width 192
 --max_depth 80
 --do_kb_crop
 --do_random_rotate
