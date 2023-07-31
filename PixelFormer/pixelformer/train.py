@@ -289,7 +289,7 @@ def main_worker(gpu, ngpus_per_node, args):
             if args.dataset == 'nyu':
                 mask = depth_gt > 0.1
             else:
-                mask = depth_gt > 1.0
+                mask = (depth_est > 0) & (depth_gt > 0)
 
             # code for debugging
             print("save")
