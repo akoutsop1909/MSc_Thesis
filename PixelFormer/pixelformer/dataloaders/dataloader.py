@@ -98,8 +98,9 @@ class DataLoadPreprocess(Dataset):
     
             image = Image.open(image_path)
             depth_gt = Image.open(depth_path)
-            
-            
+
+            image = image.resize((256, 192))
+            depth_gt = depth_gt.resize((256, 192))
 
             if self.args.do_kb_crop is True:
                 height = image.height
@@ -146,8 +147,10 @@ class DataLoadPreprocess(Dataset):
             else:
                 depth_gt = depth_gt / 256.0
 
+            """
             if image.shape[0] != self.args.input_height or image.shape[1] != self.args.input_width:
                 image, depth_gt = self.random_crop(image, depth_gt, self.args.input_height, self.args.input_width)
+            """
             image, depth_gt = self.train_preprocess(image, depth_gt)
             sample = {'image': image, 'depth': depth_gt, 'focal': focal}
         
