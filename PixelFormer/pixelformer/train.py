@@ -291,10 +291,12 @@ def main_worker(gpu, ngpus_per_node, args):
             else:
                 mask = (depth_est > 0) & (depth_gt > 0)
 
+            '''
             # code for debugging
             print("save")
             np.save('gt.npy', depth_gt.cpu().detach().numpy())
             np.save('pred.npy', depth_est.cpu().detach().numpy())
+            '''
 
             loss = silog_criterion.forward(depth_est, depth_gt, mask.to(torch.bool))
             loss.backward()
