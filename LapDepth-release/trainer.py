@@ -204,8 +204,8 @@ def train_net(args,model, optimizer, dataset_loader,val_loader, n_epochs,logger)
             """
             # code for debugging
             print("save")
-            np.save('gt7.npy', depths.cpu().detach().numpy())
-            np.save('pred7.npy', outputs.cpu().detach().numpy())
+            np.save('gt.npy', depths.cpu().detach().numpy())
+            np.save('pred.npy', outputs.cpu().detach().numpy())
             """
 
             """
@@ -270,12 +270,6 @@ def train_net(args,model, optimizer, dataset_loader,val_loader, n_epochs,logger)
         if (args.rank == 0):
             print("=> learning decay... current lr: %.6f"%(current_lr))
             #torch.save(model.state_dict(), save_dir+'/epoch_%02d_loss_%.4f_2.pkl' %(model_num+1,loss))
-            torch.save({
-                'epoch': epoch,
-                'model_state_dict': model.state_dict(),
-                'optimizer_state_dict': optimizer.state_dict(),
-                'loss': loss,
-            }, 'model.pkl')
         model_num = model_num + 1
     
     return loss

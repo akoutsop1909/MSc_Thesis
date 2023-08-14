@@ -124,28 +124,18 @@ class MyDataset(data.Dataset):
             rgb = rgb.crop((bound_left,bound_top,bound_right,bound_bottom))
         """
 
-        if (self.train is False):
-            rgb = rgb.resize((256, 192))
-        else:
-            rgb = rgb.resize((512, 384))
+        rgb = rgb.resize((256, 192))
         rgb = np.asarray(rgb, dtype=np.float32)/255.0
 
         if _is_pil_image(gt):
             #gt = gt.crop((bound_left,bound_top,bound_right,bound_bottom))
-            if (self.train is False):
-                gt = gt.resize((256, 192))
-            else:
-                gt = gt.resize((512, 384))
+            gt = gt.resize((256, 192))
             gt = (np.asarray(gt, dtype=np.float32))/self.depth_scale
             gt = np.expand_dims(gt, axis=2)
             gt = np.clip(gt, 0, self.args.max_depth)
         if self.use_dense_depth is True:
             if _is_pil_image(gt_dense):
                 #gt_dense = gt_dense.crop((bound_left,bound_top,bound_right,bound_bottom))
-                if (self.train is False):
-                    gt_dense = gt_dense.resize((256, 192))
-                else:
-                    gt_dense = gt_dense.resize((512, 384))
                 gt_dense = gt_dense.resize((256, 192))
                 gt_dense = (np.asarray(gt_dense, dtype=np.float32))/self.depth_scale
                 gt_dense = np.expand_dims(gt_dense, axis=2)
@@ -166,9 +156,9 @@ class Transformer(object):
     def __init__(self, args):
         if args.dataset == 'KITTI':
             self.train_transform = EnhancedCompose([
-                RandomCropNumpy((192,256)),
+                #RandomCropNumpy((args.height,args.width)),
                 RandomHorizontalFlip(),
-                [RandomColor(multiplier_range=(0.9, 1.1)), None, None],
+                [RandomColor(multiplier_range=(0.8, 1.2)), None, None],
                 ArrayToTensorNumpy(),
                 [transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225]), None, None]
             ])
