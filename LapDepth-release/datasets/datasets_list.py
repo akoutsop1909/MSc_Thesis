@@ -158,7 +158,7 @@ class Transformer(object):
             self.train_transform = EnhancedCompose([
                 #RandomCropNumpy((args.height,args.width)),
                 RandomHorizontalFlip(),
-                [RandomColor(multiplier_range=(0.8, 1.2)), None, None],
+                [RandomColor(multiplier_range=(0.9, 1.1)), None, None],
                 ArrayToTensorNumpy(),
                 [transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225]), None, None]
             ])
