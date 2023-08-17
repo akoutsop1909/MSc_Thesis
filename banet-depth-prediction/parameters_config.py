@@ -21,7 +21,7 @@ class ParametersConfig:
     num_workers: int = 2
 
     # batch size
-    batch_size: int = 16
+    batch_size: int = 32
 
     # number of epochs
     num_epoch: int = 60
@@ -33,7 +33,7 @@ class ParametersConfig:
     momentum: float = 0.9
 
     # amount of additional regularization on the weights values
-    weight_decay: float = 1e-1  # 1e-5
+    weight_decay: float = 0  # 1e-5
 
     # at which epochs should we make a "step" in learning rate (i.e. decrease it in some manner)
     lr_step_milestones: Iterable = (25, 40)
