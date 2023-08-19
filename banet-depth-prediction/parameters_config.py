@@ -18,10 +18,10 @@ class ParametersConfig:
     """
 
     # number of concurrent workers
-    num_workers: int = 0
+    num_workers: int = 2
 
     # batch size
-    batch_size: int = 32
+    batch_size: int = 16
 
     # number of epochs
     num_epoch: int = 60
