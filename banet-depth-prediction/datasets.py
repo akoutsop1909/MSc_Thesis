@@ -179,9 +179,11 @@ class MyDataset(Dataset):
             if random.random() > 0.5:
                 img = tf.hflip(img)
                 depthmap = tf.hflip(depthmap)
+            """
             if random.random() > 0.5:
-                #img = tf.vflip(img)
-                #depthmap = tf.vflip(depthmap)
+                img = tf.vflip(img)
+                depthmap = tf.vflip(depthmap)
+            """
 
             # select a random rotation
             angle = random.randrange(-15, 15)
