@@ -171,16 +171,20 @@ class MyDataset(Dataset):
             depthmap = tf.crop(depthmap, i, j, h, w)
             """
 
+            crop_transform = transforms.CenterCrop((out_h, out_w))
+            img = crop_transform(img)
+            depthmap = crop_transform(depthmap)
+
             # random flip
             if random.random() > 0.5:
                 img = tf.hflip(img)
                 depthmap = tf.hflip(depthmap)
             if random.random() > 0.5:
-                img = tf.vflip(img)
-                depthmap = tf.vflip(depthmap)
+                #img = tf.vflip(img)
+                #depthmap = tf.vflip(depthmap)
 
             # select a random rotation
-            angle = random.randrange(-45, 45)
+            angle = random.randrange(-15, 15)
             img = tf.rotate(img, angle, tf.InterpolationMode.BILINEAR)
             depthmap = tf.rotate(depthmap, angle, tf.InterpolationMode.NEAREST)
 
