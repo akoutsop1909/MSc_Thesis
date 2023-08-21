@@ -186,12 +186,12 @@ class MyDataset(Dataset):
             """
 
             # select a random rotation
-            angle = random.randrange(-15, 15)
+            angle = random.randrange(-10, 10)
             img = tf.rotate(img, angle, tf.InterpolationMode.BILINEAR)
             depthmap = tf.rotate(depthmap, angle, tf.InterpolationMode.NEAREST)
 
             # apply some color noise on image
-            color_jitter = transforms.ColorJitter(brightness=0.5, contrast=0.5, saturation=0.5, hue=0.1)
+            color_jitter = transforms.ColorJitter(brightness=0.3, contrast=0.3, saturation=0.3, hue=0.1)
             img = color_jitter(img)
 
         else:
