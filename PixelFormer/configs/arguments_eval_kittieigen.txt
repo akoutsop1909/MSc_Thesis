@@ -10,5 +10,6 @@
 --filenames_file_eval data_splits/eigen_test_files_with_gt.txt
 --min_depth_eval 1e-3
 --max_depth_eval 80
+--save_viz
 
 --checkpoint_path models/pixelformer_kittieigen/model-12000-best_silog_48.15898
