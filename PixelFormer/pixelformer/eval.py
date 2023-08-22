@@ -80,6 +80,9 @@ def eval(model, dataloader_eval, post_process=False):
             pred_depth = pred_depth.cpu().numpy().squeeze()
             gt_depth = gt_depth.cpu().numpy().squeeze()
 
+            # save prediction
+            np.save('pred.npy', pred_depth)
+
         if args.do_kb_crop:
             height, width = gt_depth.shape
             top_margin = int(height - 352)
