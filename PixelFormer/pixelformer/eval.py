@@ -81,7 +81,10 @@ def eval(model, dataloader_eval, post_process=False):
             gt_depth = gt_depth.cpu().numpy().squeeze()
 
             # save prediction
-            np.save('pred.npy', pred_depth)
+            if not os.path.exists('prediction'):
+                os.makedirs('prediction')
+
+            np.save('pred.npy', pred_depth.cpu().detach().numpy())
 
         if args.do_kb_crop:
             height, width = gt_depth.shape
