@@ -70,6 +70,9 @@ def eval(model, dataloader_eval, post_process=False):
                 # print('Invalid depth. continue.')
                 continue
 
+            image = image.resize((256, 192))
+            gt_depth = gt_depth.resize((256, 192))
+
             pred_depth = model(image)
 
             if post_process:
