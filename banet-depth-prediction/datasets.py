@@ -162,36 +162,28 @@ class MyDataset(Dataset):
         # perform data augmentation
         if self.data_augmentation:
 
-            """
             # select a random crop
             i, j, h, w = transforms.RandomCrop.get_params(img, output_size=(out_h, out_w))
 
             # apply the same random crop to img and depthmap
             img = tf.crop(img, i, j, h, w)
             depthmap = tf.crop(depthmap, i, j, h, w)
-            """
-
-            crop_transform = transforms.CenterCrop((out_h, out_w))
-            img = crop_transform(img)
-            depthmap = crop_transform(depthmap)
 
             # random flip
             if random.random() > 0.5:
                 img = tf.hflip(img)
                 depthmap = tf.hflip(depthmap)
-            """
             if random.random() > 0.5:
                 img = tf.vflip(img)
                 depthmap = tf.vflip(depthmap)
-            """
 
             # select a random rotation
-            angle = random.randrange(-10, 10)
+            angle = random.randrange(-45, 45)
             img = tf.rotate(img, angle, tf.InterpolationMode.BILINEAR)
             depthmap = tf.rotate(depthmap, angle, tf.InterpolationMode.NEAREST)
 
             # apply some color noise on image
-            color_jitter = transforms.ColorJitter(brightness=0.3, contrast=0.3, saturation=0.3, hue=0.1)
+            color_jitter = transforms.ColorJitter(brightness=0.5, contrast=0.5, saturation=0.5, hue=0.1)
             img = color_jitter(img)
 
         else:
