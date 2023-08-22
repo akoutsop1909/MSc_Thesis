@@ -86,7 +86,12 @@ def eval(model, dataloader_eval, post_process=False):
             if not os.path.exists('prediction'):
                 os.makedirs('prediction')
 
-            np.save('prediction/pred' + str(count) + '.npy', pred_depth)
+            if count < 10:
+                np.save('prediction/pred00' + str(count) + '.npy', pred_depth)
+            elif 10 <= count < 100:
+                np.save('prediction/pred0' + str(count) + '.npy', pred_depth)
+            else:
+                np.save('prediction/pred' + str(count) + '.npy', pred_depth)
 
             count += 1
 
