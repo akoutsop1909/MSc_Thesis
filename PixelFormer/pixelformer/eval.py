@@ -61,6 +61,7 @@ elif args.dataset == 'kittipred':
 
 def eval(model, dataloader_eval, post_process=False):
     eval_measures = torch.zeros(10).cuda()
+    count = 1
     for _, eval_sample_batched in enumerate(tqdm(dataloader_eval.data)):
         with torch.no_grad():
             image = torch.autograd.Variable(eval_sample_batched['image'].cuda())
@@ -85,7 +86,9 @@ def eval(model, dataloader_eval, post_process=False):
             if not os.path.exists('prediction'):
                 os.makedirs('prediction')
 
-            np.save('prediction/' + eval_sample_batched['depth'][0], pred_depth)
+            np.save('prediction/pred' + str(count) + '.npy', pred_depth)
+
+            count += 1
 
         if args.do_kb_crop:
             height, width = gt_depth.shape
