@@ -85,7 +85,7 @@ def eval(model, dataloader_eval, post_process=False):
             if not os.path.exists('prediction'):
                 os.makedirs('prediction')
 
-            np.save('prediction/' + eval_sample_batched['depth'], pred_depth)
+            np.save('prediction/' + eval_sample_batched['depth'][0], pred_depth)
 
         if args.do_kb_crop:
             height, width = gt_depth.shape
