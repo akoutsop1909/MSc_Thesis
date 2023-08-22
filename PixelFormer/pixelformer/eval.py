@@ -70,9 +70,6 @@ def eval(model, dataloader_eval, post_process=False):
                 # print('Invalid depth. continue.')
                 continue
 
-            image = image.resize((256, 192))
-            gt_depth = gt_depth.resize((256, 192))
-
             pred_depth = model(image)
 
             if post_process:
@@ -88,7 +85,7 @@ def eval(model, dataloader_eval, post_process=False):
             if not os.path.exists('prediction'):
                 os.makedirs('prediction')
 
-            np.save('prediction/pred.npy', pred_depth)
+            np.save('prediction/' + eval_sample_batched['depth'].npy, pred_depth)
 
         if args.do_kb_crop:
             height, width = gt_depth.shape
