@@ -71,6 +71,13 @@ def eval(model, dataloader_eval, post_process=False):
                 continue
 
             pred_depth = model(image)
+
+            # save prediction
+            if not os.path.exists('prediction'):
+                os.makedirs('prediction')
+
+            np.save('pred.npy', pred_depth.cpu().detach().numpy())
+
             if post_process:
                 image_flipped = flip_lr(image)
                 pred_depth_flipped = model(image_flipped)
@@ -79,12 +86,6 @@ def eval(model, dataloader_eval, post_process=False):
 
             pred_depth = pred_depth.cpu().numpy().squeeze()
             gt_depth = gt_depth.cpu().numpy().squeeze()
-
-            # save prediction
-            if not os.path.exists('prediction'):
-                os.makedirs('prediction')
-
-            np.save('pred.npy', pred_depth.cpu().detach().numpy())
 
         if args.do_kb_crop:
             height, width = gt_depth.shape
