@@ -277,8 +277,8 @@ def main_worker(gpu, ngpus_per_node, args):
     # set metrics dataframe
     if not os.path.exists('metrics'):
         os.makedirs('metrics')
-    tmetrics = pd.DataFrame(index=range(60), columns=range(1))
-    tmetrics.columns = ['train_loss']
+    tmetrics = pd.DataFrame(index=range(60), columns=range(2))
+    tmetrics.columns = ['train_loss', 'val_loss']
 
     while epoch < args.num_epochs:
         if args.distributed:
@@ -298,12 +298,12 @@ def main_worker(gpu, ngpus_per_node, args):
             else:
                 mask = (depth_est > 0) & (depth_gt > 0)
 
-            '''
+            """
             # code for debugging
             print("save")
             np.save('gt.npy', depth_gt.cpu().detach().numpy())
             np.save('pred.npy', depth_est.cpu().detach().numpy())
-            '''
+            """
 
             loss = silog_criterion.forward(depth_est, depth_gt, mask.to(torch.bool))
             loss.backward()
@@ -384,7 +384,9 @@ def main_worker(gpu, ngpus_per_node, args):
             global_step += 1
 
         # add metrics to dataframe
-        tmetrics['train_loss'][epoch] = eval_metrics[0]
+        tmetrics['train_loss'][epoch] = loss
+        tmetrics['val_loss'][epoch] = eval_measures[0]
+
         tmetrics.to_csv('metrics/tmetrics.csv', index=False)
 
         epoch += 1
