@@ -3,6 +3,7 @@ import torch
 import torch.backends.cudnn as cudnn
 
 import os, sys
+import cv2
 import argparse
 import numpy as np
 from tqdm import tqdm
@@ -61,6 +62,8 @@ elif args.dataset == 'kittipred':
 
 def eval(model, dataloader_eval, post_process=False):
     eval_measures = torch.zeros(10).cuda()
+    if not os.path.exists('prediction'):
+        os.makedirs('prediction')
     count = 1
     for _, eval_sample_batched in enumerate(tqdm(dataloader_eval.data)):
         with torch.no_grad():
@@ -83,15 +86,13 @@ def eval(model, dataloader_eval, post_process=False):
             gt_depth = gt_depth.cpu().numpy().squeeze()
 
             # save prediction
-            if not os.path.exists('prediction'):
-                os.makedirs('prediction')
-
+            pred = cv2.resize(pred_depth, (256, 192))
             if count < 10:
-                np.save('prediction/pred00' + str(count) + '.npy', pred_depth)
+                np.save('prediction/pred00' + str(count) + '.npy', pred)
             elif 10 <= count < 100:
-                np.save('prediction/pred0' + str(count) + '.npy', pred_depth)
+                np.save('prediction/pred0' + str(count) + '.npy', pred)
             else:
-                np.save('prediction/pred' + str(count) + '.npy', pred_depth)
+                np.save('prediction/pred' + str(count) + '.npy', pred)
 
             count += 1
 

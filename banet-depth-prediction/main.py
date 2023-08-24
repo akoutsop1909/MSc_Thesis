@@ -186,6 +186,9 @@ def main():
         # prepare inference and load model
         inference = Inference(model, SystemConfig.device)
 
+        if not os.path.exists('prediction'):
+            os.makedirs('prediction')
+
         # inference on random images from val dataset
         for i in range(50):
             # select a random image
@@ -199,21 +202,17 @@ def main():
             prediction = inference.predict_single(img)
             duration = inference.get_last_prediction_time()
 
-            # save prediction
-            if not os.path.exists('prediction'):
-                os.makedirs('prediction')
-
-            # for kitti selection
-            df = pd.read_csv('datasets/kitti_selection.csv')
-            temp = df['depth_path'][idx].split('/')
-            save('prediction/' + temp[4], prediction)
-
             """
-            # for diode
+            # save prediction for diode
             df = pd.read_csv('datasets/diode_val.csv')
             temp = df['depth_path'][idx].split('/')
             save('prediction/' + temp[7], prediction)
             """
+
+            # save prediction for kitti selection
+            df = pd.read_csv('datasets/kitti_selection.csv')
+            temp = df['depth_path'][idx].split('/')
+            save('prediction/' + temp[4], prediction)
 
             # print last elapsed time
             print("Inference time: {:.4f} sec".format(duration))

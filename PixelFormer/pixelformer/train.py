@@ -9,6 +9,7 @@ import os, sys, time
 from telnetlib import IP
 import argparse
 import numpy as np
+import pandas as pd
 from tqdm import tqdm
 
 from tensorboardX import SummaryWriter
@@ -273,6 +274,12 @@ def main_worker(gpu, ngpus_per_node, args):
     num_total_steps = args.num_epochs * steps_per_epoch
     epoch = global_step // steps_per_epoch
 
+    # set metrics dataframe
+    if not os.path.exists('metrics'):
+        os.makedirs('metrics')
+    tmetrics = pd.DataFrame(index=range(60), columns=range(1))
+    tmetrics.columns = ['train_loss']
+
     while epoch < args.num_epochs:
         if args.distributed:
             dataloader.train_sampler.set_epoch(epoch)
@@ -375,6 +382,10 @@ def main_worker(gpu, ngpus_per_node, args):
 
             model_just_loaded = False
             global_step += 1
+
+        # add metrics to dataframe
+        tmetrics['train_loss'][epoch] = eval_metrics[0]
+        tmetrics.to_csv('metrics/tmetrics.csv', index=False)
 
         epoch += 1
        
