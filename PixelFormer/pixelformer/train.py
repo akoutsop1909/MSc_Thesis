@@ -277,8 +277,8 @@ def main_worker(gpu, ngpus_per_node, args):
     # set metrics dataframe
     if not os.path.exists('metrics'):
         os.makedirs('metrics')
-    tmetrics = pd.DataFrame(index=range(60), columns=range(3))
-    tmetrics.columns = ['train_loss', 'val_loss', 'val_rmse']
+    tmetrics = pd.DataFrame(index=range(60), columns=range(4))
+    tmetrics.columns = ['train_loss', 'train_rmse', 'val_loss', 'val_rmse']
 
     while epoch < args.num_epochs:
         if args.distributed:
@@ -333,6 +333,8 @@ def main_worker(gpu, ngpus_per_node, args):
                 print_string = 'GPU: {} | examples/s: {:4.2f} | loss: {:.5f} | var sum: {:.3f} avg: {:.3f} | time elapsed: {:.2f}h | time left: {:.2f}h'
                 print(print_string.format(args.gpu, examples_per_sec, loss, var_sum.item(), var_sum.item()/var_cnt, time_sofar, training_time_left))
 
+                train_rmse = (torch.sqrt(torch.pow(depth_est.detach() - depth_gt, 2))).mean()
+
                 if not args.multiprocessing_distributed or (args.multiprocessing_distributed
                                                             and args.rank % ngpus_per_node == 0):
                     writer.add_scalar('silog_loss', loss, global_step)
@@ -385,6 +387,7 @@ def main_worker(gpu, ngpus_per_node, args):
 
         # add metrics to dataframe
         tmetrics['train_loss'][epoch] = loss.item()
+        tmetrics['train_rmse'][epoch] = train_rmse.item()
         tmetrics['val_loss'][epoch] = eval_measures[0].item()
         tmetrics['val_rmse'][epoch] = eval_measures[3].item()
 
