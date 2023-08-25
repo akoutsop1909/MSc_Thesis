@@ -278,7 +278,7 @@ def main_worker(gpu, ngpus_per_node, args):
     if not os.path.exists('metrics'):
         os.makedirs('metrics')
     tmetrics = pd.DataFrame(index=range(60), columns=range(2))
-    tmetrics.columns = ['train_loss', 'val_loss']
+    tmetrics.columns = ['train_loss', 'val_loss', 'val_rmse']
 
     while epoch < args.num_epochs:
         if args.distributed:
@@ -384,8 +384,9 @@ def main_worker(gpu, ngpus_per_node, args):
             global_step += 1
 
         # add metrics to dataframe
-        tmetrics['train_loss'][epoch] = loss
-        tmetrics['val_loss'][epoch] = eval_measures[0]
+        tmetrics['train_loss'][epoch] = loss.item()
+        tmetrics['val_loss'][epoch] = eval_measures[0].item()
+        tmetrics['val_rmse'][epoch] = eval_measures[3].item()
 
         tmetrics.to_csv('metrics/tmetrics.csv', index=False)
 
