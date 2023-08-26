@@ -15,8 +15,6 @@
 --input_height 192
 --input_width 256
 --max_depth 80
---do_random_rotate
---degree 1.0
 --log_directory ./models/
 --multiprocessing_distributed
 --dist_url tcp://127.0.0.1:1235
