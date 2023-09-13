@@ -3,7 +3,7 @@
 --dataset kitti
 --input_height 192
 --input_width 256
---max_depth 80
+--max_depth 100
 
 --data_path_eval /workspace/KITTI
 --gt_path_eval /workspace/KITTI/data_depth_annotated
