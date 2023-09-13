@@ -9,6 +9,6 @@
 --gt_path_eval /workspace/KITTI/data_depth_annotated
 --filenames_file_eval data_splits/eigen_test_files_with_gt.txt
 --min_depth_eval 1e-3
---max_depth_eval 80
+--max_depth_eval 100
 
---checkpoint_path models/pixelformer_kittieigen/model-12000-best_silog_48.15898
+--checkpoint_path model-9000-best_silog_47.83542
