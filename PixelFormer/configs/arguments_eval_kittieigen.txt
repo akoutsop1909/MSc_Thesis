@@ -8,7 +8,7 @@
 --data_path_eval /workspace/KITTI
 --gt_path_eval /workspace/KITTI/data_depth_annotated
 --filenames_file_eval data_splits/eigen_test_files_with_gt.txt
---min_depth_eval 1e-1
+--min_depth_eval 1e-2
 --max_depth_eval 100
 
 --checkpoint_path model-2000-best_silog_30.75690
