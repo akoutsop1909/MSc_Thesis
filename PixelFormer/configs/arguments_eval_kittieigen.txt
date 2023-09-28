@@ -11,4 +11,4 @@
 --min_depth_eval 1e-2
 --max_depth_eval 100
 
---checkpoint_path model-2000-best_silog_30.75690
+--checkpoint_path model-9000-best_silog_43.79609
