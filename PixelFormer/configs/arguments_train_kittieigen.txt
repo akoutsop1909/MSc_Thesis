@@ -1,14 +1,14 @@
 --mode train
 --model_name pixelformer_kittieigen
---encoder large07
---pretrain pretrained/swin_large_patch4_window7_224_22k.pth
+--encoder base07
+--pretrain pretrained/swin_base_patch4_window7_224_22k.pth
 --dataset kitti
 --data_path /workspace/KITTI
 --gt_path /workspace/KITTI/data_depth_annotated
 --filenames_file data_splits/eigen_train_files_with_gt.txt
 --batch_size 8
 --num_epochs 60
---learning_rate 4e-1
+--learning_rate 4e-5
 --weight_decay 1e-1
 --adam_eps 1e-1
 --num_threads 1
