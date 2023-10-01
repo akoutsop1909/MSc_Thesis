@@ -1,7 +1,7 @@
 --mode train
 --model_name pixelformer_kittieigen
---encoder base07
---pretrain pretrained/swin_base_patch4_window7_224_22k.pth
+--encoder large07
+--pretrain pretrained/swin_large_patch4_window7_224_22k.pth
 --dataset kitti
 --data_path /workspace/KITTI
 --gt_path /workspace/KITTI/data_depth_annotated
@@ -15,6 +15,8 @@
 --input_height 192
 --input_width 256
 --max_depth 100
+--do_random_rotate
+--degree 1.0
 --log_directory ./models/
 --multiprocessing_distributed
 --dist_url tcp://127.0.0.1:1234
