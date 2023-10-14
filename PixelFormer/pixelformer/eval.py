@@ -73,6 +73,7 @@ def eval(model, dataloader_eval, post_process=False):
             if not has_valid_depth:
                 # print('Invalid depth. continue.')
                 continue
+            image.save("image.jpeg")
 
             pred_depth = model(image)
 
