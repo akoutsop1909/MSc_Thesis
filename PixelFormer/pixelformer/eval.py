@@ -88,8 +88,10 @@ def eval(model, dataloader_eval, post_process=False):
             # save prediction
             pred = cv2.resize(pred_depth, (256, 192))
             if count < 10:
-                np.save('prediction/pred00' + str(count) + '.npy', pred)
+                np.save('prediction/pred000' + str(count) + '.npy', pred)
             elif 10 <= count < 100:
+                np.save('prediction/pred00' + str(count) + '.npy', pred)
+            elif 100 <= count < 1000:
                 np.save('prediction/pred0' + str(count) + '.npy', pred)
             else:
                 np.save('prediction/pred' + str(count) + '.npy', pred)
