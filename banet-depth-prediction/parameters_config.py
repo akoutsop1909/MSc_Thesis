@@ -24,7 +24,7 @@ class ParametersConfig:
     batch_size: int = 16
 
     # number of epochs
-    num_epoch: int = 60
+    num_epoch: int = 50
 
     # learning rate
     learning_rate: float = 1e-4
@@ -45,4 +45,4 @@ class ParametersConfig:
     input_size: tuple = (256, 192)
 
     # max depth
-    max_depth: float = 100.0
+    max_depth: float = 300.0
