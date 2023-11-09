@@ -103,7 +103,7 @@ class Trainer:
         # set metrics dataframe
         if not os.path.exists('metrics'):
             os.makedirs('metrics')
-        tmetrics = pd.DataFrame(index=range(60), columns=range(6))
+        tmetrics = pd.DataFrame(index=range(50), columns=range(6))
         tmetrics.columns = ['train_loss', 'train_silog', 'train_rmse_loss', 'val_loss', 'val_silog', 'val_rmse_loss']
 
         # upload model to device
