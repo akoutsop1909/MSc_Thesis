@@ -207,12 +207,17 @@ def main():
             df = pd.read_csv('datasets/diode_val.csv')
             temp = df['depth_path'][idx].split('/')
             save('prediction/' + temp[7], prediction)
-            """
 
             # save prediction for kitti selection
             df = pd.read_csv('datasets/kitti_selection.csv')
             temp = df['depth_path'][idx].split('/')
             save('prediction/' + temp[4], prediction)
+            """
+
+            # save prediction for dipae
+            df = pd.read_csv('datasets/dipae.csv')
+            temp = df['raw_path'][idx].split('/')
+            save('dipae/' + temp[4], prediction)
 
             # print last elapsed time
             print("Inference time: {:.4f} sec".format(duration))
