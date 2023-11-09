@@ -217,7 +217,7 @@ def main():
             # save prediction for dipae
             df = pd.read_csv('datasets/dipae.csv')
             temp = df['raw_path'][idx].split('/')
-            save('prediction/' + temp[4], prediction)
+            save('prediction/' + temp[3], prediction)
 
             # print last elapsed time
             print("Inference time: {:.4f} sec".format(duration))
