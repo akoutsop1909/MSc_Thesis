@@ -7,14 +7,14 @@
 --gt_path /workspace/KITTI/data_depth_annotated
 --filenames_file data_splits/eigen_train_files_with_gt.txt
 --batch_size 8
---num_epochs 60
+--num_epochs 50
 --learning_rate 4e-5
 --weight_decay 1e-1
 --adam_eps 1e-1
 --num_threads 1
 --input_height 192
 --input_width 256
---max_depth 100
+--max_depth 300
 --log_directory ./models/
 --multiprocessing_distributed
 --dist_url tcp://127.0.0.1:1234
@@ -26,4 +26,4 @@
 --gt_path_eval /workspace/KITTI/data_depth_annotated
 --filenames_file_eval data_splits/eigen_test_files_with_gt.txt
 --min_depth_eval 1e-2
---max_depth_eval 100
+--max_depth_eval 300
