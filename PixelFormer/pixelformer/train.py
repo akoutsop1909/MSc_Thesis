@@ -277,7 +277,7 @@ def main_worker(gpu, ngpus_per_node, args):
     # set metrics dataframe
     if not os.path.exists('metrics'):
         os.makedirs('metrics')
-    tmetrics = pd.DataFrame(index=range(60), columns=range(4))
+    tmetrics = pd.DataFrame(index=range(50), columns=range(4))
     tmetrics.columns = ['train_loss', 'train_rmse', 'val_loss', 'val_rmse']
 
     while epoch < args.num_epochs:
