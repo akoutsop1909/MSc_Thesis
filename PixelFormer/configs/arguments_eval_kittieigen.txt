@@ -7,7 +7,7 @@
 
 --data_path_eval /workspace/KITTI
 --gt_path_eval /workspace/KITTI/data_depth_annotated
---filenames_file_eval data_splits/kitti_selection.txt
+--filenames_file_eval data_splits/dipae.txt
 --min_depth_eval 1e-2
 --max_depth_eval 300
 
