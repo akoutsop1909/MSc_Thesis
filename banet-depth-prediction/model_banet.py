@@ -57,7 +57,7 @@ class D2SBlock(nn.Module):
         image_size (tuple): Image size as a tuple (height, width)
     """
 
-    def __init__(self, channels_in: int, block_size: int, image_size: tuple = (384, 512)):
+    def __init__(self, channels_in: int, block_size: int, image_size: tuple = (192, 256)):
         super().__init__()
 
         # keep image size
@@ -153,7 +153,7 @@ class D2SBlock_Truncated(nn.Module):
         image_size (tuple): Image size as a tuple (height, width)
     """
 
-    def __init__(self, channels_in: int, block_size: int, image_size: tuple = (384, 512)):
+    def __init__(self, channels_in: int, block_size: int, image_size: tuple = (192, 256)):
         super().__init__()
 
         # keep image size
@@ -236,7 +236,7 @@ class BANet_DenseNet121(nn.Module):
         image_size (tuple): Image size as a tuple (height, width)
     """
 
-    def __init__(self, image_size=(384, 512)):
+    def __init__(self, image_size=(192, 256)):
         super().__init__()
 
         # keep image size

@@ -21,7 +21,7 @@ class ParametersConfig:
     num_workers: int = 0
 
     # batch size
-    batch_size: int = 16
+    batch_size: int = 32
 
     # number of epochs
     num_epoch: int = 50
@@ -42,7 +42,7 @@ class ParametersConfig:
     lr_gamma: float = 0.1
 
     # input size (w, h)
-    input_size: tuple = (384, 512)
+    input_size: tuple = (256, 192)
 
     # max depth
     max_depth: float = 300.0
