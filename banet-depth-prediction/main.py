@@ -244,6 +244,7 @@ def main():
 
         # print results
         print("\n\n--- Performance evaluation for model {} (backbone {}) on device {} ---".format(args.model,
+                                                                                                  args.backbone,
                                                                                                   SystemConfig.device))
         print("Average Loss           = {:.4f}".format(mean_loss))
         print("Average inference time = {:.6f} s".format(mean_duration))

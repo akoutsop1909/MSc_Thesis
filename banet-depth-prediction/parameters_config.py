@@ -42,7 +42,7 @@ class ParametersConfig:
     lr_gamma: float = 0.1
 
     # input size (w, h)
-    input_size: tuple = (256, 192)
+    input_size: tuple = (384, 512)
 
     # max depth
     max_depth: float = 300.0
