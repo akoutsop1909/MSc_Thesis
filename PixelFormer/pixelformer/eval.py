@@ -85,7 +85,7 @@ def eval(model, dataloader_eval, post_process=False):
             pred_depth = pred_depth.cpu().numpy().squeeze()
             gt_depth = gt_depth.cpu().numpy().squeeze()
 
-            np.save('prediction/pred000.npy', pred_depth)
+            np.save('prediction/pred000.npy', gt_depth)
 
             # save prediction
             pred = cv2.resize(pred_depth, (256, 192))
