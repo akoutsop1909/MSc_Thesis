@@ -21,7 +21,7 @@ class ParametersConfig:
     num_workers: int = 0
 
     # batch size
-    batch_size: int = 32
+    batch_size: int = 16
 
     # number of epochs
     num_epoch: int = 50
