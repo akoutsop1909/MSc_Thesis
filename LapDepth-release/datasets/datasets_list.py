@@ -124,19 +124,19 @@ class MyDataset(data.Dataset):
             rgb = rgb.crop((bound_left,bound_top,bound_right,bound_bottom))
         """
 
-        rgb = rgb.resize((256, 192))
+        rgb = rgb.resize((512, 384))
         rgb = np.asarray(rgb, dtype=np.float32)/255.0
 
         if _is_pil_image(gt):
             #gt = gt.crop((bound_left,bound_top,bound_right,bound_bottom))
-            gt = gt.resize((256, 192))
+            gt = gt.resize((512, 384))
             gt = (np.asarray(gt, dtype=np.float32))/self.depth_scale
             gt = np.expand_dims(gt, axis=2)
             gt = np.clip(gt, 0, self.args.max_depth)
         if self.use_dense_depth is True:
             if _is_pil_image(gt_dense):
                 #gt_dense = gt_dense.crop((bound_left,bound_top,bound_right,bound_bottom))
-                gt_dense = gt_dense.resize((256, 192))
+                gt_dense = gt_dense.resize((512, 384))
                 gt_dense = (np.asarray(gt_dense, dtype=np.float32))/self.depth_scale
                 gt_dense = np.expand_dims(gt_dense, axis=2)
                 gt_dense = np.clip(gt_dense, 0, self.args.max_depth)
