@@ -1,0 +1,2899 @@
+==> Distributed Training
+==> Initial rank:  0
+==> dist_url:  tcp://127.0.0.1:10012
+==> gpu: 0 , rank: 0 , batch_size: 4 , workers: 0
+=> number of GPU:  0,1,2,3
+=> information will be saved in checkpoints/KITTI,b4/04-23-15:33
+=> Dataset:  KITTI
+=> Data height: 352, width: 704 
+=> train samples_num: 23158  
+=> test  samples_num: 697  
+=> creating model
+==> Norm: BN
+===============================================
+model encoder parameters:  57996608
+model decoder parameters:  15572864
+Total parameters: 73569472
+Total trainable parameters: 73135104
+===============================================
+=> use SyncBatchNorm
+=> Model Initialized on GPU: 0 - Distributed Traning
+training start!
+Training for 25 epochs...
+ - valid y range: 117 ~ 349
+epoch: 1,  100/5790
+[   100/115800]  total: 17.02847, gradient: 0.00000, scale_inv: 17.02847
+epoch: 1,  200/5790
+[   200/115800]  total: 14.91125, gradient: 0.00000, scale_inv: 14.91125
+epoch: 1,  300/5790
+[   300/115800]  total: 16.84986, gradient: 0.00000, scale_inv: 16.84986
+epoch: 1,  400/5790
+[   400/115800]  total: 12.00896, gradient: 0.00000, scale_inv: 12.00896
+epoch: 1,  500/5790
+[   500/115800]  total: 17.58508, gradient: 0.00000, scale_inv: 17.58508
+epoch: 1,  600/5790
+[   600/115800]  total: 18.28363, gradient: 0.00000, scale_inv: 18.28363
+epoch: 1,  700/5790
+[   700/115800]  total: 15.66837, gradient: 0.00000, scale_inv: 15.66837
+epoch: 1,  800/5790
+[   800/115800]  total: 15.29691, gradient: 0.00000, scale_inv: 15.29691
+epoch: 1,  900/5790
+[   900/115800]  total: 16.77996, gradient: 0.00000, scale_inv: 16.77996
+epoch: 1,  1000/5790
+[  1000/115800]  total: 17.02219, gradient: 0.00000, scale_inv: 17.02219
+epoch: 1,  1100/5790
+[  1100/115800]  total: 17.12638, gradient: 0.00000, scale_inv: 17.12638
+epoch: 1,  1200/5790
+[  1200/115800]  total: 16.59210, gradient: 0.00000, scale_inv: 16.59210
+epoch: 1,  1300/5790
+[  1300/115800]  total: 16.05527, gradient: 0.00000, scale_inv: 16.05527
+epoch: 1,  1400/5790
+[  1400/115800]  total: 16.97780, gradient: 0.00000, scale_inv: 16.97780
+epoch: 1,  1500/5790
+[  1500/115800]  total: 18.18394, gradient: 0.00000, scale_inv: 18.18394
+epoch: 1,  1600/5790
+[  1600/115800]  total: 17.71354, gradient: 0.00000, scale_inv: 17.71354
+epoch: 1,  1700/5790
+[  1700/115800]  total: 19.11691, gradient: 0.00000, scale_inv: 19.11691
+epoch: 1,  1800/5790
+[  1800/115800]  total: 20.38778, gradient: 0.00000, scale_inv: 20.38778
+epoch: 1,  1900/5790
+[  1900/115800]  total: 15.73812, gradient: 0.00000, scale_inv: 15.73812
+epoch: 1,  2000/5790
+[  2000/115800]  total: 18.10384, gradient: 0.00000, scale_inv: 18.10384
+epoch: 1,  2100/5790
+[  2100/115800]  total: 19.12855, gradient: 0.00000, scale_inv: 19.12855
+epoch: 1,  2200/5790
+[  2200/115800]  total: 18.69607, gradient: 0.00000, scale_inv: 18.69607
+epoch: 1,  2300/5790
+[  2300/115800]  total: 17.40510, gradient: 0.00000, scale_inv: 17.40510
+epoch: 1,  2400/5790
+[  2400/115800]  total: 14.96824, gradient: 0.00000, scale_inv: 14.96824
+epoch: 1,  2500/5790
+[  2500/115800]  total: 15.04800, gradient: 0.00000, scale_inv: 15.04800
+epoch: 1,  2600/5790
+[  2600/115800]  total: 20.30547, gradient: 0.00000, scale_inv: 20.30547
+epoch: 1,  2700/5790
+[  2700/115800]  total: 18.62056, gradient: 0.00000, scale_inv: 18.62056
+epoch: 1,  2800/5790
+[  2800/115800]  total: 16.56475, gradient: 0.00000, scale_inv: 16.56475
+epoch: 1,  2900/5790
+[  2900/115800]  total: 16.91238, gradient: 0.00000, scale_inv: 16.91238
+epoch: 1,  3000/5790
+[  3000/115800]  total: 15.13582, gradient: 0.00000, scale_inv: 15.13582
+epoch: 1,  3100/5790
+[  3100/115800]  total: 17.61098, gradient: 0.00000, scale_inv: 17.61098
+epoch: 1,  3200/5790
+[  3200/115800]  total: 16.78623, gradient: 0.00000, scale_inv: 16.78623
+epoch: 1,  3300/5790
+[  3300/115800]  total: 18.35548, gradient: 0.00000, scale_inv: 18.35548
+epoch: 1,  3400/5790
+[  3400/115800]  total: 15.96472, gradient: 0.00000, scale_inv: 15.96472
+epoch: 1,  3500/5790
+[  3500/115800]  total: 16.14401, gradient: 0.00000, scale_inv: 16.14401
+epoch: 1,  3600/5790
+[  3600/115800]  total: 15.15544, gradient: 0.00000, scale_inv: 15.15544
+epoch: 1,  3700/5790
+[  3700/115800]  total: 19.33603, gradient: 0.00000, scale_inv: 19.33603
+epoch: 1,  3800/5790
+[  3800/115800]  total: 15.81600, gradient: 0.00000, scale_inv: 15.81600
+epoch: 1,  3900/5790
+[  3900/115800]  total: 18.88382, gradient: 0.00000, scale_inv: 18.88382
+epoch: 1,  4000/5790
+[  4000/115800]  total: 14.28420, gradient: 0.00000, scale_inv: 14.28420
+epoch: 1,  4100/5790
+[  4100/115800]  total: 13.34778, gradient: 0.00000, scale_inv: 13.34778
+epoch: 1,  4200/5790
+[  4200/115800]  total: 17.36021, gradient: 0.00000, scale_inv: 17.36021
+epoch: 1,  4300/5790
+[  4300/115800]  total: 20.93711, gradient: 0.00000, scale_inv: 20.93711
+epoch: 1,  4400/5790
+[  4400/115800]  total: 14.30402, gradient: 0.00000, scale_inv: 14.30402
+epoch: 1,  4500/5790
+[  4500/115800]  total: 17.30931, gradient: 0.00000, scale_inv: 17.30931
+epoch: 1,  4600/5790
+[  4600/115800]  total: 15.85540, gradient: 0.00000, scale_inv: 15.85540
+epoch: 1,  4700/5790
+[  4700/115800]  total: 15.83841, gradient: 0.00000, scale_inv: 15.83841
+epoch: 1,  4800/5790
+[  4800/115800]  total: 17.50705, gradient: 0.00000, scale_inv: 17.50705
+epoch: 1,  4900/5790
+[  4900/115800]  total: 16.88724, gradient: 0.00000, scale_inv: 16.88724
+epoch: 1,  5000/5790
+[  5000/115800]  total: 16.16761, gradient: 0.00000, scale_inv: 16.16761
+epoch: 1,  5100/5790
+[  5100/115800]  total: 17.08075, gradient: 0.00000, scale_inv: 17.08075
+epoch: 1,  5200/5790
+[  5200/115800]  total: 17.06929, gradient: 0.00000, scale_inv: 17.06929
+epoch: 1,  5300/5790
+[  5300/115800]  total: 15.70077, gradient: 0.00000, scale_inv: 15.70077
+epoch: 1,  5400/5790
+[  5400/115800]  total: 18.81359, gradient: 0.00000, scale_inv: 18.81359
+epoch: 1,  5500/5790
+[  5500/115800]  total: 18.97767, gradient: 0.00000, scale_inv: 18.97767
+epoch: 1,  5600/5790
+[  5600/115800]  total: 20.31229, gradient: 0.00000, scale_inv: 20.31229
+epoch: 1,  5700/5790
+[  5700/115800]  total: 14.96948, gradient: 0.00000, scale_inv: 14.96948
+=> learning decay... current lr: 0.000098
+epoch: 2,  100/5790
+[  5890/115800]  total: 19.06786, gradient: 0.00000, scale_inv: 19.06786
+epoch: 2,  200/5790
+[  5990/115800]  total: 17.21582, gradient: 0.00000, scale_inv: 17.21582
+epoch: 2,  300/5790
+[  6090/115800]  total: 17.48828, gradient: 0.00000, scale_inv: 17.48828
+epoch: 2,  400/5790
+[  6190/115800]  total: 15.48333, gradient: 0.00000, scale_inv: 15.48333
+epoch: 2,  500/5790
+[  6290/115800]  total: 16.20348, gradient: 0.00000, scale_inv: 16.20348
+epoch: 2,  600/5790
+[  6390/115800]  total: 15.56126, gradient: 0.00000, scale_inv: 15.56126
+epoch: 2,  700/5790
+[  6490/115800]  total: 17.19381, gradient: 0.00000, scale_inv: 17.19381
+epoch: 2,  800/5790
+[  6590/115800]  total: 16.16906, gradient: 0.00000, scale_inv: 16.16906
+epoch: 2,  900/5790
+[  6690/115800]  total: 19.07490, gradient: 0.00000, scale_inv: 19.07490
+epoch: 2,  1000/5790
+[  6790/115800]  total: 15.95800, gradient: 0.00000, scale_inv: 15.95800
+epoch: 2,  1100/5790
+[  6890/115800]  total: 17.98368, gradient: 0.00000, scale_inv: 17.98368
+epoch: 2,  1200/5790
+[  6990/115800]  total: 15.75779, gradient: 0.00000, scale_inv: 15.75779
+epoch: 2,  1300/5790
+[  7090/115800]  total: 17.46982, gradient: 0.00000, scale_inv: 17.46982
+epoch: 2,  1400/5790
+[  7190/115800]  total: 17.65785, gradient: 0.00000, scale_inv: 17.65785
+epoch: 2,  1500/5790
+[  7290/115800]  total: 15.10691, gradient: 0.00000, scale_inv: 15.10691
+epoch: 2,  1600/5790
+[  7390/115800]  total: 17.13639, gradient: 0.00000, scale_inv: 17.13639
+epoch: 2,  1700/5790
+[  7490/115800]  total: 18.00764, gradient: 0.00000, scale_inv: 18.00764
+epoch: 2,  1800/5790
+[  7590/115800]  total: 12.55643, gradient: 0.00000, scale_inv: 12.55643
+epoch: 2,  1900/5790
+[  7690/115800]  total: 20.75365, gradient: 0.00000, scale_inv: 20.75365
+epoch: 2,  2000/5790
+[  7790/115800]  total: 15.97029, gradient: 0.00000, scale_inv: 15.97029
+epoch: 2,  2100/5790
+[  7890/115800]  total: 16.68840, gradient: 0.00000, scale_inv: 16.68840
+epoch: 2,  2200/5790
+[  7990/115800]  total: 15.41637, gradient: 0.00000, scale_inv: 15.41637
+epoch: 2,  2300/5790
+[  8090/115800]  total: 16.62672, gradient: 0.00000, scale_inv: 16.62672
+epoch: 2,  2400/5790
+[  8190/115800]  total: 17.20975, gradient: 0.00000, scale_inv: 17.20975
+epoch: 2,  2500/5790
+[  8290/115800]  total: 17.72039, gradient: 0.00000, scale_inv: 17.72039
+epoch: 2,  2600/5790
+[  8390/115800]  total: 17.71584, gradient: 0.00000, scale_inv: 17.71584
+epoch: 2,  2700/5790
+[  8490/115800]  total: 20.32611, gradient: 0.00000, scale_inv: 20.32611
+epoch: 2,  2800/5790
+[  8590/115800]  total: 16.37293, gradient: 0.00000, scale_inv: 16.37293
+epoch: 2,  2900/5790
+[  8690/115800]  total: 15.94874, gradient: 0.00000, scale_inv: 15.94874
+epoch: 2,  3000/5790
+[  8790/115800]  total: 17.17022, gradient: 0.00000, scale_inv: 17.17022
+epoch: 2,  3100/5790
+[  8890/115800]  total: 16.79968, gradient: 0.00000, scale_inv: 16.79968
+epoch: 2,  3200/5790
+[  8990/115800]  total: 15.94643, gradient: 0.00000, scale_inv: 15.94643
+epoch: 2,  3300/5790
+[  9090/115800]  total: 19.61077, gradient: 0.00000, scale_inv: 19.61077
+epoch: 2,  3400/5790
+[  9190/115800]  total: 18.31703, gradient: 0.00000, scale_inv: 18.31703
+epoch: 2,  3500/5790
+[  9290/115800]  total: 15.13448, gradient: 0.00000, scale_inv: 15.13448
+epoch: 2,  3600/5790
+[  9390/115800]  total: 16.05321, gradient: 0.00000, scale_inv: 16.05321
+epoch: 2,  3700/5790
+[  9490/115800]  total: 17.57875, gradient: 0.00000, scale_inv: 17.57875
+epoch: 2,  3800/5790
+[  9590/115800]  total: 19.55151, gradient: 0.00000, scale_inv: 19.55151
+epoch: 2,  3900/5790
+[  9690/115800]  total: 17.98493, gradient: 0.00000, scale_inv: 17.98493
+epoch: 2,  4000/5790
+[  9790/115800]  total: 15.27274, gradient: 0.00000, scale_inv: 15.27274
+epoch: 2,  4100/5790
+[  9890/115800]  total: 16.03588, gradient: 0.00000, scale_inv: 16.03588
+epoch: 2,  4200/5790
+[  9990/115800]  total: 16.24969, gradient: 0.00000, scale_inv: 16.24969
+epoch: 2,  4300/5790
+[ 10090/115800]  total: 16.15526, gradient: 0.00000, scale_inv: 16.15526
+epoch: 2,  4400/5790
+[ 10190/115800]  total: 16.33291, gradient: 0.00000, scale_inv: 16.33291
+epoch: 2,  4500/5790
+[ 10290/115800]  total: 18.23090, gradient: 0.00000, scale_inv: 18.23090
+epoch: 2,  4600/5790
+[ 10390/115800]  total: 19.37895, gradient: 0.00000, scale_inv: 19.37895
+epoch: 2,  4700/5790
+[ 10490/115800]  total: 17.14500, gradient: 0.00000, scale_inv: 17.14500
+epoch: 2,  4800/5790
+[ 10590/115800]  total: 18.88822, gradient: 0.00000, scale_inv: 18.88822
+epoch: 2,  4900/5790
+[ 10690/115800]  total: 16.85082, gradient: 0.00000, scale_inv: 16.85082
+epoch: 2,  5000/5790
+[ 10790/115800]  total: 15.59397, gradient: 0.00000, scale_inv: 15.59397
+epoch: 2,  5100/5790
+[ 10890/115800]  total: 17.06833, gradient: 0.00000, scale_inv: 17.06833
+epoch: 2,  5200/5790
+[ 10990/115800]  total: 16.89511, gradient: 0.00000, scale_inv: 16.89511
+epoch: 2,  5300/5790
+[ 11090/115800]  total: 17.02947, gradient: 0.00000, scale_inv: 17.02947
+epoch: 2,  5400/5790
+[ 11190/115800]  total: 18.70959, gradient: 0.00000, scale_inv: 18.70959
+epoch: 2,  5500/5790
+[ 11290/115800]  total: 18.22107, gradient: 0.00000, scale_inv: 18.22107
+epoch: 2,  5600/5790
+[ 11390/115800]  total: 17.96318, gradient: 0.00000, scale_inv: 17.96318
+epoch: 2,  5700/5790
+[ 11490/115800]  total: 17.31112, gradient: 0.00000, scale_inv: 17.31112
+=> learning decay... current lr: 0.000095
+epoch: 3,  100/5790
+[ 11680/115800]  total: 19.72086, gradient: 0.00000, scale_inv: 19.72086
+epoch: 3,  200/5790
+[ 11780/115800]  total: 14.72321, gradient: 0.00000, scale_inv: 14.72321
+epoch: 3,  300/5790
+[ 11880/115800]  total: 15.64357, gradient: 0.00000, scale_inv: 15.64357
+epoch: 3,  400/5790
+[ 11980/115800]  total: 16.52285, gradient: 0.00000, scale_inv: 16.52285
+epoch: 3,  500/5790
+[ 12080/115800]  total: 18.42999, gradient: 0.00000, scale_inv: 18.42999
+epoch: 3,  600/5790
+[ 12180/115800]  total: 18.05053, gradient: 0.00000, scale_inv: 18.05053
+epoch: 3,  700/5790
+[ 12280/115800]  total: 16.48023, gradient: 0.00000, scale_inv: 16.48023
+epoch: 3,  800/5790
+[ 12380/115800]  total: 20.39793, gradient: 0.00000, scale_inv: 20.39793
+epoch: 3,  900/5790
+[ 12480/115800]  total: 17.23502, gradient: 0.00000, scale_inv: 17.23502
+epoch: 3,  1000/5790
+[ 12580/115800]  total: 16.14694, gradient: 0.00000, scale_inv: 16.14694
+epoch: 3,  1100/5790
+[ 12680/115800]  total: 15.70445, gradient: 0.00000, scale_inv: 15.70445
+epoch: 3,  1200/5790
+[ 12780/115800]  total: 13.47723, gradient: 0.00000, scale_inv: 13.47723
+epoch: 3,  1300/5790
+[ 12880/115800]  total: 16.51036, gradient: 0.00000, scale_inv: 16.51036
+epoch: 3,  1400/5790
+[ 12980/115800]  total: 16.60431, gradient: 0.00000, scale_inv: 16.60431
+epoch: 3,  1500/5790
+[ 13080/115800]  total: 17.25349, gradient: 0.00000, scale_inv: 17.25349
+epoch: 3,  1600/5790
+[ 13180/115800]  total: 17.70285, gradient: 0.00000, scale_inv: 17.70285
+epoch: 3,  1700/5790
+[ 13280/115800]  total: 18.66293, gradient: 0.00000, scale_inv: 18.66293
+epoch: 3,  1800/5790
+[ 13380/115800]  total: 16.90281, gradient: 0.00000, scale_inv: 16.90281
+epoch: 3,  1900/5790
+[ 13480/115800]  total: 14.88992, gradient: 0.00000, scale_inv: 14.88992
+epoch: 3,  2000/5790
+[ 13580/115800]  total: 15.98572, gradient: 0.00000, scale_inv: 15.98572
+epoch: 3,  2100/5790
+[ 13680/115800]  total: 20.07978, gradient: 0.00000, scale_inv: 20.07978
+epoch: 3,  2200/5790
+[ 13780/115800]  total: 16.72789, gradient: 0.00000, scale_inv: 16.72789
+epoch: 3,  2300/5790
+[ 13880/115800]  total: 19.13805, gradient: 0.00000, scale_inv: 19.13805
+epoch: 3,  2400/5790
+[ 13980/115800]  total: 16.28332, gradient: 0.00000, scale_inv: 16.28332
+epoch: 3,  2500/5790
+[ 14080/115800]  total: 18.09210, gradient: 0.00000, scale_inv: 18.09210
+epoch: 3,  2600/5790
+[ 14180/115800]  total: 17.07081, gradient: 0.00000, scale_inv: 17.07081
+epoch: 3,  2700/5790
+[ 14280/115800]  total: 19.60277, gradient: 0.00000, scale_inv: 19.60277
+epoch: 3,  2800/5790
+[ 14380/115800]  total: 15.55019, gradient: 0.00000, scale_inv: 15.55019
+epoch: 3,  2900/5790
+[ 14480/115800]  total: 16.99672, gradient: 0.00000, scale_inv: 16.99672
+epoch: 3,  3000/5790
+[ 14580/115800]  total: 13.90534, gradient: 0.00000, scale_inv: 13.90534
+epoch: 3,  3100/5790
+[ 14680/115800]  total: 15.23052, gradient: 0.00000, scale_inv: 15.23052
+epoch: 3,  3200/5790
+[ 14780/115800]  total: 17.74384, gradient: 0.00000, scale_inv: 17.74384
+epoch: 3,  3300/5790
+[ 14880/115800]  total: 17.58249, gradient: 0.00000, scale_inv: 17.58249
+epoch: 3,  3400/5790
+[ 14980/115800]  total: 17.84628, gradient: 0.00000, scale_inv: 17.84628
+epoch: 3,  3500/5790
+[ 15080/115800]  total: 17.21179, gradient: 0.00000, scale_inv: 17.21179
+epoch: 3,  3600/5790
+[ 15180/115800]  total: 18.15154, gradient: 0.00000, scale_inv: 18.15154
+epoch: 3,  3700/5790
+[ 15280/115800]  total: 16.32780, gradient: 0.00000, scale_inv: 16.32780
+epoch: 3,  3800/5790
+[ 15380/115800]  total: 16.42037, gradient: 0.00000, scale_inv: 16.42037
+epoch: 3,  3900/5790
+[ 15480/115800]  total: 17.66472, gradient: 0.00000, scale_inv: 17.66472
+epoch: 3,  4000/5790
+[ 15580/115800]  total: 17.54822, gradient: 0.00000, scale_inv: 17.54822
+epoch: 3,  4100/5790
+[ 15680/115800]  total: 16.81084, gradient: 0.00000, scale_inv: 16.81084
+epoch: 3,  4200/5790
+[ 15780/115800]  total: 16.57617, gradient: 0.00000, scale_inv: 16.57617
+epoch: 3,  4300/5790
+[ 15880/115800]  total: 18.47996, gradient: 0.00000, scale_inv: 18.47996
+epoch: 3,  4400/5790
+[ 15980/115800]  total: 16.26159, gradient: 0.00000, scale_inv: 16.26159
+epoch: 3,  4500/5790
+[ 16080/115800]  total: 17.18721, gradient: 0.00000, scale_inv: 17.18721
+epoch: 3,  4600/5790
+[ 16180/115800]  total: 16.45643, gradient: 0.00000, scale_inv: 16.45643
+epoch: 3,  4700/5790
+[ 16280/115800]  total: 20.11095, gradient: 0.00000, scale_inv: 20.11095
+epoch: 3,  4800/5790
+[ 16380/115800]  total: 15.19603, gradient: 0.00000, scale_inv: 15.19603
+epoch: 3,  4900/5790
+[ 16480/115800]  total: 15.26546, gradient: 0.00000, scale_inv: 15.26546
+epoch: 3,  5000/5790
+[ 16580/115800]  total: 17.98314, gradient: 0.00000, scale_inv: 17.98314
+epoch: 3,  5100/5790
+[ 16680/115800]  total: 17.68538, gradient: 0.00000, scale_inv: 17.68538
+epoch: 3,  5200/5790
+[ 16780/115800]  total: 16.49455, gradient: 0.00000, scale_inv: 16.49455
+epoch: 3,  5300/5790
+[ 16880/115800]  total: 17.46417, gradient: 0.00000, scale_inv: 17.46417
+epoch: 3,  5400/5790
+[ 16980/115800]  total: 14.26849, gradient: 0.00000, scale_inv: 14.26849
+epoch: 3,  5500/5790
+[ 17080/115800]  total: 17.32391, gradient: 0.00000, scale_inv: 17.32391
+epoch: 3,  5600/5790
+[ 17180/115800]  total: 20.90584, gradient: 0.00000, scale_inv: 20.90584
+epoch: 3,  5700/5790
+[ 17280/115800]  total: 17.45455, gradient: 0.00000, scale_inv: 17.45455
+=> learning decay... current lr: 0.000093
+epoch: 4,  100/5790
+[ 17470/115800]  total: 16.42893, gradient: 0.00000, scale_inv: 16.42893
+epoch: 4,  200/5790
+[ 17570/115800]  total: 17.00411, gradient: 0.00000, scale_inv: 17.00411
+epoch: 4,  300/5790
+[ 17670/115800]  total: 15.15113, gradient: 0.00000, scale_inv: 15.15113
+epoch: 4,  400/5790
+[ 17770/115800]  total: 15.66921, gradient: 0.00000, scale_inv: 15.66921
+epoch: 4,  500/5790
+[ 17870/115800]  total: 15.21651, gradient: 0.00000, scale_inv: 15.21651
+epoch: 4,  600/5790
+[ 17970/115800]  total: 13.96945, gradient: 0.00000, scale_inv: 13.96945
+epoch: 4,  700/5790
+[ 18070/115800]  total: 17.74678, gradient: 0.00000, scale_inv: 17.74678
+epoch: 4,  800/5790
+[ 18170/115800]  total: 15.99797, gradient: 0.00000, scale_inv: 15.99797
+epoch: 4,  900/5790
+[ 18270/115800]  total: 15.31289, gradient: 0.00000, scale_inv: 15.31289
+epoch: 4,  1000/5790
+[ 18370/115800]  total: 18.22786, gradient: 0.00000, scale_inv: 18.22786
+epoch: 4,  1100/5790
+[ 18470/115800]  total: 17.38323, gradient: 0.00000, scale_inv: 17.38323
+epoch: 4,  1200/5790
+[ 18570/115800]  total: 17.66164, gradient: 0.00000, scale_inv: 17.66164
+epoch: 4,  1300/5790
+[ 18670/115800]  total: 17.45115, gradient: 0.00000, scale_inv: 17.45115
+epoch: 4,  1400/5790
+[ 18770/115800]  total: 18.85777, gradient: 0.00000, scale_inv: 18.85777
+epoch: 4,  1500/5790
+[ 18870/115800]  total: 17.61430, gradient: 0.00000, scale_inv: 17.61430
+epoch: 4,  1600/5790
+[ 18970/115800]  total: 16.79973, gradient: 0.00000, scale_inv: 16.79973
+epoch: 4,  1700/5790
+[ 19070/115800]  total: 16.75976, gradient: 0.00000, scale_inv: 16.75976
+epoch: 4,  1800/5790
+[ 19170/115800]  total: 17.27468, gradient: 0.00000, scale_inv: 17.27468
+epoch: 4,  1900/5790
+[ 19270/115800]  total: 17.15327, gradient: 0.00000, scale_inv: 17.15327
+epoch: 4,  2000/5790
+[ 19370/115800]  total: 17.52850, gradient: 0.00000, scale_inv: 17.52850
+epoch: 4,  2100/5790
+[ 19470/115800]  total: 16.56787, gradient: 0.00000, scale_inv: 16.56787
+epoch: 4,  2200/5790
+[ 19570/115800]  total: 13.99284, gradient: 0.00000, scale_inv: 13.99284
+epoch: 4,  2300/5790
+[ 19670/115800]  total: 16.22937, gradient: 0.00000, scale_inv: 16.22937
+epoch: 4,  2400/5790
+[ 19770/115800]  total: 15.82113, gradient: 0.00000, scale_inv: 15.82113
+epoch: 4,  2500/5790
+[ 19870/115800]  total: 17.26140, gradient: 0.00000, scale_inv: 17.26140
+epoch: 4,  2600/5790
+[ 19970/115800]  total: 15.93264, gradient: 0.00000, scale_inv: 15.93264
+epoch: 4,  2700/5790
+[ 20070/115800]  total: 15.94092, gradient: 0.00000, scale_inv: 15.94092
+epoch: 4,  2800/5790
+[ 20170/115800]  total: 16.91614, gradient: 0.00000, scale_inv: 16.91614
+epoch: 4,  2900/5790
+[ 20270/115800]  total: 15.72286, gradient: 0.00000, scale_inv: 15.72286
+epoch: 4,  3000/5790
+[ 20370/115800]  total: 16.21391, gradient: 0.00000, scale_inv: 16.21391
+epoch: 4,  3100/5790
+[ 20470/115800]  total: 18.07837, gradient: 0.00000, scale_inv: 18.07837
+epoch: 4,  3200/5790
+[ 20570/115800]  total: 15.59550, gradient: 0.00000, scale_inv: 15.59550
+epoch: 4,  3300/5790
+[ 20670/115800]  total: 15.51549, gradient: 0.00000, scale_inv: 15.51549
+epoch: 4,  3400/5790
+[ 20770/115800]  total: 15.53608, gradient: 0.00000, scale_inv: 15.53608
+epoch: 4,  3500/5790
+[ 20870/115800]  total: 15.33888, gradient: 0.00000, scale_inv: 15.33888
+epoch: 4,  3600/5790
+[ 20970/115800]  total: 17.55479, gradient: 0.00000, scale_inv: 17.55479
+epoch: 4,  3700/5790
+[ 21070/115800]  total: 15.93257, gradient: 0.00000, scale_inv: 15.93257
+epoch: 4,  3800/5790
+[ 21170/115800]  total: 20.41767, gradient: 0.00000, scale_inv: 20.41767
+epoch: 4,  3900/5790
+[ 21270/115800]  total: 14.83123, gradient: 0.00000, scale_inv: 14.83123
+epoch: 4,  4000/5790
+[ 21370/115800]  total: 15.99251, gradient: 0.00000, scale_inv: 15.99251
+epoch: 4,  4100/5790
+[ 21470/115800]  total: 15.61842, gradient: 0.00000, scale_inv: 15.61842
+epoch: 4,  4200/5790
+[ 21570/115800]  total: 15.71956, gradient: 0.00000, scale_inv: 15.71956
+epoch: 4,  4300/5790
+[ 21670/115800]  total: 15.94308, gradient: 0.00000, scale_inv: 15.94308
+epoch: 4,  4400/5790
+[ 21770/115800]  total: 17.63543, gradient: 0.00000, scale_inv: 17.63543
+epoch: 4,  4500/5790
+[ 21870/115800]  total: 16.91253, gradient: 0.00000, scale_inv: 16.91253
+epoch: 4,  4600/5790
+[ 21970/115800]  total: 16.70064, gradient: 0.00000, scale_inv: 16.70064
+epoch: 4,  4700/5790
+[ 22070/115800]  total: 19.89988, gradient: 0.00000, scale_inv: 19.89988
+epoch: 4,  4800/5790
+[ 22170/115800]  total: 16.43291, gradient: 0.00000, scale_inv: 16.43291
+epoch: 4,  4900/5790
+[ 22270/115800]  total: 17.20691, gradient: 0.00000, scale_inv: 17.20691
+epoch: 4,  5000/5790
+[ 22370/115800]  total: 17.07534, gradient: 0.00000, scale_inv: 17.07534
+epoch: 4,  5100/5790
+[ 22470/115800]  total: 15.90746, gradient: 0.00000, scale_inv: 15.90746
+epoch: 4,  5200/5790
+[ 22570/115800]  total: 17.71053, gradient: 0.00000, scale_inv: 17.71053
+epoch: 4,  5300/5790
+[ 22670/115800]  total: 16.78443, gradient: 0.00000, scale_inv: 16.78443
+epoch: 4,  5400/5790
+[ 22770/115800]  total: 15.91329, gradient: 0.00000, scale_inv: 15.91329
+epoch: 4,  5500/5790
+[ 22870/115800]  total: 17.28300, gradient: 0.00000, scale_inv: 17.28300
+epoch: 4,  5600/5790
+[ 22970/115800]  total: 17.06323, gradient: 0.00000, scale_inv: 17.06323
+epoch: 4,  5700/5790
+[ 23070/115800]  total: 17.18663, gradient: 0.00000, scale_inv: 17.18663
+=> learning decay... current lr: 0.000090
+epoch: 5,  100/5790
+[ 23260/115800]  total: 15.89106, gradient: 0.00000, scale_inv: 15.89106
+epoch: 5,  200/5790
+[ 23360/115800]  total: 18.33058, gradient: 0.00000, scale_inv: 18.33058
+epoch: 5,  300/5790
+[ 23460/115800]  total: 18.21965, gradient: 0.00000, scale_inv: 18.21965
+epoch: 5,  400/5790
+[ 23560/115800]  total: 20.27609, gradient: 0.00000, scale_inv: 20.27609
+epoch: 5,  500/5790
+[ 23660/115800]  total: 17.60975, gradient: 0.00000, scale_inv: 17.60975
+epoch: 5,  600/5790
+[ 23760/115800]  total: 16.62313, gradient: 0.00000, scale_inv: 16.62313
+epoch: 5,  700/5790
+[ 23860/115800]  total: 15.81433, gradient: 0.00000, scale_inv: 15.81433
+epoch: 5,  800/5790
+[ 23960/115800]  total: 18.83134, gradient: 0.00000, scale_inv: 18.83134
+epoch: 5,  900/5790
+[ 24060/115800]  total: 16.16039, gradient: 0.00000, scale_inv: 16.16039
+epoch: 5,  1000/5790
+[ 24160/115800]  total: 18.79261, gradient: 0.00000, scale_inv: 18.79261
+epoch: 5,  1100/5790
+[ 24260/115800]  total: 16.23898, gradient: 0.00000, scale_inv: 16.23898
+epoch: 5,  1200/5790
+[ 24360/115800]  total: 16.74045, gradient: 0.00000, scale_inv: 16.74045
+epoch: 5,  1300/5790
+[ 24460/115800]  total: 16.72038, gradient: 0.00000, scale_inv: 16.72038
+epoch: 5,  1400/5790
+[ 24560/115800]  total: 15.82079, gradient: 0.00000, scale_inv: 15.82079
+epoch: 5,  1500/5790
+[ 24660/115800]  total: 18.29345, gradient: 0.00000, scale_inv: 18.29345
+epoch: 5,  1600/5790
+[ 24760/115800]  total: 16.26730, gradient: 0.00000, scale_inv: 16.26730
+epoch: 5,  1700/5790
+[ 24860/115800]  total: 18.58007, gradient: 0.00000, scale_inv: 18.58007
+epoch: 5,  1800/5790
+[ 24960/115800]  total: 16.93723, gradient: 0.00000, scale_inv: 16.93723
+epoch: 5,  1900/5790
+[ 25060/115800]  total: 17.93559, gradient: 0.00000, scale_inv: 17.93559
+epoch: 5,  2000/5790
+[ 25160/115800]  total: 17.01389, gradient: 0.00000, scale_inv: 17.01389
+epoch: 5,  2100/5790
+[ 25260/115800]  total: 17.04934, gradient: 0.00000, scale_inv: 17.04934
+epoch: 5,  2200/5790
+[ 25360/115800]  total: 15.40422, gradient: 0.00000, scale_inv: 15.40422
+epoch: 5,  2300/5790
+[ 25460/115800]  total: 17.92692, gradient: 0.00000, scale_inv: 17.92692
+epoch: 5,  2400/5790
+[ 25560/115800]  total: 15.90434, gradient: 0.00000, scale_inv: 15.90434
+epoch: 5,  2500/5790
+[ 25660/115800]  total: 14.72442, gradient: 0.00000, scale_inv: 14.72442
+epoch: 5,  2600/5790
+[ 25760/115800]  total: 18.86814, gradient: 0.00000, scale_inv: 18.86814
+epoch: 5,  2700/5790
+[ 25860/115800]  total: 17.12045, gradient: 0.00000, scale_inv: 17.12045
+epoch: 5,  2800/5790
+[ 25960/115800]  total: 16.93533, gradient: 0.00000, scale_inv: 16.93533
+epoch: 5,  2900/5790
+[ 26060/115800]  total: 17.11425, gradient: 0.00000, scale_inv: 17.11425
+epoch: 5,  3000/5790
+[ 26160/115800]  total: 14.62684, gradient: 0.00000, scale_inv: 14.62684
+epoch: 5,  3100/5790
+[ 26260/115800]  total: 16.48827, gradient: 0.00000, scale_inv: 16.48827
+epoch: 5,  3200/5790
+[ 26360/115800]  total: 19.30173, gradient: 0.00000, scale_inv: 19.30173
+epoch: 5,  3300/5790
+[ 26460/115800]  total: 16.86600, gradient: 0.00000, scale_inv: 16.86600
+epoch: 5,  3400/5790
+[ 26560/115800]  total: 16.83625, gradient: 0.00000, scale_inv: 16.83625
+epoch: 5,  3500/5790
+[ 26660/115800]  total: 17.65191, gradient: 0.00000, scale_inv: 17.65191
+epoch: 5,  3600/5790
+[ 26760/115800]  total: 15.89245, gradient: 0.00000, scale_inv: 15.89245
+epoch: 5,  3700/5790
+[ 26860/115800]  total: 17.89344, gradient: 0.00000, scale_inv: 17.89344
+epoch: 5,  3800/5790
+[ 26960/115800]  total: 16.52864, gradient: 0.00000, scale_inv: 16.52864
+epoch: 5,  3900/5790
+[ 27060/115800]  total: 14.00194, gradient: 0.00000, scale_inv: 14.00194
+epoch: 5,  4000/5790
+[ 27160/115800]  total: 15.15252, gradient: 0.00000, scale_inv: 15.15252
+epoch: 5,  4100/5790
+[ 27260/115800]  total: 17.19176, gradient: 0.00000, scale_inv: 17.19176
+epoch: 5,  4200/5790
+[ 27360/115800]  total: 18.00905, gradient: 0.00000, scale_inv: 18.00905
+epoch: 5,  4300/5790
+[ 27460/115800]  total: 19.43221, gradient: 0.00000, scale_inv: 19.43221
+epoch: 5,  4400/5790
+[ 27560/115800]  total: 13.11995, gradient: 0.00000, scale_inv: 13.11995
+epoch: 5,  4500/5790
+[ 27660/115800]  total: 16.55595, gradient: 0.00000, scale_inv: 16.55595
+epoch: 5,  4600/5790
+[ 27760/115800]  total: 17.15063, gradient: 0.00000, scale_inv: 17.15063
+epoch: 5,  4700/5790
+[ 27860/115800]  total: 15.72733, gradient: 0.00000, scale_inv: 15.72733
+epoch: 5,  4800/5790
+[ 27960/115800]  total: 14.64083, gradient: 0.00000, scale_inv: 14.64083
+epoch: 5,  4900/5790
+[ 28060/115800]  total: 13.92157, gradient: 0.00000, scale_inv: 13.92157
+epoch: 5,  5000/5790
+[ 28160/115800]  total: 17.48193, gradient: 0.00000, scale_inv: 17.48193
+epoch: 5,  5100/5790
+[ 28260/115800]  total: 15.39413, gradient: 0.00000, scale_inv: 15.39413
+epoch: 5,  5200/5790
+[ 28360/115800]  total: 15.18714, gradient: 0.00000, scale_inv: 15.18714
+epoch: 5,  5300/5790
+[ 28460/115800]  total: 20.59472, gradient: 0.00000, scale_inv: 20.59472
+epoch: 5,  5400/5790
+[ 28560/115800]  total: 18.54547, gradient: 0.00000, scale_inv: 18.54547
+epoch: 5,  5500/5790
+[ 28660/115800]  total: 16.64250, gradient: 0.00000, scale_inv: 16.64250
+epoch: 5,  5600/5790
+[ 28760/115800]  total: 13.73895, gradient: 0.00000, scale_inv: 13.73895
+epoch: 5,  5700/5790
+[ 28860/115800]  total: 13.05208, gradient: 0.00000, scale_inv: 13.05208
+=> learning decay... current lr: 0.000088
+epoch: 6,  100/5790
+[ 29050/115800]  total: 20.34524, gradient: 0.00000, scale_inv: 20.34524
+epoch: 6,  200/5790
+[ 29150/115800]  total: 16.16820, gradient: 0.00000, scale_inv: 16.16820
+epoch: 6,  300/5790
+[ 29250/115800]  total: 15.48562, gradient: 0.00000, scale_inv: 15.48562
+epoch: 6,  400/5790
+[ 29350/115800]  total: 14.99676, gradient: 0.00000, scale_inv: 14.99676
+epoch: 6,  500/5790
+[ 29450/115800]  total: 16.11503, gradient: 0.00000, scale_inv: 16.11503
+epoch: 6,  600/5790
+[ 29550/115800]  total: 16.26435, gradient: 0.00000, scale_inv: 16.26435
+epoch: 6,  700/5790
+[ 29650/115800]  total: 18.19176, gradient: 0.00000, scale_inv: 18.19176
+epoch: 6,  800/5790
+[ 29750/115800]  total: 20.03941, gradient: 0.00000, scale_inv: 20.03941
+epoch: 6,  900/5790
+[ 29850/115800]  total: 15.07992, gradient: 0.00000, scale_inv: 15.07992
+epoch: 6,  1000/5790
+[ 29950/115800]  total: 17.28892, gradient: 0.00000, scale_inv: 17.28892
+epoch: 6,  1100/5790
+[ 30050/115800]  total: 16.27188, gradient: 0.00000, scale_inv: 16.27188
+epoch: 6,  1200/5790
+[ 30150/115800]  total: 17.08366, gradient: 0.00000, scale_inv: 17.08366
+epoch: 6,  1300/5790
+[ 30250/115800]  total: 17.45613, gradient: 0.00000, scale_inv: 17.45613
+epoch: 6,  1400/5790
+[ 30350/115800]  total: 18.34077, gradient: 0.00000, scale_inv: 18.34077
+epoch: 6,  1500/5790
+[ 30450/115800]  total: 16.98566, gradient: 0.00000, scale_inv: 16.98566
+epoch: 6,  1600/5790
+[ 30550/115800]  total: 14.86207, gradient: 0.00000, scale_inv: 14.86207
+epoch: 6,  1700/5790
+[ 30650/115800]  total: 18.03038, gradient: 0.00000, scale_inv: 18.03038
+epoch: 6,  1800/5790
+[ 30750/115800]  total: 16.78768, gradient: 0.00000, scale_inv: 16.78768
+epoch: 6,  1900/5790
+[ 30850/115800]  total: 16.09829, gradient: 0.00000, scale_inv: 16.09829
+epoch: 6,  2000/5790
+[ 30950/115800]  total: 16.59730, gradient: 0.00000, scale_inv: 16.59730
+epoch: 6,  2100/5790
+[ 31050/115800]  total: 16.49158, gradient: 0.00000, scale_inv: 16.49158
+epoch: 6,  2200/5790
+[ 31150/115800]  total: 16.40182, gradient: 0.00000, scale_inv: 16.40182
+epoch: 6,  2300/5790
+[ 31250/115800]  total: 17.11497, gradient: 0.00000, scale_inv: 17.11497
+epoch: 6,  2400/5790
+[ 31350/115800]  total: 21.49598, gradient: 0.00000, scale_inv: 21.49598
+epoch: 6,  2500/5790
+[ 31450/115800]  total: 16.68081, gradient: 0.00000, scale_inv: 16.68081
+epoch: 6,  2600/5790
+[ 31550/115800]  total: 18.00438, gradient: 0.00000, scale_inv: 18.00438
+epoch: 6,  2700/5790
+[ 31650/115800]  total: 15.58738, gradient: 0.00000, scale_inv: 15.58738
+epoch: 6,  2800/5790
+[ 31750/115800]  total: 15.17975, gradient: 0.00000, scale_inv: 15.17975
+epoch: 6,  2900/5790
+[ 31850/115800]  total: 15.45988, gradient: 0.00000, scale_inv: 15.45988
+epoch: 6,  3000/5790
+[ 31950/115800]  total: 19.12077, gradient: 0.00000, scale_inv: 19.12077
+epoch: 6,  3100/5790
+[ 32050/115800]  total: 17.29411, gradient: 0.00000, scale_inv: 17.29411
+epoch: 6,  3200/5790
+[ 32150/115800]  total: 14.78800, gradient: 0.00000, scale_inv: 14.78800
+epoch: 6,  3300/5790
+[ 32250/115800]  total: 20.82261, gradient: 0.00000, scale_inv: 20.82261
+epoch: 6,  3400/5790
+[ 32350/115800]  total: 16.48622, gradient: 0.00000, scale_inv: 16.48622
+epoch: 6,  3500/5790
+[ 32450/115800]  total: 16.30900, gradient: 0.00000, scale_inv: 16.30900
+epoch: 6,  3600/5790
+[ 32550/115800]  total: 16.33668, gradient: 0.00000, scale_inv: 16.33668
+epoch: 6,  3700/5790
+[ 32650/115800]  total: 12.93588, gradient: 0.00000, scale_inv: 12.93588
+epoch: 6,  3800/5790
+[ 32750/115800]  total: 15.56373, gradient: 0.00000, scale_inv: 15.56373
+epoch: 6,  3900/5790
+[ 32850/115800]  total: 16.49281, gradient: 0.00000, scale_inv: 16.49281
+epoch: 6,  4000/5790
+[ 32950/115800]  total: 17.09516, gradient: 0.00000, scale_inv: 17.09516
+epoch: 6,  4100/5790
+[ 33050/115800]  total: 18.55744, gradient: 0.00000, scale_inv: 18.55744
+epoch: 6,  4200/5790
+[ 33150/115800]  total: 16.90490, gradient: 0.00000, scale_inv: 16.90490
+epoch: 6,  4300/5790
+[ 33250/115800]  total: 19.35386, gradient: 0.00000, scale_inv: 19.35386
+epoch: 6,  4400/5790
+[ 33350/115800]  total: 18.50748, gradient: 0.00000, scale_inv: 18.50748
+epoch: 6,  4500/5790
+[ 33450/115800]  total: 14.77047, gradient: 0.00000, scale_inv: 14.77047
+epoch: 6,  4600/5790
+[ 33550/115800]  total: 16.22558, gradient: 0.00000, scale_inv: 16.22558
+epoch: 6,  4700/5790
+[ 33650/115800]  total: 15.44563, gradient: 0.00000, scale_inv: 15.44563
+epoch: 6,  4800/5790
+[ 33750/115800]  total: 17.30270, gradient: 0.00000, scale_inv: 17.30270
+epoch: 6,  4900/5790
+[ 33850/115800]  total: 16.95414, gradient: 0.00000, scale_inv: 16.95414
+epoch: 6,  5000/5790
+[ 33950/115800]  total: 19.58733, gradient: 0.00000, scale_inv: 19.58733
+epoch: 6,  5100/5790
+[ 34050/115800]  total: 17.16502, gradient: 0.00000, scale_inv: 17.16502
+epoch: 6,  5200/5790
+[ 34150/115800]  total: 15.65505, gradient: 0.00000, scale_inv: 15.65505
+epoch: 6,  5300/5790
+[ 34250/115800]  total: 15.93833, gradient: 0.00000, scale_inv: 15.93833
+epoch: 6,  5400/5790
+[ 34350/115800]  total: 15.58895, gradient: 0.00000, scale_inv: 15.58895
+epoch: 6,  5500/5790
+[ 34450/115800]  total: 17.79213, gradient: 0.00000, scale_inv: 17.79213
+epoch: 6,  5600/5790
+[ 34550/115800]  total: 16.52798, gradient: 0.00000, scale_inv: 16.52798
+epoch: 6,  5700/5790
+[ 34650/115800]  total: 16.95560, gradient: 0.00000, scale_inv: 16.95560
+=> learning decay... current lr: 0.000085
+epoch: 7,  100/5790
+[ 34840/115800]  total: 15.55292, gradient: 0.00000, scale_inv: 15.55292
+epoch: 7,  200/5790
+[ 34940/115800]  total: 16.21142, gradient: 0.00000, scale_inv: 16.21142
+epoch: 7,  300/5790
+[ 35040/115800]  total: 16.53205, gradient: 0.00000, scale_inv: 16.53205
+epoch: 7,  400/5790
+[ 35140/115800]  total: 20.04654, gradient: 0.00000, scale_inv: 20.04654
+epoch: 7,  500/5790
+[ 35240/115800]  total: 16.58794, gradient: 0.00000, scale_inv: 16.58794
+epoch: 7,  600/5790
+[ 35340/115800]  total: 18.75809, gradient: 0.00000, scale_inv: 18.75809
+epoch: 7,  700/5790
+[ 35440/115800]  total: 17.12141, gradient: 0.00000, scale_inv: 17.12141
+epoch: 7,  800/5790
+[ 35540/115800]  total: 17.03057, gradient: 0.00000, scale_inv: 17.03057
+epoch: 7,  900/5790
+[ 35640/115800]  total: 16.27732, gradient: 0.00000, scale_inv: 16.27732
+epoch: 7,  1000/5790
+[ 35740/115800]  total: 16.68260, gradient: 0.00000, scale_inv: 16.68260
+epoch: 7,  1100/5790
+[ 35840/115800]  total: 17.77722, gradient: 0.00000, scale_inv: 17.77722
+epoch: 7,  1200/5790
+[ 35940/115800]  total: 15.94395, gradient: 0.00000, scale_inv: 15.94395
+epoch: 7,  1300/5790
+[ 36040/115800]  total: 18.00436, gradient: 0.00000, scale_inv: 18.00436
+epoch: 7,  1400/5790
+[ 36140/115800]  total: 18.14785, gradient: 0.00000, scale_inv: 18.14785
+epoch: 7,  1500/5790
+[ 36240/115800]  total: 16.47037, gradient: 0.00000, scale_inv: 16.47037
+epoch: 7,  1600/5790
+[ 36340/115800]  total: 16.09669, gradient: 0.00000, scale_inv: 16.09669
+epoch: 7,  1700/5790
+[ 36440/115800]  total: 16.91488, gradient: 0.00000, scale_inv: 16.91488
+epoch: 7,  1800/5790
+[ 36540/115800]  total: 14.64385, gradient: 0.00000, scale_inv: 14.64385
+epoch: 7,  1900/5790
+[ 36640/115800]  total: 15.42462, gradient: 0.00000, scale_inv: 15.42462
+epoch: 7,  2000/5790
+[ 36740/115800]  total: 14.74402, gradient: 0.00000, scale_inv: 14.74402
+epoch: 7,  2100/5790
+[ 36840/115800]  total: 18.41621, gradient: 0.00000, scale_inv: 18.41621
+epoch: 7,  2200/5790
+[ 36940/115800]  total: 18.49148, gradient: 0.00000, scale_inv: 18.49148
+epoch: 7,  2300/5790
+[ 37040/115800]  total: 14.18288, gradient: 0.00000, scale_inv: 14.18288
+epoch: 7,  2400/5790
+[ 37140/115800]  total: 18.74033, gradient: 0.00000, scale_inv: 18.74033
+epoch: 7,  2500/5790
+[ 37240/115800]  total: 19.24445, gradient: 0.00000, scale_inv: 19.24445
+epoch: 7,  2600/5790
+[ 37340/115800]  total: 15.24071, gradient: 0.00000, scale_inv: 15.24071
+epoch: 7,  2700/5790
+[ 37440/115800]  total: 16.14073, gradient: 0.00000, scale_inv: 16.14073
+epoch: 7,  2800/5790
+[ 37540/115800]  total: 16.13619, gradient: 0.00000, scale_inv: 16.13619
+epoch: 7,  2900/5790
+[ 37640/115800]  total: 19.99820, gradient: 0.00000, scale_inv: 19.99820
+epoch: 7,  3000/5790
+[ 37740/115800]  total: 17.03957, gradient: 0.00000, scale_inv: 17.03957
+epoch: 7,  3100/5790
+[ 37840/115800]  total: 19.53110, gradient: 0.00000, scale_inv: 19.53110
+epoch: 7,  3200/5790
+[ 37940/115800]  total: 17.22868, gradient: 0.00000, scale_inv: 17.22868
+epoch: 7,  3300/5790
+[ 38040/115800]  total: 15.55851, gradient: 0.00000, scale_inv: 15.55851
+epoch: 7,  3400/5790
+[ 38140/115800]  total: 14.61793, gradient: 0.00000, scale_inv: 14.61793
+epoch: 7,  3500/5790
+[ 38240/115800]  total: 15.88269, gradient: 0.00000, scale_inv: 15.88269
+epoch: 7,  3600/5790
+[ 38340/115800]  total: 16.75082, gradient: 0.00000, scale_inv: 16.75082
+epoch: 7,  3700/5790
+[ 38440/115800]  total: 16.85549, gradient: 0.00000, scale_inv: 16.85549
+epoch: 7,  3800/5790
+[ 38540/115800]  total: 15.45802, gradient: 0.00000, scale_inv: 15.45802
+epoch: 7,  3900/5790
+[ 38640/115800]  total: 16.79977, gradient: 0.00000, scale_inv: 16.79977
+epoch: 7,  4000/5790
+[ 38740/115800]  total: 17.37679, gradient: 0.00000, scale_inv: 17.37679
+epoch: 7,  4100/5790
+[ 38840/115800]  total: 15.08053, gradient: 0.00000, scale_inv: 15.08053
+epoch: 7,  4200/5790
+[ 38940/115800]  total: 16.56382, gradient: 0.00000, scale_inv: 16.56382
+epoch: 7,  4300/5790
+[ 39040/115800]  total: 18.91443, gradient: 0.00000, scale_inv: 18.91443
+epoch: 7,  4400/5790
+[ 39140/115800]  total: 19.26389, gradient: 0.00000, scale_inv: 19.26389
+epoch: 7,  4500/5790
+[ 39240/115800]  total: 16.82557, gradient: 0.00000, scale_inv: 16.82557
+epoch: 7,  4600/5790
+[ 39340/115800]  total: 16.70983, gradient: 0.00000, scale_inv: 16.70983
+epoch: 7,  4700/5790
+[ 39440/115800]  total: 16.82894, gradient: 0.00000, scale_inv: 16.82894
+epoch: 7,  4800/5790
+[ 39540/115800]  total: 16.02356, gradient: 0.00000, scale_inv: 16.02356
+epoch: 7,  4900/5790
+[ 39640/115800]  total: 17.22919, gradient: 0.00000, scale_inv: 17.22919
+epoch: 7,  5000/5790
+[ 39740/115800]  total: 14.39443, gradient: 0.00000, scale_inv: 14.39443
+epoch: 7,  5100/5790
+[ 39840/115800]  total: 16.96681, gradient: 0.00000, scale_inv: 16.96681
+epoch: 7,  5200/5790
+[ 39940/115800]  total: 21.04345, gradient: 0.00000, scale_inv: 21.04345
+epoch: 7,  5300/5790
+[ 40040/115800]  total: 16.92268, gradient: 0.00000, scale_inv: 16.92268
+epoch: 7,  5400/5790
+[ 40140/115800]  total: 16.46532, gradient: 0.00000, scale_inv: 16.46532
+epoch: 7,  5500/5790
+[ 40240/115800]  total: 18.77600, gradient: 0.00000, scale_inv: 18.77600
+epoch: 7,  5600/5790
+[ 40340/115800]  total: 17.76525, gradient: 0.00000, scale_inv: 17.76525
+epoch: 7,  5700/5790
+[ 40440/115800]  total: 16.63118, gradient: 0.00000, scale_inv: 16.63118
+=> learning decay... current lr: 0.000083
+epoch: 8,  100/5790
+[ 40630/115800]  total: 17.91040, gradient: 0.00000, scale_inv: 17.91040
+epoch: 8,  200/5790
+[ 40730/115800]  total: 16.98262, gradient: 0.00000, scale_inv: 16.98262
+epoch: 8,  300/5790
+[ 40830/115800]  total: 16.32414, gradient: 0.00000, scale_inv: 16.32414
+epoch: 8,  400/5790
+[ 40930/115800]  total: 16.17980, gradient: 0.00000, scale_inv: 16.17980
+epoch: 8,  500/5790
+[ 41030/115800]  total: 17.22132, gradient: 0.00000, scale_inv: 17.22132
+epoch: 8,  600/5790
+[ 41130/115800]  total: 18.14039, gradient: 0.00000, scale_inv: 18.14039
+epoch: 8,  700/5790
+[ 41230/115800]  total: 17.43885, gradient: 0.00000, scale_inv: 17.43885
+epoch: 8,  800/5790
+[ 41330/115800]  total: 17.46222, gradient: 0.00000, scale_inv: 17.46222
+epoch: 8,  900/5790
+[ 41430/115800]  total: 18.31062, gradient: 0.00000, scale_inv: 18.31062
+epoch: 8,  1000/5790
+[ 41530/115800]  total: 17.13771, gradient: 0.00000, scale_inv: 17.13771
+epoch: 8,  1100/5790
+[ 41630/115800]  total: 21.34426, gradient: 0.00000, scale_inv: 21.34426
+epoch: 8,  1200/5790
+[ 41730/115800]  total: 15.69179, gradient: 0.00000, scale_inv: 15.69179
+epoch: 8,  1300/5790
+[ 41830/115800]  total: 18.89236, gradient: 0.00000, scale_inv: 18.89236
+epoch: 8,  1400/5790
+[ 41930/115800]  total: 17.30025, gradient: 0.00000, scale_inv: 17.30025
+epoch: 8,  1500/5790
+[ 42030/115800]  total: 16.41797, gradient: 0.00000, scale_inv: 16.41797
+epoch: 8,  1600/5790
+[ 42130/115800]  total: 16.72390, gradient: 0.00000, scale_inv: 16.72390
+epoch: 8,  1700/5790
+[ 42230/115800]  total: 16.63108, gradient: 0.00000, scale_inv: 16.63108
+epoch: 8,  1800/5790
+[ 42330/115800]  total: 19.82999, gradient: 0.00000, scale_inv: 19.82999
+epoch: 8,  1900/5790
+[ 42430/115800]  total: 16.83993, gradient: 0.00000, scale_inv: 16.83993
+epoch: 8,  2000/5790
+[ 42530/115800]  total: 16.70463, gradient: 0.00000, scale_inv: 16.70463
+epoch: 8,  2100/5790
+[ 42630/115800]  total: 17.81997, gradient: 0.00000, scale_inv: 17.81997
+epoch: 8,  2200/5790
+[ 42730/115800]  total: 16.42638, gradient: 0.00000, scale_inv: 16.42638
+epoch: 8,  2300/5790
+[ 42830/115800]  total: 15.53898, gradient: 0.00000, scale_inv: 15.53898
+epoch: 8,  2400/5790
+[ 42930/115800]  total: 18.39632, gradient: 0.00000, scale_inv: 18.39632
+epoch: 8,  2500/5790
+[ 43030/115800]  total: 18.07487, gradient: 0.00000, scale_inv: 18.07487
+epoch: 8,  2600/5790
+[ 43130/115800]  total: 18.01205, gradient: 0.00000, scale_inv: 18.01205
+epoch: 8,  2700/5790
+[ 43230/115800]  total: 15.56504, gradient: 0.00000, scale_inv: 15.56504
+epoch: 8,  2800/5790
+[ 43330/115800]  total: 13.72940, gradient: 0.00000, scale_inv: 13.72940
+epoch: 8,  2900/5790
+[ 43430/115800]  total: 15.74593, gradient: 0.00000, scale_inv: 15.74593
+epoch: 8,  3000/5790
+[ 43530/115800]  total: 17.57274, gradient: 0.00000, scale_inv: 17.57274
+epoch: 8,  3100/5790
+[ 43630/115800]  total: 17.86524, gradient: 0.00000, scale_inv: 17.86524
+epoch: 8,  3200/5790
+[ 43730/115800]  total: 17.11526, gradient: 0.00000, scale_inv: 17.11526
+epoch: 8,  3300/5790
+[ 43830/115800]  total: 15.70496, gradient: 0.00000, scale_inv: 15.70496
+epoch: 8,  3400/5790
+[ 43930/115800]  total: 16.29257, gradient: 0.00000, scale_inv: 16.29257
+epoch: 8,  3500/5790
+[ 44030/115800]  total: 17.82034, gradient: 0.00000, scale_inv: 17.82034
+epoch: 8,  3600/5790
+[ 44130/115800]  total: 16.99122, gradient: 0.00000, scale_inv: 16.99122
+epoch: 8,  3700/5790
+[ 44230/115800]  total: 17.15835, gradient: 0.00000, scale_inv: 17.15835
+epoch: 8,  3800/5790
+[ 44330/115800]  total: 20.67756, gradient: 0.00000, scale_inv: 20.67756
+epoch: 8,  3900/5790
+[ 44430/115800]  total: 16.45058, gradient: 0.00000, scale_inv: 16.45058
+epoch: 8,  4000/5790
+[ 44530/115800]  total: 16.22827, gradient: 0.00000, scale_inv: 16.22827
+epoch: 8,  4100/5790
+[ 44630/115800]  total: 15.26013, gradient: 0.00000, scale_inv: 15.26013
+epoch: 8,  4200/5790
+[ 44730/115800]  total: 16.96188, gradient: 0.00000, scale_inv: 16.96188
+epoch: 8,  4300/5790
+[ 44830/115800]  total: 15.59501, gradient: 0.00000, scale_inv: 15.59501
+epoch: 8,  4400/5790
+[ 44930/115800]  total: 16.51833, gradient: 0.00000, scale_inv: 16.51833
+epoch: 8,  4500/5790
+[ 45030/115800]  total: 19.80688, gradient: 0.00000, scale_inv: 19.80688
+epoch: 8,  4600/5790
+[ 45130/115800]  total: 17.81009, gradient: 0.00000, scale_inv: 17.81009
+epoch: 8,  4700/5790
+[ 45230/115800]  total: 18.26629, gradient: 0.00000, scale_inv: 18.26629
+epoch: 8,  4800/5790
+[ 45330/115800]  total: 16.92892, gradient: 0.00000, scale_inv: 16.92892
+epoch: 8,  4900/5790
+[ 45430/115800]  total: 15.60802, gradient: 0.00000, scale_inv: 15.60802
+epoch: 8,  5000/5790
+[ 45530/115800]  total: 17.46104, gradient: 0.00000, scale_inv: 17.46104
+epoch: 8,  5100/5790
+[ 45630/115800]  total: 16.89516, gradient: 0.00000, scale_inv: 16.89516
+epoch: 8,  5200/5790
+[ 45730/115800]  total: 15.95368, gradient: 0.00000, scale_inv: 15.95368
+epoch: 8,  5300/5790
+[ 45830/115800]  total: 15.99415, gradient: 0.00000, scale_inv: 15.99415
+epoch: 8,  5400/5790
+[ 45930/115800]  total: 17.73858, gradient: 0.00000, scale_inv: 17.73858
+epoch: 8,  5500/5790
+[ 46030/115800]  total: 14.79503, gradient: 0.00000, scale_inv: 14.79503
+epoch: 8,  5600/5790
+[ 46130/115800]  total: 15.52903, gradient: 0.00000, scale_inv: 15.52903
+epoch: 8,  5700/5790
+[ 46230/115800]  total: 18.16549, gradient: 0.00000, scale_inv: 18.16549
+=> learning decay... current lr: 0.000080
+epoch: 9,  100/5790
+[ 46420/115800]  total: 19.23682, gradient: 0.00000, scale_inv: 19.23682
+epoch: 9,  200/5790
+[ 46520/115800]  total: 14.63063, gradient: 0.00000, scale_inv: 14.63063
+epoch: 9,  300/5790
+[ 46620/115800]  total: 16.23470, gradient: 0.00000, scale_inv: 16.23470
+epoch: 9,  400/5790
+[ 46720/115800]  total: 15.76614, gradient: 0.00000, scale_inv: 15.76614
+epoch: 9,  500/5790
+[ 46820/115800]  total: 16.10407, gradient: 0.00000, scale_inv: 16.10407
+epoch: 9,  600/5790
+[ 46920/115800]  total: 16.88346, gradient: 0.00000, scale_inv: 16.88346
+epoch: 9,  700/5790
+[ 47020/115800]  total: 16.97675, gradient: 0.00000, scale_inv: 16.97675
+epoch: 9,  800/5790
+[ 47120/115800]  total: 17.98493, gradient: 0.00000, scale_inv: 17.98493
+epoch: 9,  900/5790
+[ 47220/115800]  total: 15.21327, gradient: 0.00000, scale_inv: 15.21327
+epoch: 9,  1000/5790
+[ 47320/115800]  total: 18.12534, gradient: 0.00000, scale_inv: 18.12534
+epoch: 9,  1100/5790
+[ 47420/115800]  total: 18.59952, gradient: 0.00000, scale_inv: 18.59952
+epoch: 9,  1200/5790
+[ 47520/115800]  total: 17.01587, gradient: 0.00000, scale_inv: 17.01587
+epoch: 9,  1300/5790
+[ 47620/115800]  total: 16.19978, gradient: 0.00000, scale_inv: 16.19978
+epoch: 9,  1400/5790
+[ 47720/115800]  total: 20.16787, gradient: 0.00000, scale_inv: 20.16787
+epoch: 9,  1500/5790
+[ 47820/115800]  total: 19.96739, gradient: 0.00000, scale_inv: 19.96739
+epoch: 9,  1600/5790
+[ 47920/115800]  total: 16.14712, gradient: 0.00000, scale_inv: 16.14712
+epoch: 9,  1700/5790
+[ 48020/115800]  total: 17.15911, gradient: 0.00000, scale_inv: 17.15911
+epoch: 9,  1800/5790
+[ 48120/115800]  total: 16.08990, gradient: 0.00000, scale_inv: 16.08990
+epoch: 9,  1900/5790
+[ 48220/115800]  total: 16.82748, gradient: 0.00000, scale_inv: 16.82748
+epoch: 9,  2000/5790
+[ 48320/115800]  total: 19.04132, gradient: 0.00000, scale_inv: 19.04132
+epoch: 9,  2100/5790
+[ 48420/115800]  total: 17.01116, gradient: 0.00000, scale_inv: 17.01116
+epoch: 9,  2200/5790
+[ 48520/115800]  total: 15.67574, gradient: 0.00000, scale_inv: 15.67574
+epoch: 9,  2300/5790
+[ 48620/115800]  total: 15.64700, gradient: 0.00000, scale_inv: 15.64700
+epoch: 9,  2400/5790
+[ 48720/115800]  total: 15.38144, gradient: 0.00000, scale_inv: 15.38144
+epoch: 9,  2500/5790
+[ 48820/115800]  total: 14.22502, gradient: 0.00000, scale_inv: 14.22502
+epoch: 9,  2600/5790
+[ 48920/115800]  total: 16.20395, gradient: 0.00000, scale_inv: 16.20395
+epoch: 9,  2700/5790
+[ 49020/115800]  total: 16.72364, gradient: 0.00000, scale_inv: 16.72364
+epoch: 9,  2800/5790
+[ 49120/115800]  total: 17.60277, gradient: 0.00000, scale_inv: 17.60277
+epoch: 9,  2900/5790
+[ 49220/115800]  total: 11.96845, gradient: 0.00000, scale_inv: 11.96845
+epoch: 9,  3000/5790
+[ 49320/115800]  total: 16.64986, gradient: 0.00000, scale_inv: 16.64986
+epoch: 9,  3100/5790
+[ 49420/115800]  total: 18.05308, gradient: 0.00000, scale_inv: 18.05308
+epoch: 9,  3200/5790
+[ 49520/115800]  total: 17.17095, gradient: 0.00000, scale_inv: 17.17095
+epoch: 9,  3300/5790
+[ 49620/115800]  total: 15.54254, gradient: 0.00000, scale_inv: 15.54254
+epoch: 9,  3400/5790
+[ 49720/115800]  total: 15.46781, gradient: 0.00000, scale_inv: 15.46781
+epoch: 9,  3500/5790
+[ 49820/115800]  total: 15.12641, gradient: 0.00000, scale_inv: 15.12641
+epoch: 9,  3600/5790
+[ 49920/115800]  total: 19.38101, gradient: 0.00000, scale_inv: 19.38101
+epoch: 9,  3700/5790
+[ 50020/115800]  total: 17.30258, gradient: 0.00000, scale_inv: 17.30258
+epoch: 9,  3800/5790
+[ 50120/115800]  total: 17.69948, gradient: 0.00000, scale_inv: 17.69948
+epoch: 9,  3900/5790
+[ 50220/115800]  total: 16.32649, gradient: 0.00000, scale_inv: 16.32649
+epoch: 9,  4000/5790
+[ 50320/115800]  total: 17.42543, gradient: 0.00000, scale_inv: 17.42543
+epoch: 9,  4100/5790
+[ 50420/115800]  total: 17.59885, gradient: 0.00000, scale_inv: 17.59885
+epoch: 9,  4200/5790
+[ 50520/115800]  total: 14.67099, gradient: 0.00000, scale_inv: 14.67099
+epoch: 9,  4300/5790
+[ 50620/115800]  total: 19.22156, gradient: 0.00000, scale_inv: 19.22156
+epoch: 9,  4400/5790
+[ 50720/115800]  total: 17.65485, gradient: 0.00000, scale_inv: 17.65485
+epoch: 9,  4500/5790
+[ 50820/115800]  total: 17.49207, gradient: 0.00000, scale_inv: 17.49207
+epoch: 9,  4600/5790
+[ 50920/115800]  total: 17.30936, gradient: 0.00000, scale_inv: 17.30936
+epoch: 9,  4700/5790
+[ 51020/115800]  total: 16.04120, gradient: 0.00000, scale_inv: 16.04120
+epoch: 9,  4800/5790
+[ 51120/115800]  total: 13.65333, gradient: 0.00000, scale_inv: 13.65333
+epoch: 9,  4900/5790
+[ 51220/115800]  total: 15.98663, gradient: 0.00000, scale_inv: 15.98663
+epoch: 9,  5000/5790
+[ 51320/115800]  total: 17.41837, gradient: 0.00000, scale_inv: 17.41837
+epoch: 9,  5100/5790
+[ 51420/115800]  total: 16.94857, gradient: 0.00000, scale_inv: 16.94857
+epoch: 9,  5200/5790
+[ 51520/115800]  total: 18.48297, gradient: 0.00000, scale_inv: 18.48297
+epoch: 9,  5300/5790
+[ 51620/115800]  total: 16.46637, gradient: 0.00000, scale_inv: 16.46637
+epoch: 9,  5400/5790
+[ 51720/115800]  total: 16.90108, gradient: 0.00000, scale_inv: 16.90108
+epoch: 9,  5500/5790
+[ 51820/115800]  total: 21.18205, gradient: 0.00000, scale_inv: 21.18205
+epoch: 9,  5600/5790
+[ 51920/115800]  total: 17.23981, gradient: 0.00000, scale_inv: 17.23981
+epoch: 9,  5700/5790
+[ 52020/115800]  total: 18.42506, gradient: 0.00000, scale_inv: 18.42506
+=> learning decay... current lr: 0.000077
+epoch: 10,  100/5790
+[ 52210/115800]  total: 16.46423, gradient: 0.00000, scale_inv: 16.46423
+epoch: 10,  200/5790
+[ 52310/115800]  total: 14.83023, gradient: 0.00000, scale_inv: 14.83023
+epoch: 10,  300/5790
+[ 52410/115800]  total: 15.36355, gradient: 0.00000, scale_inv: 15.36355
+epoch: 10,  400/5790
+[ 52510/115800]  total: 17.41973, gradient: 0.00000, scale_inv: 17.41973
+epoch: 10,  500/5790
+[ 52610/115800]  total: 16.71176, gradient: 0.00000, scale_inv: 16.71176
+epoch: 10,  600/5790
+[ 52710/115800]  total: 14.59727, gradient: 0.00000, scale_inv: 14.59727
+epoch: 10,  700/5790
+[ 52810/115800]  total: 17.19737, gradient: 0.00000, scale_inv: 17.19737
+epoch: 10,  800/5790
+[ 52910/115800]  total: 17.32802, gradient: 0.00000, scale_inv: 17.32802
+epoch: 10,  900/5790
+[ 53010/115800]  total: 16.23901, gradient: 0.00000, scale_inv: 16.23901
+epoch: 10,  1000/5790
+[ 53110/115800]  total: 16.84036, gradient: 0.00000, scale_inv: 16.84036
+epoch: 10,  1100/5790
+[ 53210/115800]  total: 15.91401, gradient: 0.00000, scale_inv: 15.91401
+epoch: 10,  1200/5790
+[ 53310/115800]  total: 17.51697, gradient: 0.00000, scale_inv: 17.51697
+epoch: 10,  1300/5790
+[ 53410/115800]  total: 14.62442, gradient: 0.00000, scale_inv: 14.62442
+epoch: 10,  1400/5790
+[ 53510/115800]  total: 17.59385, gradient: 0.00000, scale_inv: 17.59385
+epoch: 10,  1500/5790
+[ 53610/115800]  total: 17.52080, gradient: 0.00000, scale_inv: 17.52080
+epoch: 10,  1600/5790
+[ 53710/115800]  total: 13.85013, gradient: 0.00000, scale_inv: 13.85013
+epoch: 10,  1700/5790
+[ 53810/115800]  total: 18.56736, gradient: 0.00000, scale_inv: 18.56736
+epoch: 10,  1800/5790
+[ 53910/115800]  total: 16.87214, gradient: 0.00000, scale_inv: 16.87214
+epoch: 10,  1900/5790
+[ 54010/115800]  total: 14.38894, gradient: 0.00000, scale_inv: 14.38894
+epoch: 10,  2000/5790
+[ 54110/115800]  total: 15.64077, gradient: 0.00000, scale_inv: 15.64077
+epoch: 10,  2100/5790
+[ 54210/115800]  total: 16.78891, gradient: 0.00000, scale_inv: 16.78891
+epoch: 10,  2200/5790
+[ 54310/115800]  total: 15.66191, gradient: 0.00000, scale_inv: 15.66191
+epoch: 10,  2300/5790
+[ 54410/115800]  total: 20.51515, gradient: 0.00000, scale_inv: 20.51515
+epoch: 10,  2400/5790
+[ 54510/115800]  total: 20.22398, gradient: 0.00000, scale_inv: 20.22398
+epoch: 10,  2500/5790
+[ 54610/115800]  total: 18.54106, gradient: 0.00000, scale_inv: 18.54106
+epoch: 10,  2600/5790
+[ 54710/115800]  total: 16.20788, gradient: 0.00000, scale_inv: 16.20788
+epoch: 10,  2700/5790
+[ 54810/115800]  total: 16.89669, gradient: 0.00000, scale_inv: 16.89669
+epoch: 10,  2800/5790
+[ 54910/115800]  total: 16.97036, gradient: 0.00000, scale_inv: 16.97036
+epoch: 10,  2900/5790
+[ 55010/115800]  total: 14.37038, gradient: 0.00000, scale_inv: 14.37038
+epoch: 10,  3000/5790
+[ 55110/115800]  total: 17.47009, gradient: 0.00000, scale_inv: 17.47009
+epoch: 10,  3100/5790
+[ 55210/115800]  total: 16.69415, gradient: 0.00000, scale_inv: 16.69415
+epoch: 10,  3200/5790
+[ 55310/115800]  total: 15.59984, gradient: 0.00000, scale_inv: 15.59984
+epoch: 10,  3300/5790
+[ 55410/115800]  total: 13.81230, gradient: 0.00000, scale_inv: 13.81230
+epoch: 10,  3400/5790
+[ 55510/115800]  total: 17.72840, gradient: 0.00000, scale_inv: 17.72840
+epoch: 10,  3500/5790
+[ 55610/115800]  total: 18.58561, gradient: 0.00000, scale_inv: 18.58561
+epoch: 10,  3600/5790
+[ 55710/115800]  total: 16.09701, gradient: 0.00000, scale_inv: 16.09701
+epoch: 10,  3700/5790
+[ 55810/115800]  total: 16.58512, gradient: 0.00000, scale_inv: 16.58512
+epoch: 10,  3800/5790
+[ 55910/115800]  total: 17.12587, gradient: 0.00000, scale_inv: 17.12587
+epoch: 10,  3900/5790
+[ 56010/115800]  total: 15.59144, gradient: 0.00000, scale_inv: 15.59144
+epoch: 10,  4000/5790
+[ 56110/115800]  total: 16.82697, gradient: 0.00000, scale_inv: 16.82697
+epoch: 10,  4100/5790
+[ 56210/115800]  total: 16.85784, gradient: 0.00000, scale_inv: 16.85784
+epoch: 10,  4200/5790
+[ 56310/115800]  total: 17.66674, gradient: 0.00000, scale_inv: 17.66674
+epoch: 10,  4300/5790
+[ 56410/115800]  total: 17.56894, gradient: 0.00000, scale_inv: 17.56894
+epoch: 10,  4400/5790
+[ 56510/115800]  total: 18.53025, gradient: 0.00000, scale_inv: 18.53025
+epoch: 10,  4500/5790
+[ 56610/115800]  total: 15.81471, gradient: 0.00000, scale_inv: 15.81471
+epoch: 10,  4600/5790
+[ 56710/115800]  total: 17.54552, gradient: 0.00000, scale_inv: 17.54552
+epoch: 10,  4700/5790
+[ 56810/115800]  total: 16.66418, gradient: 0.00000, scale_inv: 16.66418
+epoch: 10,  4800/5790
+[ 56910/115800]  total: 21.51947, gradient: 0.00000, scale_inv: 21.51947
+epoch: 10,  4900/5790
+[ 57010/115800]  total: 18.20624, gradient: 0.00000, scale_inv: 18.20624
+epoch: 10,  5000/5790
+[ 57110/115800]  total: 18.65672, gradient: 0.00000, scale_inv: 18.65672
+epoch: 10,  5100/5790
+[ 57210/115800]  total: 17.06690, gradient: 0.00000, scale_inv: 17.06690
+epoch: 10,  5200/5790
+[ 57310/115800]  total: 16.18985, gradient: 0.00000, scale_inv: 16.18985
+epoch: 10,  5300/5790
+[ 57410/115800]  total: 15.28494, gradient: 0.00000, scale_inv: 15.28494
+epoch: 10,  5400/5790
+[ 57510/115800]  total: 15.94978, gradient: 0.00000, scale_inv: 15.94978
+epoch: 10,  5500/5790
+[ 57610/115800]  total: 14.47951, gradient: 0.00000, scale_inv: 14.47951
+epoch: 10,  5600/5790
+[ 57710/115800]  total: 17.62148, gradient: 0.00000, scale_inv: 17.62148
+epoch: 10,  5700/5790
+[ 57810/115800]  total: 17.40312, gradient: 0.00000, scale_inv: 17.40312
+=> learning decay... current lr: 0.000074
+epoch: 11,  100/5790
+[ 58000/115800]  total: 15.87676, gradient: 0.00000, scale_inv: 15.87676
+epoch: 11,  200/5790
+[ 58100/115800]  total: 13.70587, gradient: 0.00000, scale_inv: 13.70587
+epoch: 11,  300/5790
+[ 58200/115800]  total: 17.25599, gradient: 0.00000, scale_inv: 17.25599
+epoch: 11,  400/5790
+[ 58300/115800]  total: 17.40853, gradient: 0.00000, scale_inv: 17.40853
+epoch: 11,  500/5790
+[ 58400/115800]  total: 11.43406, gradient: 0.00000, scale_inv: 11.43406
+epoch: 11,  600/5790
+[ 58500/115800]  total: 18.41837, gradient: 0.00000, scale_inv: 18.41837
+epoch: 11,  700/5790
+[ 58600/115800]  total: 17.03089, gradient: 0.00000, scale_inv: 17.03089
+epoch: 11,  800/5790
+[ 58700/115800]  total: 16.94823, gradient: 0.00000, scale_inv: 16.94823
+epoch: 11,  900/5790
+[ 58800/115800]  total: 14.81875, gradient: 0.00000, scale_inv: 14.81875
+epoch: 11,  1000/5790
+[ 58900/115800]  total: 16.47473, gradient: 0.00000, scale_inv: 16.47473
+epoch: 11,  1100/5790
+[ 59000/115800]  total: 18.01194, gradient: 0.00000, scale_inv: 18.01194
+epoch: 11,  1200/5790
+[ 59100/115800]  total: 17.32321, gradient: 0.00000, scale_inv: 17.32321
+epoch: 11,  1300/5790
+[ 59200/115800]  total: 18.07326, gradient: 0.00000, scale_inv: 18.07326
+epoch: 11,  1400/5790
+[ 59300/115800]  total: 16.57423, gradient: 0.00000, scale_inv: 16.57423
+epoch: 11,  1500/5790
+[ 59400/115800]  total: 16.90702, gradient: 0.00000, scale_inv: 16.90702
+epoch: 11,  1600/5790
+[ 59500/115800]  total: 15.28727, gradient: 0.00000, scale_inv: 15.28727
+epoch: 11,  1700/5790
+[ 59600/115800]  total: 15.79491, gradient: 0.00000, scale_inv: 15.79491
+epoch: 11,  1800/5790
+[ 59700/115800]  total: 17.36361, gradient: 0.00000, scale_inv: 17.36361
+epoch: 11,  1900/5790
+[ 59800/115800]  total: 16.98814, gradient: 0.00000, scale_inv: 16.98814
+epoch: 11,  2000/5790
+[ 59900/115800]  total: 20.57125, gradient: 0.00000, scale_inv: 20.57125
+epoch: 11,  2100/5790
+[ 60000/115800]  total: 19.72760, gradient: 0.00000, scale_inv: 19.72760
+epoch: 11,  2200/5790
+[ 60100/115800]  total: 16.84125, gradient: 0.00000, scale_inv: 16.84125
+epoch: 11,  2300/5790
+[ 60200/115800]  total: 18.76472, gradient: 0.00000, scale_inv: 18.76472
+epoch: 11,  2400/5790
+[ 60300/115800]  total: 16.04781, gradient: 0.00000, scale_inv: 16.04781
+epoch: 11,  2500/5790
+[ 60400/115800]  total: 17.37935, gradient: 0.00000, scale_inv: 17.37935
+epoch: 11,  2600/5790
+[ 60500/115800]  total: 15.78959, gradient: 0.00000, scale_inv: 15.78959
+epoch: 11,  2700/5790
+[ 60600/115800]  total: 19.86848, gradient: 0.00000, scale_inv: 19.86848
+epoch: 11,  2800/5790
+[ 60700/115800]  total: 18.38173, gradient: 0.00000, scale_inv: 18.38173
+epoch: 11,  2900/5790
+[ 60800/115800]  total: 21.01316, gradient: 0.00000, scale_inv: 21.01316
+epoch: 11,  3000/5790
+[ 60900/115800]  total: 17.36809, gradient: 0.00000, scale_inv: 17.36809
+epoch: 11,  3100/5790
+[ 61000/115800]  total: 17.80444, gradient: 0.00000, scale_inv: 17.80444
+epoch: 11,  3200/5790
+[ 61100/115800]  total: 17.03800, gradient: 0.00000, scale_inv: 17.03800
+epoch: 11,  3300/5790
+[ 61200/115800]  total: 16.27145, gradient: 0.00000, scale_inv: 16.27145
+epoch: 11,  3400/5790
+[ 61300/115800]  total: 18.64977, gradient: 0.00000, scale_inv: 18.64977
+epoch: 11,  3500/5790
+[ 61400/115800]  total: 16.22347, gradient: 0.00000, scale_inv: 16.22347
+epoch: 11,  3600/5790
+[ 61500/115800]  total: 17.11023, gradient: 0.00000, scale_inv: 17.11023
+epoch: 11,  3700/5790
+[ 61600/115800]  total: 16.62397, gradient: 0.00000, scale_inv: 16.62397
+epoch: 11,  3800/5790
+[ 61700/115800]  total: 17.44126, gradient: 0.00000, scale_inv: 17.44126
+epoch: 11,  3900/5790
+[ 61800/115800]  total: 18.71150, gradient: 0.00000, scale_inv: 18.71150
+epoch: 11,  4000/5790
+[ 61900/115800]  total: 16.35880, gradient: 0.00000, scale_inv: 16.35880
+epoch: 11,  4100/5790
+[ 62000/115800]  total: 17.28987, gradient: 0.00000, scale_inv: 17.28987
+epoch: 11,  4200/5790
+[ 62100/115800]  total: 19.12770, gradient: 0.00000, scale_inv: 19.12770
+epoch: 11,  4300/5790
+[ 62200/115800]  total: 15.44013, gradient: 0.00000, scale_inv: 15.44013
+epoch: 11,  4400/5790
+[ 62300/115800]  total: 19.95110, gradient: 0.00000, scale_inv: 19.95110
+epoch: 11,  4500/5790
+[ 62400/115800]  total: 16.52860, gradient: 0.00000, scale_inv: 16.52860
+epoch: 11,  4600/5790
+[ 62500/115800]  total: 17.07001, gradient: 0.00000, scale_inv: 17.07001
+epoch: 11,  4700/5790
+[ 62600/115800]  total: 15.58272, gradient: 0.00000, scale_inv: 15.58272
+epoch: 11,  4800/5790
+[ 62700/115800]  total: 15.67578, gradient: 0.00000, scale_inv: 15.67578
+epoch: 11,  4900/5790
+[ 62800/115800]  total: 15.15054, gradient: 0.00000, scale_inv: 15.15054
+epoch: 11,  5000/5790
+[ 62900/115800]  total: 17.41975, gradient: 0.00000, scale_inv: 17.41975
+epoch: 11,  5100/5790
+[ 63000/115800]  total: 16.28595, gradient: 0.00000, scale_inv: 16.28595
+epoch: 11,  5200/5790
+[ 63100/115800]  total: 16.62904, gradient: 0.00000, scale_inv: 16.62904
+epoch: 11,  5300/5790
+[ 63200/115800]  total: 18.26398, gradient: 0.00000, scale_inv: 18.26398
+epoch: 11,  5400/5790
+[ 63300/115800]  total: 14.71341, gradient: 0.00000, scale_inv: 14.71341
+epoch: 11,  5500/5790
+[ 63400/115800]  total: 16.94687, gradient: 0.00000, scale_inv: 16.94687
+epoch: 11,  5600/5790
+[ 63500/115800]  total: 16.65351, gradient: 0.00000, scale_inv: 16.65351
+epoch: 11,  5700/5790
+[ 63600/115800]  total: 17.38831, gradient: 0.00000, scale_inv: 17.38831
+=> learning decay... current lr: 0.000070
+epoch: 12,  100/5790
+[ 63790/115800]  total: 17.70239, gradient: 0.00000, scale_inv: 17.70239
+epoch: 12,  200/5790
+[ 63890/115800]  total: 16.13774, gradient: 0.00000, scale_inv: 16.13774
+epoch: 12,  300/5790
+[ 63990/115800]  total: 15.82971, gradient: 0.00000, scale_inv: 15.82971
+epoch: 12,  400/5790
+[ 64090/115800]  total: 17.01584, gradient: 0.00000, scale_inv: 17.01584
+epoch: 12,  500/5790
+[ 64190/115800]  total: 18.53528, gradient: 0.00000, scale_inv: 18.53528
+epoch: 12,  600/5790
+[ 64290/115800]  total: 19.72676, gradient: 0.00000, scale_inv: 19.72676
+epoch: 12,  700/5790
+[ 64390/115800]  total: 15.32636, gradient: 0.00000, scale_inv: 15.32636
+epoch: 12,  800/5790
+[ 64490/115800]  total: 17.00322, gradient: 0.00000, scale_inv: 17.00322
+epoch: 12,  900/5790
+[ 64590/115800]  total: 18.08931, gradient: 0.00000, scale_inv: 18.08931
+epoch: 12,  1000/5790
+[ 64690/115800]  total: 13.96354, gradient: 0.00000, scale_inv: 13.96354
+epoch: 12,  1100/5790
+[ 64790/115800]  total: 15.37853, gradient: 0.00000, scale_inv: 15.37853
+epoch: 12,  1200/5790
+[ 64890/115800]  total: 17.48212, gradient: 0.00000, scale_inv: 17.48212
+epoch: 12,  1300/5790
+[ 64990/115800]  total: 16.28976, gradient: 0.00000, scale_inv: 16.28976
+epoch: 12,  1400/5790
+[ 65090/115800]  total: 17.20600, gradient: 0.00000, scale_inv: 17.20600
+epoch: 12,  1500/5790
+[ 65190/115800]  total: 19.44224, gradient: 0.00000, scale_inv: 19.44224
+epoch: 12,  1600/5790
+[ 65290/115800]  total: 17.41861, gradient: 0.00000, scale_inv: 17.41861
+epoch: 12,  1700/5790
+[ 65390/115800]  total: 15.77641, gradient: 0.00000, scale_inv: 15.77641
+epoch: 12,  1800/5790
+[ 65490/115800]  total: 16.53979, gradient: 0.00000, scale_inv: 16.53979
+epoch: 12,  1900/5790
+[ 65590/115800]  total: 14.39953, gradient: 0.00000, scale_inv: 14.39953
+epoch: 12,  2000/5790
+[ 65690/115800]  total: 16.51360, gradient: 0.00000, scale_inv: 16.51360
+epoch: 12,  2100/5790
+[ 65790/115800]  total: 16.79626, gradient: 0.00000, scale_inv: 16.79626
+epoch: 12,  2200/5790
+[ 65890/115800]  total: 17.02441, gradient: 0.00000, scale_inv: 17.02441
+epoch: 12,  2300/5790
+[ 65990/115800]  total: 18.15762, gradient: 0.00000, scale_inv: 18.15762
+epoch: 12,  2400/5790
+[ 66090/115800]  total: 19.34299, gradient: 0.00000, scale_inv: 19.34299
+epoch: 12,  2500/5790
+[ 66190/115800]  total: 15.95636, gradient: 0.00000, scale_inv: 15.95636
+epoch: 12,  2600/5790
+[ 66290/115800]  total: 16.20633, gradient: 0.00000, scale_inv: 16.20633
+epoch: 12,  2700/5790
+[ 66390/115800]  total: 16.04414, gradient: 0.00000, scale_inv: 16.04414
+epoch: 12,  2800/5790
+[ 66490/115800]  total: 16.01210, gradient: 0.00000, scale_inv: 16.01210
+epoch: 12,  2900/5790
+[ 66590/115800]  total: 16.43631, gradient: 0.00000, scale_inv: 16.43631
+epoch: 12,  3000/5790
+[ 66690/115800]  total: 16.75470, gradient: 0.00000, scale_inv: 16.75470
+epoch: 12,  3100/5790
+[ 66790/115800]  total: 16.68308, gradient: 0.00000, scale_inv: 16.68308
+epoch: 12,  3200/5790
+[ 66890/115800]  total: 16.71483, gradient: 0.00000, scale_inv: 16.71483
+epoch: 12,  3300/5790
+[ 66990/115800]  total: 18.09739, gradient: 0.00000, scale_inv: 18.09739
+epoch: 12,  3400/5790
+[ 67090/115800]  total: 15.53351, gradient: 0.00000, scale_inv: 15.53351
+epoch: 12,  3500/5790
+[ 67190/115800]  total: 14.18180, gradient: 0.00000, scale_inv: 14.18180
+epoch: 12,  3600/5790
+[ 67290/115800]  total: 16.11186, gradient: 0.00000, scale_inv: 16.11186
+epoch: 12,  3700/5790
+[ 67390/115800]  total: 15.75293, gradient: 0.00000, scale_inv: 15.75293
+epoch: 12,  3800/5790
+[ 67490/115800]  total: 17.88337, gradient: 0.00000, scale_inv: 17.88337
+epoch: 12,  3900/5790
+[ 67590/115800]  total: 15.46059, gradient: 0.00000, scale_inv: 15.46059
+epoch: 12,  4000/5790
+[ 67690/115800]  total: 17.04024, gradient: 0.00000, scale_inv: 17.04024
+epoch: 12,  4100/5790
+[ 67790/115800]  total: 15.53750, gradient: 0.00000, scale_inv: 15.53750
+epoch: 12,  4200/5790
+[ 67890/115800]  total: 19.17969, gradient: 0.00000, scale_inv: 19.17969
+epoch: 12,  4300/5790
+[ 67990/115800]  total: 16.57287, gradient: 0.00000, scale_inv: 16.57287
+epoch: 12,  4400/5790
+[ 68090/115800]  total: 16.01634, gradient: 0.00000, scale_inv: 16.01634
+epoch: 12,  4500/5790
+[ 68190/115800]  total: 14.37015, gradient: 0.00000, scale_inv: 14.37015
+epoch: 12,  4600/5790
+[ 68290/115800]  total: 16.52798, gradient: 0.00000, scale_inv: 16.52798
+epoch: 12,  4700/5790
+[ 68390/115800]  total: 19.59606, gradient: 0.00000, scale_inv: 19.59606
+epoch: 12,  4800/5790
+[ 68490/115800]  total: 15.19442, gradient: 0.00000, scale_inv: 15.19442
+epoch: 12,  4900/5790
+[ 68590/115800]  total: 16.31331, gradient: 0.00000, scale_inv: 16.31331
+epoch: 12,  5000/5790
+[ 68690/115800]  total: 16.61153, gradient: 0.00000, scale_inv: 16.61153
+epoch: 12,  5100/5790
+[ 68790/115800]  total: 18.62476, gradient: 0.00000, scale_inv: 18.62476
+epoch: 12,  5200/5790
+[ 68890/115800]  total: 20.28363, gradient: 0.00000, scale_inv: 20.28363
+epoch: 12,  5300/5790
+[ 68990/115800]  total: 15.20953, gradient: 0.00000, scale_inv: 15.20953
+epoch: 12,  5400/5790
+[ 69090/115800]  total: 14.42535, gradient: 0.00000, scale_inv: 14.42535
+epoch: 12,  5500/5790
+[ 69190/115800]  total: 16.73537, gradient: 0.00000, scale_inv: 16.73537
+epoch: 12,  5600/5790
+[ 69290/115800]  total: 16.21585, gradient: 0.00000, scale_inv: 16.21585
+epoch: 12,  5700/5790
+[ 69390/115800]  total: 18.22791, gradient: 0.00000, scale_inv: 18.22791
+=> learning decay... current lr: 0.000067
+epoch: 13,  100/5790
+[ 69580/115800]  total: 15.76939, gradient: 0.00000, scale_inv: 15.76939
+epoch: 13,  200/5790
+[ 69680/115800]  total: 14.86033, gradient: 0.00000, scale_inv: 14.86033
+epoch: 13,  300/5790
+[ 69780/115800]  total: 19.92621, gradient: 0.00000, scale_inv: 19.92621
+epoch: 13,  400/5790
+[ 69880/115800]  total: 17.49413, gradient: 0.00000, scale_inv: 17.49413
+epoch: 13,  500/5790
+[ 69980/115800]  total: 15.76060, gradient: 0.00000, scale_inv: 15.76060
+epoch: 13,  600/5790
+[ 70080/115800]  total: 17.09492, gradient: 0.00000, scale_inv: 17.09492
+epoch: 13,  700/5790
+[ 70180/115800]  total: 16.68317, gradient: 0.00000, scale_inv: 16.68317
+epoch: 13,  800/5790
+[ 70280/115800]  total: 16.88179, gradient: 0.00000, scale_inv: 16.88179
+epoch: 13,  900/5790
+[ 70380/115800]  total: 17.74978, gradient: 0.00000, scale_inv: 17.74978
+epoch: 13,  1000/5790
+[ 70480/115800]  total: 16.89148, gradient: 0.00000, scale_inv: 16.89148
+epoch: 13,  1100/5790
+[ 70580/115800]  total: 16.69101, gradient: 0.00000, scale_inv: 16.69101
+epoch: 13,  1200/5790
+[ 70680/115800]  total: 17.50568, gradient: 0.00000, scale_inv: 17.50568
+epoch: 13,  1300/5790
+[ 70780/115800]  total: 17.63796, gradient: 0.00000, scale_inv: 17.63796
+epoch: 13,  1400/5790
+[ 70880/115800]  total: 16.23286, gradient: 0.00000, scale_inv: 16.23286
+epoch: 13,  1500/5790
+[ 70980/115800]  total: 16.42970, gradient: 0.00000, scale_inv: 16.42970
+epoch: 13,  1600/5790
+[ 71080/115800]  total: 15.41482, gradient: 0.00000, scale_inv: 15.41482
+epoch: 13,  1700/5790
+[ 71180/115800]  total: 18.21758, gradient: 0.00000, scale_inv: 18.21758
+epoch: 13,  1800/5790
+[ 71280/115800]  total: 14.43083, gradient: 0.00000, scale_inv: 14.43083
+epoch: 13,  1900/5790
+[ 71380/115800]  total: 16.11398, gradient: 0.00000, scale_inv: 16.11398
+epoch: 13,  2000/5790
+[ 71480/115800]  total: 17.09354, gradient: 0.00000, scale_inv: 17.09354
+epoch: 13,  2100/5790
+[ 71580/115800]  total: 17.61381, gradient: 0.00000, scale_inv: 17.61381
+epoch: 13,  2200/5790
+[ 71680/115800]  total: 17.19449, gradient: 0.00000, scale_inv: 17.19449
+epoch: 13,  2300/5790
+[ 71780/115800]  total: 17.83267, gradient: 0.00000, scale_inv: 17.83267
+epoch: 13,  2400/5790
+[ 71880/115800]  total: 15.14666, gradient: 0.00000, scale_inv: 15.14666
+epoch: 13,  2500/5790
+[ 71980/115800]  total: 17.04221, gradient: 0.00000, scale_inv: 17.04221
+epoch: 13,  2600/5790
+[ 72080/115800]  total: 18.36843, gradient: 0.00000, scale_inv: 18.36843
+epoch: 13,  2700/5790
+[ 72180/115800]  total: 16.56785, gradient: 0.00000, scale_inv: 16.56785
+epoch: 13,  2800/5790
+[ 72280/115800]  total: 15.22198, gradient: 0.00000, scale_inv: 15.22198
+epoch: 13,  2900/5790
+[ 72380/115800]  total: 16.65744, gradient: 0.00000, scale_inv: 16.65744
+epoch: 13,  3000/5790
+[ 72480/115800]  total: 16.86563, gradient: 0.00000, scale_inv: 16.86563
+epoch: 13,  3100/5790
+[ 72580/115800]  total: 16.89702, gradient: 0.00000, scale_inv: 16.89702
+epoch: 13,  3200/5790
+[ 72680/115800]  total: 18.85488, gradient: 0.00000, scale_inv: 18.85488
+epoch: 13,  3300/5790
+[ 72780/115800]  total: 16.18806, gradient: 0.00000, scale_inv: 16.18806
+epoch: 13,  3400/5790
+[ 72880/115800]  total: 15.73099, gradient: 0.00000, scale_inv: 15.73099
+epoch: 13,  3500/5790
+[ 72980/115800]  total: 15.09057, gradient: 0.00000, scale_inv: 15.09057
+epoch: 13,  3600/5790
+[ 73080/115800]  total: 16.21853, gradient: 0.00000, scale_inv: 16.21853
+epoch: 13,  3700/5790
+[ 73180/115800]  total: 20.43819, gradient: 0.00000, scale_inv: 20.43819
+epoch: 13,  3800/5790
+[ 73280/115800]  total: 15.42008, gradient: 0.00000, scale_inv: 15.42008
+epoch: 13,  3900/5790
+[ 73380/115800]  total: 17.33142, gradient: 0.00000, scale_inv: 17.33142
+epoch: 13,  4000/5790
+[ 73480/115800]  total: 17.30632, gradient: 0.00000, scale_inv: 17.30632
+epoch: 13,  4100/5790
+[ 73580/115800]  total: 13.92376, gradient: 0.00000, scale_inv: 13.92376
+epoch: 13,  4200/5790
+[ 73680/115800]  total: 17.59314, gradient: 0.00000, scale_inv: 17.59314
+epoch: 13,  4300/5790
+[ 73780/115800]  total: 16.64810, gradient: 0.00000, scale_inv: 16.64810
+epoch: 13,  4400/5790
+[ 73880/115800]  total: 14.65495, gradient: 0.00000, scale_inv: 14.65495
+epoch: 13,  4500/5790
+[ 73980/115800]  total: 19.38835, gradient: 0.00000, scale_inv: 19.38835
+epoch: 13,  4600/5790
+[ 74080/115800]  total: 12.77572, gradient: 0.00000, scale_inv: 12.77572
+epoch: 13,  4700/5790
+[ 74180/115800]  total: 13.08978, gradient: 0.00000, scale_inv: 13.08978
+epoch: 13,  4800/5790
+[ 74280/115800]  total: 16.73818, gradient: 0.00000, scale_inv: 16.73818
+epoch: 13,  4900/5790
+[ 74380/115800]  total: 15.97884, gradient: 0.00000, scale_inv: 15.97884
+epoch: 13,  5000/5790
+[ 74480/115800]  total: 19.27885, gradient: 0.00000, scale_inv: 19.27885
+epoch: 13,  5100/5790
+[ 74580/115800]  total: 19.01242, gradient: 0.00000, scale_inv: 19.01242
+epoch: 13,  5200/5790
+[ 74680/115800]  total: 19.61436, gradient: 0.00000, scale_inv: 19.61436
+epoch: 13,  5300/5790
+[ 74780/115800]  total: 13.84924, gradient: 0.00000, scale_inv: 13.84924
+epoch: 13,  5400/5790
+[ 74880/115800]  total: 15.08616, gradient: 0.00000, scale_inv: 15.08616
+epoch: 13,  5500/5790
+[ 74980/115800]  total: 17.86966, gradient: 0.00000, scale_inv: 17.86966
+epoch: 13,  5600/5790
+[ 75080/115800]  total: 15.69271, gradient: 0.00000, scale_inv: 15.69271
+epoch: 13,  5700/5790
+[ 75180/115800]  total: 15.59496, gradient: 0.00000, scale_inv: 15.59496
+=> learning decay... current lr: 0.000063
+epoch: 14,  100/5790
+[ 75370/115800]  total: 16.99023, gradient: 0.00000, scale_inv: 16.99023
+epoch: 14,  200/5790
+[ 75470/115800]  total: 17.88020, gradient: 0.00000, scale_inv: 17.88020
+epoch: 14,  300/5790
+[ 75570/115800]  total: 17.12133, gradient: 0.00000, scale_inv: 17.12133
+epoch: 14,  400/5790
+[ 75670/115800]  total: 13.35213, gradient: 0.00000, scale_inv: 13.35213
+epoch: 14,  500/5790
+[ 75770/115800]  total: 17.08887, gradient: 0.00000, scale_inv: 17.08887
+epoch: 14,  600/5790
+[ 75870/115800]  total: 17.42792, gradient: 0.00000, scale_inv: 17.42792
+epoch: 14,  700/5790
+[ 75970/115800]  total: 16.02968, gradient: 0.00000, scale_inv: 16.02968
+epoch: 14,  800/5790
+[ 76070/115800]  total: 16.24281, gradient: 0.00000, scale_inv: 16.24281
+epoch: 14,  900/5790
+[ 76170/115800]  total: 19.35210, gradient: 0.00000, scale_inv: 19.35210
+epoch: 14,  1000/5790
+[ 76270/115800]  total: 18.16694, gradient: 0.00000, scale_inv: 18.16694
+epoch: 14,  1100/5790
+[ 76370/115800]  total: 17.52032, gradient: 0.00000, scale_inv: 17.52032
+epoch: 14,  1200/5790
+[ 76470/115800]  total: 16.63676, gradient: 0.00000, scale_inv: 16.63676
+epoch: 14,  1300/5790
+[ 76570/115800]  total: 17.70829, gradient: 0.00000, scale_inv: 17.70829
+epoch: 14,  1400/5790
+[ 76670/115800]  total: 17.76122, gradient: 0.00000, scale_inv: 17.76122
+epoch: 14,  1500/5790
+[ 76770/115800]  total: 16.34922, gradient: 0.00000, scale_inv: 16.34922
+epoch: 14,  1600/5790
+[ 76870/115800]  total: 16.65380, gradient: 0.00000, scale_inv: 16.65380
+epoch: 14,  1700/5790
+[ 76970/115800]  total: 15.42338, gradient: 0.00000, scale_inv: 15.42338
+epoch: 14,  1800/5790
+[ 77070/115800]  total: 15.94784, gradient: 0.00000, scale_inv: 15.94784
+epoch: 14,  1900/5790
+[ 77170/115800]  total: 15.95031, gradient: 0.00000, scale_inv: 15.95031
+epoch: 14,  2000/5790
+[ 77270/115800]  total: 16.74732, gradient: 0.00000, scale_inv: 16.74732
+epoch: 14,  2100/5790
+[ 77370/115800]  total: 15.94485, gradient: 0.00000, scale_inv: 15.94485
+epoch: 14,  2200/5790
+[ 77470/115800]  total: 17.88222, gradient: 0.00000, scale_inv: 17.88222
+epoch: 14,  2300/5790
+[ 77570/115800]  total: 18.27158, gradient: 0.00000, scale_inv: 18.27158
+epoch: 14,  2400/5790
+[ 77670/115800]  total: 16.86575, gradient: 0.00000, scale_inv: 16.86575
+epoch: 14,  2500/5790
+[ 77770/115800]  total: 14.28605, gradient: 0.00000, scale_inv: 14.28605
+epoch: 14,  2600/5790
+[ 77870/115800]  total: 13.78801, gradient: 0.00000, scale_inv: 13.78801
+epoch: 14,  2700/5790
+[ 77970/115800]  total: 15.56273, gradient: 0.00000, scale_inv: 15.56273
+epoch: 14,  2800/5790
+[ 78070/115800]  total: 17.89093, gradient: 0.00000, scale_inv: 17.89093
+epoch: 14,  2900/5790
+[ 78170/115800]  total: 18.70608, gradient: 0.00000, scale_inv: 18.70608
+epoch: 14,  3000/5790
+[ 78270/115800]  total: 17.35272, gradient: 0.00000, scale_inv: 17.35272
+epoch: 14,  3100/5790
+[ 78370/115800]  total: 18.51228, gradient: 0.00000, scale_inv: 18.51228
+epoch: 14,  3200/5790
+[ 78470/115800]  total: 16.53476, gradient: 0.00000, scale_inv: 16.53476
+epoch: 14,  3300/5790
+[ 78570/115800]  total: 14.98511, gradient: 0.00000, scale_inv: 14.98511
+epoch: 14,  3400/5790
+[ 78670/115800]  total: 18.65688, gradient: 0.00000, scale_inv: 18.65688
+epoch: 14,  3500/5790
+[ 78770/115800]  total: 19.10361, gradient: 0.00000, scale_inv: 19.10361
+epoch: 14,  3600/5790
+[ 78870/115800]  total: 18.35735, gradient: 0.00000, scale_inv: 18.35735
+epoch: 14,  3700/5790
+[ 78970/115800]  total: 15.69314, gradient: 0.00000, scale_inv: 15.69314
+epoch: 14,  3800/5790
+[ 79070/115800]  total: 15.35969, gradient: 0.00000, scale_inv: 15.35969
+epoch: 14,  3900/5790
+[ 79170/115800]  total: 16.49191, gradient: 0.00000, scale_inv: 16.49191
+epoch: 14,  4000/5790
+[ 79270/115800]  total: 17.23331, gradient: 0.00000, scale_inv: 17.23331
+epoch: 14,  4100/5790
+[ 79370/115800]  total: 17.63513, gradient: 0.00000, scale_inv: 17.63513
+epoch: 14,  4200/5790
+[ 79470/115800]  total: 16.72699, gradient: 0.00000, scale_inv: 16.72699
+epoch: 14,  4300/5790
+[ 79570/115800]  total: 18.38526, gradient: 0.00000, scale_inv: 18.38526
+epoch: 14,  4400/5790
+[ 79670/115800]  total: 16.27730, gradient: 0.00000, scale_inv: 16.27730
+epoch: 14,  4500/5790
+[ 79770/115800]  total: 16.66211, gradient: 0.00000, scale_inv: 16.66211
+epoch: 14,  4600/5790
+[ 79870/115800]  total: 16.12904, gradient: 0.00000, scale_inv: 16.12904
+epoch: 14,  4700/5790
+[ 79970/115800]  total: 17.90101, gradient: 0.00000, scale_inv: 17.90101
+epoch: 14,  4800/5790
+[ 80070/115800]  total: 14.54713, gradient: 0.00000, scale_inv: 14.54713
+epoch: 14,  4900/5790
+[ 80170/115800]  total: 17.32154, gradient: 0.00000, scale_inv: 17.32154
+epoch: 14,  5000/5790
+[ 80270/115800]  total: 17.01438, gradient: 0.00000, scale_inv: 17.01438
+epoch: 14,  5100/5790
+[ 80370/115800]  total: 16.44263, gradient: 0.00000, scale_inv: 16.44263
+epoch: 14,  5200/5790
+[ 80470/115800]  total: 17.76719, gradient: 0.00000, scale_inv: 17.76719
+epoch: 14,  5300/5790
+[ 80570/115800]  total: 17.33914, gradient: 0.00000, scale_inv: 17.33914
+epoch: 14,  5400/5790
+[ 80670/115800]  total: 19.87706, gradient: 0.00000, scale_inv: 19.87706
+epoch: 14,  5500/5790
+[ 80770/115800]  total: 15.87718, gradient: 0.00000, scale_inv: 15.87718
+epoch: 14,  5600/5790
+[ 80870/115800]  total: 17.48006, gradient: 0.00000, scale_inv: 17.48006
+epoch: 14,  5700/5790
+[ 80970/115800]  total: 17.18751, gradient: 0.00000, scale_inv: 17.18751
+=> learning decay... current lr: 0.000059
+epoch: 15,  100/5790
+[ 81160/115800]  total: 15.03569, gradient: 0.00000, scale_inv: 15.03569
+epoch: 15,  200/5790
+[ 81260/115800]  total: 16.69833, gradient: 0.00000, scale_inv: 16.69833
+epoch: 15,  300/5790
+[ 81360/115800]  total: 15.49486, gradient: 0.00000, scale_inv: 15.49486
+epoch: 15,  400/5790
+[ 81460/115800]  total: 15.15886, gradient: 0.00000, scale_inv: 15.15886
+epoch: 15,  500/5790
+[ 81560/115800]  total: 18.19425, gradient: 0.00000, scale_inv: 18.19425
+epoch: 15,  600/5790
+[ 81660/115800]  total: 19.43917, gradient: 0.00000, scale_inv: 19.43917
+epoch: 15,  700/5790
+[ 81760/115800]  total: 16.06512, gradient: 0.00000, scale_inv: 16.06512
+epoch: 15,  800/5790
+[ 81860/115800]  total: 16.30823, gradient: 0.00000, scale_inv: 16.30823
+epoch: 15,  900/5790
+[ 81960/115800]  total: 17.81740, gradient: 0.00000, scale_inv: 17.81740
+epoch: 15,  1000/5790
+[ 82060/115800]  total: 18.42718, gradient: 0.00000, scale_inv: 18.42718
+epoch: 15,  1100/5790
+[ 82160/115800]  total: 20.43159, gradient: 0.00000, scale_inv: 20.43159
+epoch: 15,  1200/5790
+[ 82260/115800]  total: 17.71416, gradient: 0.00000, scale_inv: 17.71416
+epoch: 15,  1300/5790
+[ 82360/115800]  total: 17.20953, gradient: 0.00000, scale_inv: 17.20953
+epoch: 15,  1400/5790
+[ 82460/115800]  total: 12.65383, gradient: 0.00000, scale_inv: 12.65383
+epoch: 15,  1500/5790
+[ 82560/115800]  total: 16.79200, gradient: 0.00000, scale_inv: 16.79200
+epoch: 15,  1600/5790
+[ 82660/115800]  total: 16.90315, gradient: 0.00000, scale_inv: 16.90315
+epoch: 15,  1700/5790
+[ 82760/115800]  total: 16.94856, gradient: 0.00000, scale_inv: 16.94856
+epoch: 15,  1800/5790
+[ 82860/115800]  total: 17.64324, gradient: 0.00000, scale_inv: 17.64324
+epoch: 15,  1900/5790
+[ 82960/115800]  total: 17.42477, gradient: 0.00000, scale_inv: 17.42477
+epoch: 15,  2000/5790
+[ 83060/115800]  total: 16.24212, gradient: 0.00000, scale_inv: 16.24212
+epoch: 15,  2100/5790
+[ 83160/115800]  total: 17.65472, gradient: 0.00000, scale_inv: 17.65472
+epoch: 15,  2200/5790
+[ 83260/115800]  total: 15.61339, gradient: 0.00000, scale_inv: 15.61339
+epoch: 15,  2300/5790
+[ 83360/115800]  total: 17.12354, gradient: 0.00000, scale_inv: 17.12354
+epoch: 15,  2400/5790
+[ 83460/115800]  total: 19.32185, gradient: 0.00000, scale_inv: 19.32185
+epoch: 15,  2500/5790
+[ 83560/115800]  total: 17.78214, gradient: 0.00000, scale_inv: 17.78214
+epoch: 15,  2600/5790
+[ 83660/115800]  total: 18.41405, gradient: 0.00000, scale_inv: 18.41405
+epoch: 15,  2700/5790
+[ 83760/115800]  total: 16.81480, gradient: 0.00000, scale_inv: 16.81480
+epoch: 15,  2800/5790
+[ 83860/115800]  total: 16.63274, gradient: 0.00000, scale_inv: 16.63274
+epoch: 15,  2900/5790
+[ 83960/115800]  total: 17.12165, gradient: 0.00000, scale_inv: 17.12165
+epoch: 15,  3000/5790
+[ 84060/115800]  total: 12.76771, gradient: 0.00000, scale_inv: 12.76771
+epoch: 15,  3100/5790
+[ 84160/115800]  total: 21.51126, gradient: 0.00000, scale_inv: 21.51126
+epoch: 15,  3200/5790
+[ 84260/115800]  total: 16.92653, gradient: 0.00000, scale_inv: 16.92653
+epoch: 15,  3300/5790
+[ 84360/115800]  total: 18.22426, gradient: 0.00000, scale_inv: 18.22426
+epoch: 15,  3400/5790
+[ 84460/115800]  total: 15.85115, gradient: 0.00000, scale_inv: 15.85115
+epoch: 15,  3500/5790
+[ 84560/115800]  total: 17.83652, gradient: 0.00000, scale_inv: 17.83652
+epoch: 15,  3600/5790
+[ 84660/115800]  total: 19.26604, gradient: 0.00000, scale_inv: 19.26604
+epoch: 15,  3700/5790
+[ 84760/115800]  total: 14.01213, gradient: 0.00000, scale_inv: 14.01213
+epoch: 15,  3800/5790
+[ 84860/115800]  total: 17.74631, gradient: 0.00000, scale_inv: 17.74631
+epoch: 15,  3900/5790
+[ 84960/115800]  total: 17.22030, gradient: 0.00000, scale_inv: 17.22030
+epoch: 15,  4000/5790
+[ 85060/115800]  total: 14.81522, gradient: 0.00000, scale_inv: 14.81522
+epoch: 15,  4100/5790
+[ 85160/115800]  total: 18.70890, gradient: 0.00000, scale_inv: 18.70890
+epoch: 15,  4200/5790
+[ 85260/115800]  total: 16.02238, gradient: 0.00000, scale_inv: 16.02238
+epoch: 15,  4300/5790
+[ 85360/115800]  total: 14.90714, gradient: 0.00000, scale_inv: 14.90714
+epoch: 15,  4400/5790
+[ 85460/115800]  total: 17.83512, gradient: 0.00000, scale_inv: 17.83512
+epoch: 15,  4500/5790
+[ 85560/115800]  total: 13.27631, gradient: 0.00000, scale_inv: 13.27631
+epoch: 15,  4600/5790
+[ 85660/115800]  total: 16.86410, gradient: 0.00000, scale_inv: 16.86410
+epoch: 15,  4700/5790
+[ 85760/115800]  total: 16.77274, gradient: 0.00000, scale_inv: 16.77274
+epoch: 15,  4800/5790
+[ 85860/115800]  total: 16.23815, gradient: 0.00000, scale_inv: 16.23815
+epoch: 15,  4900/5790
+[ 85960/115800]  total: 17.66946, gradient: 0.00000, scale_inv: 17.66946
+epoch: 15,  5000/5790
+[ 86060/115800]  total: 15.17748, gradient: 0.00000, scale_inv: 15.17748
+epoch: 15,  5100/5790
+[ 86160/115800]  total: 16.38370, gradient: 0.00000, scale_inv: 16.38370
+epoch: 15,  5200/5790
+[ 86260/115800]  total: 19.18187, gradient: 0.00000, scale_inv: 19.18187
+epoch: 15,  5300/5790
+[ 86360/115800]  total: 16.67332, gradient: 0.00000, scale_inv: 16.67332
+epoch: 15,  5400/5790
+[ 86460/115800]  total: 14.85595, gradient: 0.00000, scale_inv: 14.85595
+epoch: 15,  5500/5790
+[ 86560/115800]  total: 19.26861, gradient: 0.00000, scale_inv: 19.26861
+epoch: 15,  5600/5790
+[ 86660/115800]  total: 16.29057, gradient: 0.00000, scale_inv: 16.29057
+epoch: 15,  5700/5790
+[ 86760/115800]  total: 18.29072, gradient: 0.00000, scale_inv: 18.29072
+=> learning decay... current lr: 0.000055
+epoch: 16,  100/5790
+[ 86950/115800]  total: 14.35432, gradient: 0.00000, scale_inv: 14.35432
+epoch: 16,  200/5790
+[ 87050/115800]  total: 16.05772, gradient: 0.00000, scale_inv: 16.05772
+epoch: 16,  300/5790
+[ 87150/115800]  total: 21.66343, gradient: 0.00000, scale_inv: 21.66343
+epoch: 16,  400/5790
+[ 87250/115800]  total: 15.82443, gradient: 0.00000, scale_inv: 15.82443
+epoch: 16,  500/5790
+[ 87350/115800]  total: 16.54996, gradient: 0.00000, scale_inv: 16.54996
+epoch: 16,  600/5790
+[ 87450/115800]  total: 17.12119, gradient: 0.00000, scale_inv: 17.12119
+epoch: 16,  700/5790
+[ 87550/115800]  total: 19.39504, gradient: 0.00000, scale_inv: 19.39504
+epoch: 16,  800/5790
+[ 87650/115800]  total: 16.35605, gradient: 0.00000, scale_inv: 16.35605
+epoch: 16,  900/5790
+[ 87750/115800]  total: 17.44594, gradient: 0.00000, scale_inv: 17.44594
+epoch: 16,  1000/5790
+[ 87850/115800]  total: 14.98683, gradient: 0.00000, scale_inv: 14.98683
+epoch: 16,  1100/5790
+[ 87950/115800]  total: 14.97544, gradient: 0.00000, scale_inv: 14.97544
+epoch: 16,  1200/5790
+[ 88050/115800]  total: 20.12320, gradient: 0.00000, scale_inv: 20.12320
+epoch: 16,  1300/5790
+[ 88150/115800]  total: 16.21732, gradient: 0.00000, scale_inv: 16.21732
+epoch: 16,  1400/5790
+[ 88250/115800]  total: 18.39473, gradient: 0.00000, scale_inv: 18.39473
+epoch: 16,  1500/5790
+[ 88350/115800]  total: 15.96046, gradient: 0.00000, scale_inv: 15.96046
+epoch: 16,  1600/5790
+[ 88450/115800]  total: 17.11680, gradient: 0.00000, scale_inv: 17.11680
+epoch: 16,  1700/5790
+[ 88550/115800]  total: 16.23664, gradient: 0.00000, scale_inv: 16.23664
+epoch: 16,  1800/5790
+[ 88650/115800]  total: 15.97573, gradient: 0.00000, scale_inv: 15.97573
+epoch: 16,  1900/5790
+[ 88750/115800]  total: 17.31260, gradient: 0.00000, scale_inv: 17.31260
+epoch: 16,  2000/5790
+[ 88850/115800]  total: 18.90485, gradient: 0.00000, scale_inv: 18.90485
+epoch: 16,  2100/5790
+[ 88950/115800]  total: 18.24212, gradient: 0.00000, scale_inv: 18.24212
+epoch: 16,  2200/5790
+[ 89050/115800]  total: 16.88624, gradient: 0.00000, scale_inv: 16.88624
+epoch: 16,  2300/5790
+[ 89150/115800]  total: 21.05309, gradient: 0.00000, scale_inv: 21.05309
+epoch: 16,  2400/5790
+[ 89250/115800]  total: 18.48194, gradient: 0.00000, scale_inv: 18.48194
+epoch: 16,  2500/5790
+[ 89350/115800]  total: 17.40775, gradient: 0.00000, scale_inv: 17.40775
+epoch: 16,  2600/5790
+[ 89450/115800]  total: 19.49482, gradient: 0.00000, scale_inv: 19.49482
+epoch: 16,  2700/5790
+[ 89550/115800]  total: 16.98823, gradient: 0.00000, scale_inv: 16.98823
+epoch: 16,  2800/5790
+[ 89650/115800]  total: 19.58479, gradient: 0.00000, scale_inv: 19.58479
+epoch: 16,  2900/5790
+[ 89750/115800]  total: 16.84851, gradient: 0.00000, scale_inv: 16.84851
+epoch: 16,  3000/5790
+[ 89850/115800]  total: 14.83069, gradient: 0.00000, scale_inv: 14.83069
+epoch: 16,  3100/5790
+[ 89950/115800]  total: 16.20126, gradient: 0.00000, scale_inv: 16.20126
+epoch: 16,  3200/5790
+[ 90050/115800]  total: 18.18176, gradient: 0.00000, scale_inv: 18.18176
+epoch: 16,  3300/5790
+[ 90150/115800]  total: 15.38552, gradient: 0.00000, scale_inv: 15.38552
+epoch: 16,  3400/5790
+[ 90250/115800]  total: 19.60922, gradient: 0.00000, scale_inv: 19.60922
+epoch: 16,  3500/5790
+[ 90350/115800]  total: 16.24938, gradient: 0.00000, scale_inv: 16.24938
+epoch: 16,  3600/5790
+[ 90450/115800]  total: 17.46232, gradient: 0.00000, scale_inv: 17.46232
+epoch: 16,  3700/5790
+[ 90550/115800]  total: 15.37743, gradient: 0.00000, scale_inv: 15.37743
+epoch: 16,  3800/5790
+[ 90650/115800]  total: 20.48739, gradient: 0.00000, scale_inv: 20.48739
+epoch: 16,  3900/5790
+[ 90750/115800]  total: 16.97417, gradient: 0.00000, scale_inv: 16.97417
+epoch: 16,  4000/5790
+[ 90850/115800]  total: 19.63002, gradient: 0.00000, scale_inv: 19.63002
+epoch: 16,  4100/5790
+[ 90950/115800]  total: 16.48899, gradient: 0.00000, scale_inv: 16.48899
+epoch: 16,  4200/5790
+[ 91050/115800]  total: 16.48640, gradient: 0.00000, scale_inv: 16.48640
+epoch: 16,  4300/5790
+[ 91150/115800]  total: 18.47677, gradient: 0.00000, scale_inv: 18.47677
+epoch: 16,  4400/5790
+[ 91250/115800]  total: 18.58611, gradient: 0.00000, scale_inv: 18.58611
+epoch: 16,  4500/5790
+[ 91350/115800]  total: 17.48783, gradient: 0.00000, scale_inv: 17.48783
+epoch: 16,  4600/5790
+[ 91450/115800]  total: 15.11179, gradient: 0.00000, scale_inv: 15.11179
+epoch: 16,  4700/5790
+[ 91550/115800]  total: 16.98276, gradient: 0.00000, scale_inv: 16.98276
+epoch: 16,  4800/5790
+[ 91650/115800]  total: 19.47215, gradient: 0.00000, scale_inv: 19.47215
+epoch: 16,  4900/5790
+[ 91750/115800]  total: 14.68541, gradient: 0.00000, scale_inv: 14.68541
+epoch: 16,  5000/5790
+[ 91850/115800]  total: 13.23359, gradient: 0.00000, scale_inv: 13.23359
+epoch: 16,  5100/5790
+[ 91950/115800]  total: 18.67020, gradient: 0.00000, scale_inv: 18.67020
+epoch: 16,  5200/5790
+[ 92050/115800]  total: 16.27897, gradient: 0.00000, scale_inv: 16.27897
+epoch: 16,  5300/5790
+[ 92150/115800]  total: 19.66852, gradient: 0.00000, scale_inv: 19.66852
+epoch: 16,  5400/5790
+[ 92250/115800]  total: 16.84717, gradient: 0.00000, scale_inv: 16.84717
+epoch: 16,  5500/5790
+[ 92350/115800]  total: 19.03535, gradient: 0.00000, scale_inv: 19.03535
+epoch: 16,  5600/5790
+[ 92450/115800]  total: 17.20292, gradient: 0.00000, scale_inv: 17.20292
+epoch: 16,  5700/5790
+[ 92550/115800]  total: 16.78335, gradient: 0.00000, scale_inv: 16.78335
+=> learning decay... current lr: 0.000050
+epoch: 17,  100/5790
+[ 92740/115800]  total: 15.02173, gradient: 0.00000, scale_inv: 15.02173
+epoch: 17,  200/5790
+[ 92840/115800]  total: 16.04576, gradient: 0.00000, scale_inv: 16.04576
+epoch: 17,  300/5790
+[ 92940/115800]  total: 16.84877, gradient: 0.00000, scale_inv: 16.84877
+epoch: 17,  400/5790
+[ 93040/115800]  total: 15.93053, gradient: 0.00000, scale_inv: 15.93053
+epoch: 17,  500/5790
+[ 93140/115800]  total: 18.50517, gradient: 0.00000, scale_inv: 18.50517
+epoch: 17,  600/5790
+[ 93240/115800]  total: 17.32775, gradient: 0.00000, scale_inv: 17.32775
+epoch: 17,  700/5790
+[ 93340/115800]  total: 17.57747, gradient: 0.00000, scale_inv: 17.57747
+epoch: 17,  800/5790
+[ 93440/115800]  total: 19.28968, gradient: 0.00000, scale_inv: 19.28968
+epoch: 17,  900/5790
+[ 93540/115800]  total: 13.73495, gradient: 0.00000, scale_inv: 13.73495
+epoch: 17,  1000/5790
+[ 93640/115800]  total: 15.75929, gradient: 0.00000, scale_inv: 15.75929
+epoch: 17,  1100/5790
+[ 93740/115800]  total: 15.92341, gradient: 0.00000, scale_inv: 15.92341
+epoch: 17,  1200/5790
+[ 93840/115800]  total: 15.92594, gradient: 0.00000, scale_inv: 15.92594
+epoch: 17,  1300/5790
+[ 93940/115800]  total: 16.38998, gradient: 0.00000, scale_inv: 16.38998
+epoch: 17,  1400/5790
+[ 94040/115800]  total: 19.77774, gradient: 0.00000, scale_inv: 19.77774
+epoch: 17,  1500/5790
+[ 94140/115800]  total: 15.46416, gradient: 0.00000, scale_inv: 15.46416
+epoch: 17,  1600/5790
+[ 94240/115800]  total: 16.60914, gradient: 0.00000, scale_inv: 16.60914
+epoch: 17,  1700/5790
+[ 94340/115800]  total: 18.75859, gradient: 0.00000, scale_inv: 18.75859
+epoch: 17,  1800/5790
+[ 94440/115800]  total: 17.45399, gradient: 0.00000, scale_inv: 17.45399
+epoch: 17,  1900/5790
+[ 94540/115800]  total: 17.68941, gradient: 0.00000, scale_inv: 17.68941
+epoch: 17,  2000/5790
+[ 94640/115800]  total: 17.86751, gradient: 0.00000, scale_inv: 17.86751
+epoch: 17,  2100/5790
+[ 94740/115800]  total: 16.41319, gradient: 0.00000, scale_inv: 16.41319
+epoch: 17,  2200/5790
+[ 94840/115800]  total: 17.67059, gradient: 0.00000, scale_inv: 17.67059
+epoch: 17,  2300/5790
+[ 94940/115800]  total: 16.77869, gradient: 0.00000, scale_inv: 16.77869
+epoch: 17,  2400/5790
+[ 95040/115800]  total: 15.62134, gradient: 0.00000, scale_inv: 15.62134
+epoch: 17,  2500/5790
+[ 95140/115800]  total: 16.48792, gradient: 0.00000, scale_inv: 16.48792
+epoch: 17,  2600/5790
+[ 95240/115800]  total: 16.66046, gradient: 0.00000, scale_inv: 16.66046
+epoch: 17,  2700/5790
+[ 95340/115800]  total: 17.92665, gradient: 0.00000, scale_inv: 17.92665
+epoch: 17,  2800/5790
+[ 95440/115800]  total: 20.83294, gradient: 0.00000, scale_inv: 20.83294
+epoch: 17,  2900/5790
+[ 95540/115800]  total: 17.12186, gradient: 0.00000, scale_inv: 17.12186
+epoch: 17,  3000/5790
+[ 95640/115800]  total: 15.56655, gradient: 0.00000, scale_inv: 15.56655
+epoch: 17,  3100/5790
+[ 95740/115800]  total: 15.91385, gradient: 0.00000, scale_inv: 15.91385
+epoch: 17,  3200/5790
+[ 95840/115800]  total: 18.82915, gradient: 0.00000, scale_inv: 18.82915
+epoch: 17,  3300/5790
+[ 95940/115800]  total: 17.53996, gradient: 0.00000, scale_inv: 17.53996
+epoch: 17,  3400/5790
+[ 96040/115800]  total: 16.60900, gradient: 0.00000, scale_inv: 16.60900
+epoch: 17,  3500/5790
+[ 96140/115800]  total: 17.47584, gradient: 0.00000, scale_inv: 17.47584
+epoch: 17,  3600/5790
+[ 96240/115800]  total: 17.93808, gradient: 0.00000, scale_inv: 17.93808
+epoch: 17,  3700/5790
+[ 96340/115800]  total: 17.24770, gradient: 0.00000, scale_inv: 17.24770
+epoch: 17,  3800/5790
+[ 96440/115800]  total: 15.78040, gradient: 0.00000, scale_inv: 15.78040
+epoch: 17,  3900/5790
+[ 96540/115800]  total: 12.59804, gradient: 0.00000, scale_inv: 12.59804
+epoch: 17,  4000/5790
+[ 96640/115800]  total: 16.70131, gradient: 0.00000, scale_inv: 16.70131
+epoch: 17,  4100/5790
+[ 96740/115800]  total: 15.93657, gradient: 0.00000, scale_inv: 15.93657
+epoch: 17,  4200/5790
+[ 96840/115800]  total: 16.93505, gradient: 0.00000, scale_inv: 16.93505
+epoch: 17,  4300/5790
+[ 96940/115800]  total: 18.50570, gradient: 0.00000, scale_inv: 18.50570
+epoch: 17,  4400/5790
+[ 97040/115800]  total: 17.40901, gradient: 0.00000, scale_inv: 17.40901
+epoch: 17,  4500/5790
+[ 97140/115800]  total: 17.03153, gradient: 0.00000, scale_inv: 17.03153
+epoch: 17,  4600/5790
+[ 97240/115800]  total: 18.76900, gradient: 0.00000, scale_inv: 18.76900
+epoch: 17,  4700/5790
+[ 97340/115800]  total: 13.16704, gradient: 0.00000, scale_inv: 13.16704
+epoch: 17,  4800/5790
+[ 97440/115800]  total: 17.94887, gradient: 0.00000, scale_inv: 17.94887
+epoch: 17,  4900/5790
+[ 97540/115800]  total: 17.96253, gradient: 0.00000, scale_inv: 17.96253
+epoch: 17,  5000/5790
+[ 97640/115800]  total: 16.79478, gradient: 0.00000, scale_inv: 16.79478
+epoch: 17,  5100/5790
+[ 97740/115800]  total: 15.92911, gradient: 0.00000, scale_inv: 15.92911
+epoch: 17,  5200/5790
+[ 97840/115800]  total: 16.50550, gradient: 0.00000, scale_inv: 16.50550
+epoch: 17,  5300/5790
+[ 97940/115800]  total: 14.62480, gradient: 0.00000, scale_inv: 14.62480
+epoch: 17,  5400/5790
+[ 98040/115800]  total: 17.91878, gradient: 0.00000, scale_inv: 17.91878
+epoch: 17,  5500/5790
+[ 98140/115800]  total: 17.84741, gradient: 0.00000, scale_inv: 17.84741
+epoch: 17,  5600/5790
+[ 98240/115800]  total: 17.12212, gradient: 0.00000, scale_inv: 17.12212
+epoch: 17,  5700/5790
+[ 98340/115800]  total: 14.98827, gradient: 0.00000, scale_inv: 14.98827
+=> learning decay... current lr: 0.000045
+epoch: 18,  100/5790
+[ 98530/115800]  total: 15.72729, gradient: 0.00000, scale_inv: 15.72729
+epoch: 18,  200/5790
+[ 98630/115800]  total: 18.08500, gradient: 0.00000, scale_inv: 18.08500
+epoch: 18,  300/5790
+[ 98730/115800]  total: 15.77457, gradient: 0.00000, scale_inv: 15.77457
+epoch: 18,  400/5790
+[ 98830/115800]  total: 17.64048, gradient: 0.00000, scale_inv: 17.64048
+epoch: 18,  500/5790
+[ 98930/115800]  total: 16.58287, gradient: 0.00000, scale_inv: 16.58287
+epoch: 18,  600/5790
+[ 99030/115800]  total: 16.11293, gradient: 0.00000, scale_inv: 16.11293
+epoch: 18,  700/5790
+[ 99130/115800]  total: 14.66436, gradient: 0.00000, scale_inv: 14.66436
+epoch: 18,  800/5790
+[ 99230/115800]  total: 16.21578, gradient: 0.00000, scale_inv: 16.21578
+epoch: 18,  900/5790
+[ 99330/115800]  total: 17.45707, gradient: 0.00000, scale_inv: 17.45707
+epoch: 18,  1000/5790
+[ 99430/115800]  total: 19.14207, gradient: 0.00000, scale_inv: 19.14207
+epoch: 18,  1100/5790
+[ 99530/115800]  total: 13.06465, gradient: 0.00000, scale_inv: 13.06465
+epoch: 18,  1200/5790
+[ 99630/115800]  total: 13.47017, gradient: 0.00000, scale_inv: 13.47017
+epoch: 18,  1300/5790
+[ 99730/115800]  total: 18.94785, gradient: 0.00000, scale_inv: 18.94785
+epoch: 18,  1400/5790
+[ 99830/115800]  total: 20.42391, gradient: 0.00000, scale_inv: 20.42391
+epoch: 18,  1500/5790
+[ 99930/115800]  total: 16.90928, gradient: 0.00000, scale_inv: 16.90928
+epoch: 18,  1600/5790
+[100030/115800]  total: 19.13493, gradient: 0.00000, scale_inv: 19.13493
+epoch: 18,  1700/5790
+[100130/115800]  total: 18.48846, gradient: 0.00000, scale_inv: 18.48846
+epoch: 18,  1800/5790
+[100230/115800]  total: 17.56801, gradient: 0.00000, scale_inv: 17.56801
+epoch: 18,  1900/5790
+[100330/115800]  total: 16.80916, gradient: 0.00000, scale_inv: 16.80916
+epoch: 18,  2000/5790
+[100430/115800]  total: 13.90463, gradient: 0.00000, scale_inv: 13.90463
+epoch: 18,  2100/5790
+[100530/115800]  total: 18.35380, gradient: 0.00000, scale_inv: 18.35380
+epoch: 18,  2200/5790
+[100630/115800]  total: 19.16012, gradient: 0.00000, scale_inv: 19.16012
+epoch: 18,  2300/5790
+[100730/115800]  total: 18.59426, gradient: 0.00000, scale_inv: 18.59426
+epoch: 18,  2400/5790
+[100830/115800]  total: 17.79321, gradient: 0.00000, scale_inv: 17.79321
+epoch: 18,  2500/5790
+[100930/115800]  total: 15.64469, gradient: 0.00000, scale_inv: 15.64469
+epoch: 18,  2600/5790
+[101030/115800]  total: 17.47883, gradient: 0.00000, scale_inv: 17.47883
+epoch: 18,  2700/5790
+[101130/115800]  total: 19.36741, gradient: 0.00000, scale_inv: 19.36741
+epoch: 18,  2800/5790
+[101230/115800]  total: 14.64509, gradient: 0.00000, scale_inv: 14.64509
+epoch: 18,  2900/5790
+[101330/115800]  total: 17.59181, gradient: 0.00000, scale_inv: 17.59181
+epoch: 18,  3000/5790
+[101430/115800]  total: 17.71078, gradient: 0.00000, scale_inv: 17.71078
+epoch: 18,  3100/5790
+[101530/115800]  total: 17.79869, gradient: 0.00000, scale_inv: 17.79869
+epoch: 18,  3200/5790
+[101630/115800]  total: 16.50137, gradient: 0.00000, scale_inv: 16.50137
+epoch: 18,  3300/5790
+[101730/115800]  total: 16.76884, gradient: 0.00000, scale_inv: 16.76884
+epoch: 18,  3400/5790
+[101830/115800]  total: 17.44063, gradient: 0.00000, scale_inv: 17.44063
+epoch: 18,  3500/5790
+[101930/115800]  total: 17.96249, gradient: 0.00000, scale_inv: 17.96249
+epoch: 18,  3600/5790
+[102030/115800]  total: 16.47246, gradient: 0.00000, scale_inv: 16.47246
+epoch: 18,  3700/5790
+[102130/115800]  total: 17.90604, gradient: 0.00000, scale_inv: 17.90604
+epoch: 18,  3800/5790
+[102230/115800]  total: 17.33246, gradient: 0.00000, scale_inv: 17.33246
+epoch: 18,  3900/5790
+[102330/115800]  total: 17.84664, gradient: 0.00000, scale_inv: 17.84664
+epoch: 18,  4000/5790
+[102430/115800]  total: 17.15403, gradient: 0.00000, scale_inv: 17.15403
+epoch: 18,  4100/5790
+[102530/115800]  total: 16.14168, gradient: 0.00000, scale_inv: 16.14168
+epoch: 18,  4200/5790
+[102630/115800]  total: 17.07468, gradient: 0.00000, scale_inv: 17.07468
+epoch: 18,  4300/5790
+[102730/115800]  total: 16.83133, gradient: 0.00000, scale_inv: 16.83133
+epoch: 18,  4400/5790
+[102830/115800]  total: 16.01629, gradient: 0.00000, scale_inv: 16.01629
+epoch: 18,  4500/5790
+[102930/115800]  total: 18.63974, gradient: 0.00000, scale_inv: 18.63974
+epoch: 18,  4600/5790
+[103030/115800]  total: 15.49108, gradient: 0.00000, scale_inv: 15.49108
+epoch: 18,  4700/5790
+[103130/115800]  total: 18.07586, gradient: 0.00000, scale_inv: 18.07586
+epoch: 18,  4800/5790
+[103230/115800]  total: 15.79693, gradient: 0.00000, scale_inv: 15.79693
+epoch: 18,  4900/5790
+[103330/115800]  total: 17.16051, gradient: 0.00000, scale_inv: 17.16051
+epoch: 18,  5000/5790
+[103430/115800]  total: 18.74609, gradient: 0.00000, scale_inv: 18.74609
+epoch: 18,  5100/5790
+[103530/115800]  total: 16.66773, gradient: 0.00000, scale_inv: 16.66773
+epoch: 18,  5200/5790
+[103630/115800]  total: 15.15516, gradient: 0.00000, scale_inv: 15.15516
+epoch: 18,  5300/5790
+[103730/115800]  total: 18.61496, gradient: 0.00000, scale_inv: 18.61496
+epoch: 18,  5400/5790
+[103830/115800]  total: 15.81979, gradient: 0.00000, scale_inv: 15.81979
+epoch: 18,  5500/5790
+[103930/115800]  total: 14.91337, gradient: 0.00000, scale_inv: 14.91337
+epoch: 18,  5600/5790
+[104030/115800]  total: 16.27247, gradient: 0.00000, scale_inv: 16.27247
+epoch: 18,  5700/5790
+[104130/115800]  total: 17.63854, gradient: 0.00000, scale_inv: 17.63854
+=> learning decay... current lr: 0.000038
+epoch: 19,  100/5790
+[104320/115800]  total: 18.03968, gradient: 0.00000, scale_inv: 18.03968
+epoch: 19,  200/5790
+[104420/115800]  total: 12.18183, gradient: 0.00000, scale_inv: 12.18183
+epoch: 19,  300/5790
+[104520/115800]  total: 20.54068, gradient: 0.00000, scale_inv: 20.54068
+epoch: 19,  400/5790
+[104620/115800]  total: 15.71205, gradient: 0.00000, scale_inv: 15.71205
+epoch: 19,  500/5790
+[104720/115800]  total: 17.87448, gradient: 0.00000, scale_inv: 17.87448
+epoch: 19,  600/5790
+[104820/115800]  total: 17.41328, gradient: 0.00000, scale_inv: 17.41328
+epoch: 19,  700/5790
+[104920/115800]  total: 20.33856, gradient: 0.00000, scale_inv: 20.33856
+epoch: 19,  800/5790
+[105020/115800]  total: 15.23151, gradient: 0.00000, scale_inv: 15.23151
+epoch: 19,  900/5790
+[105120/115800]  total: 16.88524, gradient: 0.00000, scale_inv: 16.88524
+epoch: 19,  1000/5790
+[105220/115800]  total: 17.72004, gradient: 0.00000, scale_inv: 17.72004
+epoch: 19,  1100/5790
+[105320/115800]  total: 16.46416, gradient: 0.00000, scale_inv: 16.46416
+epoch: 19,  1200/5790
+[105420/115800]  total: 16.18892, gradient: 0.00000, scale_inv: 16.18892
+epoch: 19,  1300/5790
+[105520/115800]  total: 19.54298, gradient: 0.00000, scale_inv: 19.54298
+epoch: 19,  1400/5790
+[105620/115800]  total: 16.76262, gradient: 0.00000, scale_inv: 16.76262
+epoch: 19,  1500/5790
+[105720/115800]  total: 16.64568, gradient: 0.00000, scale_inv: 16.64568
+epoch: 19,  1600/5790
+[105820/115800]  total: 17.70234, gradient: 0.00000, scale_inv: 17.70234
+epoch: 19,  1700/5790
+[105920/115800]  total: 17.08784, gradient: 0.00000, scale_inv: 17.08784
+epoch: 19,  1800/5790
+[106020/115800]  total: 19.46460, gradient: 0.00000, scale_inv: 19.46460
+epoch: 19,  1900/5790
+[106120/115800]  total: 15.06478, gradient: 0.00000, scale_inv: 15.06478
+epoch: 19,  2000/5790
+[106220/115800]  total: 16.78602, gradient: 0.00000, scale_inv: 16.78602
+epoch: 19,  2100/5790
+[106320/115800]  total: 17.64441, gradient: 0.00000, scale_inv: 17.64441
+epoch: 19,  2200/5790
+[106420/115800]  total: 16.35858, gradient: 0.00000, scale_inv: 16.35858
+epoch: 19,  2300/5790
+[106520/115800]  total: 16.36415, gradient: 0.00000, scale_inv: 16.36415
+epoch: 19,  2400/5790
+[106620/115800]  total: 19.91696, gradient: 0.00000, scale_inv: 19.91696
+epoch: 19,  2500/5790
+[106720/115800]  total: 21.44143, gradient: 0.00000, scale_inv: 21.44143
+epoch: 19,  2600/5790
+[106820/115800]  total: 16.49584, gradient: 0.00000, scale_inv: 16.49584
+epoch: 19,  2700/5790
+[106920/115800]  total: 15.39070, gradient: 0.00000, scale_inv: 15.39070
+epoch: 19,  2800/5790
+[107020/115800]  total: 16.66372, gradient: 0.00000, scale_inv: 16.66372
+epoch: 19,  2900/5790
+[107120/115800]  total: 17.74933, gradient: 0.00000, scale_inv: 17.74933
+epoch: 19,  3000/5790
+[107220/115800]  total: 15.61696, gradient: 0.00000, scale_inv: 15.61696
+epoch: 19,  3100/5790
+[107320/115800]  total: 15.88547, gradient: 0.00000, scale_inv: 15.88547
+epoch: 19,  3200/5790
+[107420/115800]  total: 19.68316, gradient: 0.00000, scale_inv: 19.68316
+epoch: 19,  3300/5790
+[107520/115800]  total: 18.88426, gradient: 0.00000, scale_inv: 18.88426
+epoch: 19,  3400/5790
+[107620/115800]  total: 14.57189, gradient: 0.00000, scale_inv: 14.57189
+epoch: 19,  3500/5790
+[107720/115800]  total: 18.76315, gradient: 0.00000, scale_inv: 18.76315
+epoch: 19,  3600/5790
+[107820/115800]  total: 16.31473, gradient: 0.00000, scale_inv: 16.31473
+epoch: 19,  3700/5790
+[107920/115800]  total: 16.54977, gradient: 0.00000, scale_inv: 16.54977
+epoch: 19,  3800/5790
+[108020/115800]  total: 17.63046, gradient: 0.00000, scale_inv: 17.63046
+epoch: 19,  3900/5790
+[108120/115800]  total: 16.66104, gradient: 0.00000, scale_inv: 16.66104
+epoch: 19,  4000/5790
+[108220/115800]  total: 16.30691, gradient: 0.00000, scale_inv: 16.30691
+epoch: 19,  4100/5790
+[108320/115800]  total: 15.83698, gradient: 0.00000, scale_inv: 15.83698
+epoch: 19,  4200/5790
+[108420/115800]  total: 17.76637, gradient: 0.00000, scale_inv: 17.76637
+epoch: 19,  4300/5790
+[108520/115800]  total: 19.13398, gradient: 0.00000, scale_inv: 19.13398
+epoch: 19,  4400/5790
+[108620/115800]  total: 15.21553, gradient: 0.00000, scale_inv: 15.21553
+epoch: 19,  4500/5790
+[108720/115800]  total: 20.10177, gradient: 0.00000, scale_inv: 20.10177
+epoch: 19,  4600/5790
+[108820/115800]  total: 16.84748, gradient: 0.00000, scale_inv: 16.84748
+epoch: 19,  4700/5790
+[108920/115800]  total: 17.05038, gradient: 0.00000, scale_inv: 17.05038
+epoch: 19,  4800/5790
+[109020/115800]  total: 16.33214, gradient: 0.00000, scale_inv: 16.33214
+epoch: 19,  4900/5790
+[109120/115800]  total: 17.06730, gradient: 0.00000, scale_inv: 17.06730
+epoch: 19,  5000/5790
+[109220/115800]  total: 17.17171, gradient: 0.00000, scale_inv: 17.17171
+epoch: 19,  5100/5790
+[109320/115800]  total: 15.57777, gradient: 0.00000, scale_inv: 15.57777
+epoch: 19,  5200/5790
+[109420/115800]  total: 16.96694, gradient: 0.00000, scale_inv: 16.96694
+epoch: 19,  5300/5790
+[109520/115800]  total: 17.90331, gradient: 0.00000, scale_inv: 17.90331
+epoch: 19,  5400/5790
+[109620/115800]  total: 17.23335, gradient: 0.00000, scale_inv: 17.23335
+epoch: 19,  5500/5790
+[109720/115800]  total: 17.77702, gradient: 0.00000, scale_inv: 17.77702
+epoch: 19,  5600/5790
+[109820/115800]  total: 16.21317, gradient: 0.00000, scale_inv: 16.21317
+epoch: 19,  5700/5790
+[109920/115800]  total: 19.51513, gradient: 0.00000, scale_inv: 19.51513
+=> learning decay... current lr: 0.000030
+epoch: 20,  100/5790
+[110110/115800]  total: 18.37967, gradient: 0.00000, scale_inv: 18.37967
+epoch: 20,  200/5790
+[110210/115800]  total: 15.85421, gradient: 0.00000, scale_inv: 15.85421
+epoch: 20,  300/5790
+[110310/115800]  total: 18.57083, gradient: 0.00000, scale_inv: 18.57083
+epoch: 20,  400/5790
+[110410/115800]  total: 17.62538, gradient: 0.00000, scale_inv: 17.62538
+epoch: 20,  500/5790
+[110510/115800]  total: 15.92140, gradient: 0.00000, scale_inv: 15.92140
+epoch: 20,  600/5790
+[110610/115800]  total: 17.38432, gradient: 0.00000, scale_inv: 17.38432
+epoch: 20,  700/5790
+[110710/115800]  total: 17.00473, gradient: 0.00000, scale_inv: 17.00473
+epoch: 20,  800/5790
+[110810/115800]  total: 16.03055, gradient: 0.00000, scale_inv: 16.03055
+epoch: 20,  900/5790
+[110910/115800]  total: 20.05157, gradient: 0.00000, scale_inv: 20.05157
+epoch: 20,  1000/5790
+[111010/115800]  total: 17.51313, gradient: 0.00000, scale_inv: 17.51313
+epoch: 20,  1100/5790
+[111110/115800]  total: 17.10129, gradient: 0.00000, scale_inv: 17.10129
+epoch: 20,  1200/5790
+[111210/115800]  total: 14.45343, gradient: 0.00000, scale_inv: 14.45343
+epoch: 20,  1300/5790
+[111310/115800]  total: 18.12716, gradient: 0.00000, scale_inv: 18.12716
+epoch: 20,  1400/5790
+[111410/115800]  total: 16.73818, gradient: 0.00000, scale_inv: 16.73818
+epoch: 20,  1500/5790
+[111510/115800]  total: 18.38546, gradient: 0.00000, scale_inv: 18.38546
+epoch: 20,  1600/5790
+[111610/115800]  total: 21.14172, gradient: 0.00000, scale_inv: 21.14172
+epoch: 20,  1700/5790
+[111710/115800]  total: 15.71454, gradient: 0.00000, scale_inv: 15.71454
+epoch: 20,  1800/5790
+[111810/115800]  total: 15.85840, gradient: 0.00000, scale_inv: 15.85840
+epoch: 20,  1900/5790
+[111910/115800]  total: 12.51085, gradient: 0.00000, scale_inv: 12.51085
+epoch: 20,  2000/5790
+[112010/115800]  total: 15.22947, gradient: 0.00000, scale_inv: 15.22947
+epoch: 20,  2100/5790
+[112110/115800]  total: 16.61948, gradient: 0.00000, scale_inv: 16.61948
+epoch: 20,  2200/5790
+[112210/115800]  total: 16.41414, gradient: 0.00000, scale_inv: 16.41414
+epoch: 20,  2300/5790
+[112310/115800]  total: 17.31289, gradient: 0.00000, scale_inv: 17.31289
+epoch: 20,  2400/5790
+[112410/115800]  total: 15.51158, gradient: 0.00000, scale_inv: 15.51158
+epoch: 20,  2500/5790
+[112510/115800]  total: 17.17437, gradient: 0.00000, scale_inv: 17.17437
+epoch: 20,  2600/5790
+[112610/115800]  total: 14.64474, gradient: 0.00000, scale_inv: 14.64474
+epoch: 20,  2700/5790
+[112710/115800]  total: 17.73142, gradient: 0.00000, scale_inv: 17.73142
+epoch: 20,  2800/5790
+[112810/115800]  total: 13.05527, gradient: 0.00000, scale_inv: 13.05527
+epoch: 20,  2900/5790
+[112910/115800]  total: 20.72896, gradient: 0.00000, scale_inv: 20.72896
+epoch: 20,  3000/5790
+[113010/115800]  total: 17.19795, gradient: 0.00000, scale_inv: 17.19795
+epoch: 20,  3100/5790
+[113110/115800]  total: 17.55854, gradient: 0.00000, scale_inv: 17.55854
+epoch: 20,  3200/5790
+[113210/115800]  total: 15.27451, gradient: 0.00000, scale_inv: 15.27451
+epoch: 20,  3300/5790
+[113310/115800]  total: 16.59398, gradient: 0.00000, scale_inv: 16.59398
+epoch: 20,  3400/5790
+[113410/115800]  total: 16.50863, gradient: 0.00000, scale_inv: 16.50863
+epoch: 20,  3500/5790
+[113510/115800]  total: 20.09877, gradient: 0.00000, scale_inv: 20.09877
+epoch: 20,  3600/5790
+[113610/115800]  total: 15.84658, gradient: 0.00000, scale_inv: 15.84658
+epoch: 20,  3700/5790
+[113710/115800]  total: 17.54921, gradient: 0.00000, scale_inv: 17.54921
+epoch: 20,  3800/5790
+[113810/115800]  total: 16.77732, gradient: 0.00000, scale_inv: 16.77732
+epoch: 20,  3900/5790
+[113910/115800]  total: 15.69718, gradient: 0.00000, scale_inv: 15.69718
+epoch: 20,  4000/5790
+[114010/115800]  total: 18.15495, gradient: 0.00000, scale_inv: 18.15495
+epoch: 20,  4100/5790
+[114110/115800]  total: 17.72105, gradient: 0.00000, scale_inv: 17.72105
+epoch: 20,  4200/5790
+[114210/115800]  total: 16.85045, gradient: 0.00000, scale_inv: 16.85045
+epoch: 20,  4300/5790
+[114310/115800]  total: 15.85001, gradient: 0.00000, scale_inv: 15.85001
+epoch: 20,  4400/5790
+[114410/115800]  total: 14.92937, gradient: 0.00000, scale_inv: 14.92937
+epoch: 20,  4500/5790
+[114510/115800]  total: 16.96644, gradient: 0.00000, scale_inv: 16.96644
+epoch: 20,  4600/5790
+[114610/115800]  total: 13.93727, gradient: 0.00000, scale_inv: 13.93727
+epoch: 20,  4700/5790
+[114710/115800]  total: 16.94876, gradient: 0.00000, scale_inv: 16.94876
+epoch: 20,  4800/5790
+[114810/115800]  total: 17.78049, gradient: 0.00000, scale_inv: 17.78049
+epoch: 20,  4900/5790
+[114910/115800]  total: 17.56515, gradient: 0.00000, scale_inv: 17.56515
+epoch: 20,  5000/5790
+[115010/115800]  total: 17.22739, gradient: 0.00000, scale_inv: 17.22739
+epoch: 20,  5100/5790
+[115110/115800]  total: 15.42690, gradient: 0.00000, scale_inv: 15.42690
+epoch: 20,  5200/5790
+[115210/115800]  total: 19.34021, gradient: 0.00000, scale_inv: 19.34021
+epoch: 20,  5300/5790
+[115310/115800]  total: 17.68531, gradient: 0.00000, scale_inv: 17.68531
+epoch: 20,  5400/5790
+[115410/115800]  total: 15.47413, gradient: 0.00000, scale_inv: 15.47413
+epoch: 20,  5500/5790
+[115510/115800]  total: 19.41104, gradient: 0.00000, scale_inv: 19.41104
+epoch: 20,  5600/5790
+[115610/115800]  total: 13.72322, gradient: 0.00000, scale_inv: 13.72322
+epoch: 20,  5700/5790
+[115710/115800]  total: 16.87770, gradient: 0.00000, scale_inv: 16.87770
+=> learning decay... current lr: 0.000010
+epoch: 21,  100/5790
+[115800/115800]  total: 16.08244, gradient: 0.00000, scale_inv: 16.08244
+epoch: 21,  200/5790
+[115800/115800]  total: 18.48431, gradient: 0.00000, scale_inv: 18.48431
+epoch: 21,  300/5790
+[115800/115800]  total: 16.12788, gradient: 0.00000, scale_inv: 16.12788
+epoch: 21,  400/5790
+[115800/115800]  total: 17.06198, gradient: 0.00000, scale_inv: 17.06198
+epoch: 21,  500/5790
+[115800/115800]  total: 16.43021, gradient: 0.00000, scale_inv: 16.43021
+epoch: 21,  600/5790
+[115800/115800]  total: 16.04033, gradient: 0.00000, scale_inv: 16.04033
+epoch: 21,  700/5790
+[115800/115800]  total: 18.05722, gradient: 0.00000, scale_inv: 18.05722
+epoch: 21,  800/5790
+[115800/115800]  total: 12.82106, gradient: 0.00000, scale_inv: 12.82106
+epoch: 21,  900/5790
+[115800/115800]  total: 18.29614, gradient: 0.00000, scale_inv: 18.29614
+epoch: 21,  1000/5790
+[115800/115800]  total: 18.26588, gradient: 0.00000, scale_inv: 18.26588
+epoch: 21,  1100/5790
+[115800/115800]  total: 17.00177, gradient: 0.00000, scale_inv: 17.00177
+epoch: 21,  1200/5790
+[115800/115800]  total: 15.77812, gradient: 0.00000, scale_inv: 15.77812
+epoch: 21,  1300/5790
+[115800/115800]  total: 16.46136, gradient: 0.00000, scale_inv: 16.46136
+epoch: 21,  1400/5790
+[115800/115800]  total: 14.82783, gradient: 0.00000, scale_inv: 14.82783
+epoch: 21,  1500/5790
+[115800/115800]  total: 15.60667, gradient: 0.00000, scale_inv: 15.60667
+epoch: 21,  1600/5790
+[115800/115800]  total: 13.14020, gradient: 0.00000, scale_inv: 13.14020
+epoch: 21,  1700/5790
+[115800/115800]  total: 15.65742, gradient: 0.00000, scale_inv: 15.65742
+epoch: 21,  1800/5790
+[115800/115800]  total: 18.22518, gradient: 0.00000, scale_inv: 18.22518
+epoch: 21,  1900/5790
+[115800/115800]  total: 17.99556, gradient: 0.00000, scale_inv: 17.99556
+epoch: 21,  2000/5790
+[115800/115800]  total: 15.51983, gradient: 0.00000, scale_inv: 15.51983
+epoch: 21,  2100/5790
+[115800/115800]  total: 16.06606, gradient: 0.00000, scale_inv: 16.06606
+epoch: 21,  2200/5790
+[115800/115800]  total: 16.16227, gradient: 0.00000, scale_inv: 16.16227
+epoch: 21,  2300/5790
+[115800/115800]  total: 20.38030, gradient: 0.00000, scale_inv: 20.38030
+epoch: 21,  2400/5790
+[115800/115800]  total: 17.30303, gradient: 0.00000, scale_inv: 17.30303
+epoch: 21,  2500/5790
+[115800/115800]  total: 17.48120, gradient: 0.00000, scale_inv: 17.48120
+epoch: 21,  2600/5790
+[115800/115800]  total: 19.98260, gradient: 0.00000, scale_inv: 19.98260
+epoch: 21,  2700/5790
+[115800/115800]  total: 16.46897, gradient: 0.00000, scale_inv: 16.46897
+epoch: 21,  2800/5790
+[115800/115800]  total: 17.99047, gradient: 0.00000, scale_inv: 17.99047
+epoch: 21,  2900/5790
+[115800/115800]  total: 17.98422, gradient: 0.00000, scale_inv: 17.98422
+epoch: 21,  3000/5790
+[115800/115800]  total: 15.09736, gradient: 0.00000, scale_inv: 15.09736
+epoch: 21,  3100/5790
+[115800/115800]  total: 18.13111, gradient: 0.00000, scale_inv: 18.13111
+epoch: 21,  3200/5790
+[115800/115800]  total: 16.44291, gradient: 0.00000, scale_inv: 16.44291
+epoch: 21,  3300/5790
+[115800/115800]  total: 18.22587, gradient: 0.00000, scale_inv: 18.22587
+epoch: 21,  3400/5790
+[115800/115800]  total: 18.58071, gradient: 0.00000, scale_inv: 18.58071
+epoch: 21,  3500/5790
+[115800/115800]  total: 15.39664, gradient: 0.00000, scale_inv: 15.39664
+epoch: 21,  3600/5790
+[115800/115800]  total: 17.64821, gradient: 0.00000, scale_inv: 17.64821
+epoch: 21,  3700/5790
+[115800/115800]  total: 15.24820, gradient: 0.00000, scale_inv: 15.24820
+epoch: 21,  3800/5790
+[115800/115800]  total: 17.16665, gradient: 0.00000, scale_inv: 17.16665
+epoch: 21,  3900/5790
+[115800/115800]  total: 18.58522, gradient: 0.00000, scale_inv: 18.58522
+epoch: 21,  4000/5790
+[115800/115800]  total: 17.82409, gradient: 0.00000, scale_inv: 17.82409
+epoch: 21,  4100/5790
+[115800/115800]  total: 15.71141, gradient: 0.00000, scale_inv: 15.71141
+epoch: 21,  4200/5790
+[115800/115800]  total: 18.26740, gradient: 0.00000, scale_inv: 18.26740
+epoch: 21,  4300/5790
+[115800/115800]  total: 16.86112, gradient: 0.00000, scale_inv: 16.86112
+epoch: 21,  4400/5790
+[115800/115800]  total: 14.85398, gradient: 0.00000, scale_inv: 14.85398
+epoch: 21,  4500/5790
+[115800/115800]  total: 17.52086, gradient: 0.00000, scale_inv: 17.52086
+epoch: 21,  4600/5790
+[115800/115800]  total: 15.75825, gradient: 0.00000, scale_inv: 15.75825
+epoch: 21,  4700/5790
+[115800/115800]  total: 16.22573, gradient: 0.00000, scale_inv: 16.22573
+epoch: 21,  4800/5790
+[115800/115800]  total: 17.36634, gradient: 0.00000, scale_inv: 17.36634
+epoch: 21,  4900/5790
+[115800/115800]  total: 20.91831, gradient: 0.00000, scale_inv: 20.91831
+epoch: 21,  5000/5790
+[115800/115800]  total: 16.06909, gradient: 0.00000, scale_inv: 16.06909
+epoch: 21,  5100/5790
+[115800/115800]  total: 17.54380, gradient: 0.00000, scale_inv: 17.54380
+epoch: 21,  5200/5790
+[115800/115800]  total: 16.77603, gradient: 0.00000, scale_inv: 16.77603
+epoch: 21,  5300/5790
+[115800/115800]  total: 16.42332, gradient: 0.00000, scale_inv: 16.42332
+epoch: 21,  5400/5790
+[115800/115800]  total: 15.33377, gradient: 0.00000, scale_inv: 15.33377
+epoch: 21,  5500/5790
+[115800/115800]  total: 17.24859, gradient: 0.00000, scale_inv: 17.24859
+epoch: 21,  5600/5790
+[115800/115800]  total: 15.29263, gradient: 0.00000, scale_inv: 15.29263
+epoch: 21,  5700/5790
+[115800/115800]  total: 20.39768, gradient: 0.00000, scale_inv: 20.39768
+=> learning decay... current lr: 0.000010
+epoch: 22,  100/5790
+[115800/115800]  total: 18.08899, gradient: 0.00000, scale_inv: 18.08899
+epoch: 22,  200/5790
+[115800/115800]  total: 17.97278, gradient: 0.00000, scale_inv: 17.97278
+epoch: 22,  300/5790
+[115800/115800]  total: 17.73077, gradient: 0.00000, scale_inv: 17.73077
+epoch: 22,  400/5790
+[115800/115800]  total: 16.42422, gradient: 0.00000, scale_inv: 16.42422
+epoch: 22,  500/5790
+[115800/115800]  total: 16.53017, gradient: 0.00000, scale_inv: 16.53017
+epoch: 22,  600/5790
+[115800/115800]  total: 16.62364, gradient: 0.00000, scale_inv: 16.62364
+epoch: 22,  700/5790
+[115800/115800]  total: 18.03164, gradient: 0.00000, scale_inv: 18.03164
+epoch: 22,  800/5790
+[115800/115800]  total: 15.86931, gradient: 0.00000, scale_inv: 15.86931
+epoch: 22,  900/5790
+[115800/115800]  total: 17.84121, gradient: 0.00000, scale_inv: 17.84121
+epoch: 22,  1000/5790
+[115800/115800]  total: 20.64154, gradient: 0.00000, scale_inv: 20.64154
+epoch: 22,  1100/5790
+[115800/115800]  total: 18.04180, gradient: 0.00000, scale_inv: 18.04180
+epoch: 22,  1200/5790
+[115800/115800]  total: 15.13885, gradient: 0.00000, scale_inv: 15.13885
+epoch: 22,  1300/5790
+[115800/115800]  total: 20.03276, gradient: 0.00000, scale_inv: 20.03276
+epoch: 22,  1400/5790
+[115800/115800]  total: 16.44488, gradient: 0.00000, scale_inv: 16.44488
+epoch: 22,  1500/5790
+[115800/115800]  total: 17.80784, gradient: 0.00000, scale_inv: 17.80784
+epoch: 22,  1600/5790
+[115800/115800]  total: 17.99146, gradient: 0.00000, scale_inv: 17.99146
+epoch: 22,  1700/5790
+[115800/115800]  total: 17.70212, gradient: 0.00000, scale_inv: 17.70212
+epoch: 22,  1800/5790
+[115800/115800]  total: 18.35855, gradient: 0.00000, scale_inv: 18.35855
+epoch: 22,  1900/5790
+[115800/115800]  total: 20.10389, gradient: 0.00000, scale_inv: 20.10389
+epoch: 22,  2000/5790
+[115800/115800]  total: 19.29818, gradient: 0.00000, scale_inv: 19.29818
+epoch: 22,  2100/5790
+[115800/115800]  total: 14.22165, gradient: 0.00000, scale_inv: 14.22165
+epoch: 22,  2200/5790
+[115800/115800]  total: 17.96036, gradient: 0.00000, scale_inv: 17.96036
+epoch: 22,  2300/5790
+[115800/115800]  total: 20.22671, gradient: 0.00000, scale_inv: 20.22671
+epoch: 22,  2400/5790
+[115800/115800]  total: 16.03174, gradient: 0.00000, scale_inv: 16.03174
+epoch: 22,  2500/5790
+[115800/115800]  total: 15.80310, gradient: 0.00000, scale_inv: 15.80310
+epoch: 22,  2600/5790
+[115800/115800]  total: 19.52003, gradient: 0.00000, scale_inv: 19.52003
+epoch: 22,  2700/5790
+[115800/115800]  total: 17.43189, gradient: 0.00000, scale_inv: 17.43189
+epoch: 22,  2800/5790
+[115800/115800]  total: 17.65794, gradient: 0.00000, scale_inv: 17.65794
+epoch: 22,  2900/5790
+[115800/115800]  total: 14.81679, gradient: 0.00000, scale_inv: 14.81679
+epoch: 22,  3000/5790
+[115800/115800]  total: 18.07792, gradient: 0.00000, scale_inv: 18.07792
+epoch: 22,  3100/5790
+[115800/115800]  total: 16.54519, gradient: 0.00000, scale_inv: 16.54519
+epoch: 22,  3200/5790
+[115800/115800]  total: 16.99769, gradient: 0.00000, scale_inv: 16.99769
+epoch: 22,  3300/5790
+[115800/115800]  total: 15.58779, gradient: 0.00000, scale_inv: 15.58779
+epoch: 22,  3400/5790
+[115800/115800]  total: 17.20668, gradient: 0.00000, scale_inv: 17.20668
+epoch: 22,  3500/5790
+[115800/115800]  total: 16.82721, gradient: 0.00000, scale_inv: 16.82721
+epoch: 22,  3600/5790
+[115800/115800]  total: 17.63796, gradient: 0.00000, scale_inv: 17.63796
+epoch: 22,  3700/5790
+[115800/115800]  total: 15.29224, gradient: 0.00000, scale_inv: 15.29224
+epoch: 22,  3800/5790
+[115800/115800]  total: 16.54372, gradient: 0.00000, scale_inv: 16.54372
+epoch: 22,  3900/5790
+[115800/115800]  total: 16.11138, gradient: 0.00000, scale_inv: 16.11138
+epoch: 22,  4000/5790
+[115800/115800]  total: 17.57244, gradient: 0.00000, scale_inv: 17.57244
+epoch: 22,  4100/5790
+[115800/115800]  total: 15.60391, gradient: 0.00000, scale_inv: 15.60391
+epoch: 22,  4200/5790
+[115800/115800]  total: 17.43245, gradient: 0.00000, scale_inv: 17.43245
+epoch: 22,  4300/5790
+[115800/115800]  total: 16.79515, gradient: 0.00000, scale_inv: 16.79515
+epoch: 22,  4400/5790
+[115800/115800]  total: 20.49738, gradient: 0.00000, scale_inv: 20.49738
+epoch: 22,  4500/5790
+[115800/115800]  total: 17.65055, gradient: 0.00000, scale_inv: 17.65055
+epoch: 22,  4600/5790
+[115800/115800]  total: 19.41260, gradient: 0.00000, scale_inv: 19.41260
+epoch: 22,  4700/5790
+[115800/115800]  total: 18.73094, gradient: 0.00000, scale_inv: 18.73094
+epoch: 22,  4800/5790
+[115800/115800]  total: 17.20545, gradient: 0.00000, scale_inv: 17.20545
+epoch: 22,  4900/5790
+[115800/115800]  total: 17.44707, gradient: 0.00000, scale_inv: 17.44707
+epoch: 22,  5000/5790
+[115800/115800]  total: 16.34198, gradient: 0.00000, scale_inv: 16.34198
+epoch: 22,  5100/5790
+[115800/115800]  total: 17.48629, gradient: 0.00000, scale_inv: 17.48629
+epoch: 22,  5200/5790
+[115800/115800]  total: 16.38963, gradient: 0.00000, scale_inv: 16.38963
+epoch: 22,  5300/5790
+[115800/115800]  total: 13.89670, gradient: 0.00000, scale_inv: 13.89670
+epoch: 22,  5400/5790
+[115800/115800]  total: 15.39100, gradient: 0.00000, scale_inv: 15.39100
+epoch: 22,  5500/5790
+[115800/115800]  total: 17.11443, gradient: 0.00000, scale_inv: 17.11443
+epoch: 22,  5600/5790
+[115800/115800]  total: 18.69416, gradient: 0.00000, scale_inv: 18.69416
+epoch: 22,  5700/5790
+[115800/115800]  total: 17.73389, gradient: 0.00000, scale_inv: 17.73389
+=> learning decay... current lr: 0.000010
+epoch: 23,  100/5790
+[115800/115800]  total: 17.82455, gradient: 0.00000, scale_inv: 17.82455
+epoch: 23,  200/5790
+[115800/115800]  total: 12.30036, gradient: 0.00000, scale_inv: 12.30036
+epoch: 23,  300/5790
+[115800/115800]  total: 17.66143, gradient: 0.00000, scale_inv: 17.66143
+epoch: 23,  400/5790
+[115800/115800]  total: 15.65063, gradient: 0.00000, scale_inv: 15.65063
+epoch: 23,  500/5790
+[115800/115800]  total: 17.31841, gradient: 0.00000, scale_inv: 17.31841
+epoch: 23,  600/5790
+[115800/115800]  total: 18.70365, gradient: 0.00000, scale_inv: 18.70365
+epoch: 23,  700/5790
+[115800/115800]  total: 19.63588, gradient: 0.00000, scale_inv: 19.63588
+epoch: 23,  800/5790
+[115800/115800]  total: 16.42335, gradient: 0.00000, scale_inv: 16.42335
+epoch: 23,  900/5790
+[115800/115800]  total: 17.93081, gradient: 0.00000, scale_inv: 17.93081
+epoch: 23,  1000/5790
+[115800/115800]  total: 15.31883, gradient: 0.00000, scale_inv: 15.31883
+epoch: 23,  1100/5790
+[115800/115800]  total: 15.27950, gradient: 0.00000, scale_inv: 15.27950
+epoch: 23,  1200/5790
+[115800/115800]  total: 18.36547, gradient: 0.00000, scale_inv: 18.36547
+epoch: 23,  1300/5790
+[115800/115800]  total: 16.28636, gradient: 0.00000, scale_inv: 16.28636
+epoch: 23,  1400/5790
+[115800/115800]  total: 17.88686, gradient: 0.00000, scale_inv: 17.88686
+epoch: 23,  1500/5790
+[115800/115800]  total: 15.57063, gradient: 0.00000, scale_inv: 15.57063
+epoch: 23,  1600/5790
+[115800/115800]  total: 18.39879, gradient: 0.00000, scale_inv: 18.39879
+epoch: 23,  1700/5790
+[115800/115800]  total: 20.98616, gradient: 0.00000, scale_inv: 20.98616
+epoch: 23,  1800/5790
+[115800/115800]  total: 17.90673, gradient: 0.00000, scale_inv: 17.90673
+epoch: 23,  1900/5790
+[115800/115800]  total: 14.62628, gradient: 0.00000, scale_inv: 14.62628
+epoch: 23,  2000/5790
+[115800/115800]  total: 17.76309, gradient: 0.00000, scale_inv: 17.76309
+epoch: 23,  2100/5790
+[115800/115800]  total: 17.04220, gradient: 0.00000, scale_inv: 17.04220
+epoch: 23,  2200/5790
+[115800/115800]  total: 18.66341, gradient: 0.00000, scale_inv: 18.66341
+epoch: 23,  2300/5790
+[115800/115800]  total: 16.33341, gradient: 0.00000, scale_inv: 16.33341
+epoch: 23,  2400/5790
+[115800/115800]  total: 13.07862, gradient: 0.00000, scale_inv: 13.07862
+epoch: 23,  2500/5790
+[115800/115800]  total: 18.03465, gradient: 0.00000, scale_inv: 18.03465
+epoch: 23,  2600/5790
+[115800/115800]  total: 16.60638, gradient: 0.00000, scale_inv: 16.60638
+epoch: 23,  2700/5790
+[115800/115800]  total: 18.24809, gradient: 0.00000, scale_inv: 18.24809
+epoch: 23,  2800/5790
+[115800/115800]  total: 17.24459, gradient: 0.00000, scale_inv: 17.24459
+epoch: 23,  2900/5790
+[115800/115800]  total: 15.03198, gradient: 0.00000, scale_inv: 15.03198
+epoch: 23,  3000/5790
+[115800/115800]  total: 13.99710, gradient: 0.00000, scale_inv: 13.99710
+epoch: 23,  3100/5790
+[115800/115800]  total: 15.30128, gradient: 0.00000, scale_inv: 15.30128
+epoch: 23,  3200/5790
+[115800/115800]  total: 18.25298, gradient: 0.00000, scale_inv: 18.25298
+epoch: 23,  3300/5790
+[115800/115800]  total: 17.23809, gradient: 0.00000, scale_inv: 17.23809
+epoch: 23,  3400/5790
+[115800/115800]  total: 15.34395, gradient: 0.00000, scale_inv: 15.34395
+epoch: 23,  3500/5790
+[115800/115800]  total: 17.15330, gradient: 0.00000, scale_inv: 17.15330
+epoch: 23,  3600/5790
+[115800/115800]  total: 15.57337, gradient: 0.00000, scale_inv: 15.57337
+epoch: 23,  3700/5790
+[115800/115800]  total: 16.74807, gradient: 0.00000, scale_inv: 16.74807
+epoch: 23,  3800/5790
+[115800/115800]  total: 17.66469, gradient: 0.00000, scale_inv: 17.66469
+epoch: 23,  3900/5790
+[115800/115800]  total: 15.13616, gradient: 0.00000, scale_inv: 15.13616
+epoch: 23,  4000/5790
+[115800/115800]  total: 14.44253, gradient: 0.00000, scale_inv: 14.44253
+epoch: 23,  4100/5790
+[115800/115800]  total: 17.25057, gradient: 0.00000, scale_inv: 17.25057
+epoch: 23,  4200/5790
+[115800/115800]  total: 18.53876, gradient: 0.00000, scale_inv: 18.53876
+epoch: 23,  4300/5790
+[115800/115800]  total: 15.98373, gradient: 0.00000, scale_inv: 15.98373
+epoch: 23,  4400/5790
+[115800/115800]  total: 16.10181, gradient: 0.00000, scale_inv: 16.10181
+epoch: 23,  4500/5790
+[115800/115800]  total: 12.14724, gradient: 0.00000, scale_inv: 12.14724
+epoch: 23,  4600/5790
+[115800/115800]  total: 17.09743, gradient: 0.00000, scale_inv: 17.09743
+epoch: 23,  4700/5790
+[115800/115800]  total: 17.06797, gradient: 0.00000, scale_inv: 17.06797
+epoch: 23,  4800/5790
+[115800/115800]  total: 17.50488, gradient: 0.00000, scale_inv: 17.50488
+epoch: 23,  4900/5790
+[115800/115800]  total: 16.66311, gradient: 0.00000, scale_inv: 16.66311
+epoch: 23,  5000/5790
+[115800/115800]  total: 18.70078, gradient: 0.00000, scale_inv: 18.70078
+epoch: 23,  5100/5790
+[115800/115800]  total: 17.32181, gradient: 0.00000, scale_inv: 17.32181
+epoch: 23,  5200/5790
+[115800/115800]  total: 17.26307, gradient: 0.00000, scale_inv: 17.26307
+epoch: 23,  5300/5790
+[115800/115800]  total: 16.59903, gradient: 0.00000, scale_inv: 16.59903
+epoch: 23,  5400/5790
+[115800/115800]  total: 16.35258, gradient: 0.00000, scale_inv: 16.35258
+epoch: 23,  5500/5790
+[115800/115800]  total: 16.43095, gradient: 0.00000, scale_inv: 16.43095
+epoch: 23,  5600/5790
+[115800/115800]  total: 13.51653, gradient: 0.00000, scale_inv: 13.51653
+epoch: 23,  5700/5790
+[115800/115800]  total: 16.78508, gradient: 0.00000, scale_inv: 16.78508
+=> learning decay... current lr: 0.000010
+epoch: 24,  100/5790
+[115800/115800]  total: 17.16382, gradient: 0.00000, scale_inv: 17.16382
+epoch: 24,  200/5790
+[115800/115800]  total: 16.52349, gradient: 0.00000, scale_inv: 16.52349
+epoch: 24,  300/5790
+[115800/115800]  total: 17.02377, gradient: 0.00000, scale_inv: 17.02377
+epoch: 24,  400/5790
+[115800/115800]  total: 17.83457, gradient: 0.00000, scale_inv: 17.83457
+epoch: 24,  500/5790
+[115800/115800]  total: 15.94544, gradient: 0.00000, scale_inv: 15.94544
+epoch: 24,  600/5790
+[115800/115800]  total: 18.56890, gradient: 0.00000, scale_inv: 18.56890
+epoch: 24,  700/5790
+[115800/115800]  total: 17.73457, gradient: 0.00000, scale_inv: 17.73457
+epoch: 24,  800/5790
+[115800/115800]  total: 15.88263, gradient: 0.00000, scale_inv: 15.88263
+epoch: 24,  900/5790
+[115800/115800]  total: 13.95955, gradient: 0.00000, scale_inv: 13.95955
+epoch: 24,  1000/5790
+[115800/115800]  total: 14.72750, gradient: 0.00000, scale_inv: 14.72750
+epoch: 24,  1100/5790
+[115800/115800]  total: 15.10264, gradient: 0.00000, scale_inv: 15.10264
+epoch: 24,  1200/5790
+[115800/115800]  total: 15.08696, gradient: 0.00000, scale_inv: 15.08696
+epoch: 24,  1300/5790
+[115800/115800]  total: 15.57209, gradient: 0.00000, scale_inv: 15.57209
+epoch: 24,  1400/5790
+[115800/115800]  total: 17.57997, gradient: 0.00000, scale_inv: 17.57997
+epoch: 24,  1500/5790
+[115800/115800]  total: 15.43266, gradient: 0.00000, scale_inv: 15.43266
+epoch: 24,  1600/5790
+[115800/115800]  total: 18.30109, gradient: 0.00000, scale_inv: 18.30109
+epoch: 24,  1700/5790
+[115800/115800]  total: 15.13001, gradient: 0.00000, scale_inv: 15.13001
+epoch: 24,  1800/5790
+[115800/115800]  total: 14.77667, gradient: 0.00000, scale_inv: 14.77667
+epoch: 24,  1900/5790
+[115800/115800]  total: 15.14314, gradient: 0.00000, scale_inv: 15.14314
+epoch: 24,  2000/5790
+[115800/115800]  total: 16.54052, gradient: 0.00000, scale_inv: 16.54052
+epoch: 24,  2100/5790
+[115800/115800]  total: 14.16784, gradient: 0.00000, scale_inv: 14.16784
+epoch: 24,  2200/5790
+[115800/115800]  total: 17.79724, gradient: 0.00000, scale_inv: 17.79724
+epoch: 24,  2300/5790
+[115800/115800]  total: 14.42518, gradient: 0.00000, scale_inv: 14.42518
+epoch: 24,  2400/5790
+[115800/115800]  total: 17.23222, gradient: 0.00000, scale_inv: 17.23222
+epoch: 24,  2500/5790
+[115800/115800]  total: 16.97876, gradient: 0.00000, scale_inv: 16.97876
+epoch: 24,  2600/5790
+[115800/115800]  total: 17.89429, gradient: 0.00000, scale_inv: 17.89429
+epoch: 24,  2700/5790
+[115800/115800]  total: 16.09327, gradient: 0.00000, scale_inv: 16.09327
+epoch: 24,  2800/5790
+[115800/115800]  total: 16.26808, gradient: 0.00000, scale_inv: 16.26808
+epoch: 24,  2900/5790
+[115800/115800]  total: 17.32330, gradient: 0.00000, scale_inv: 17.32330
+epoch: 24,  3000/5790
+[115800/115800]  total: 17.77366, gradient: 0.00000, scale_inv: 17.77366
+epoch: 24,  3100/5790
+[115800/115800]  total: 20.34008, gradient: 0.00000, scale_inv: 20.34008
+epoch: 24,  3200/5790
+[115800/115800]  total: 17.08655, gradient: 0.00000, scale_inv: 17.08655
+epoch: 24,  3300/5790
+[115800/115800]  total: 16.80249, gradient: 0.00000, scale_inv: 16.80249
+epoch: 24,  3400/5790
+[115800/115800]  total: 17.34457, gradient: 0.00000, scale_inv: 17.34457
+epoch: 24,  3500/5790
+[115800/115800]  total: 16.40093, gradient: 0.00000, scale_inv: 16.40093
+epoch: 24,  3600/5790
+[115800/115800]  total: 16.98008, gradient: 0.00000, scale_inv: 16.98008
+epoch: 24,  3700/5790
+[115800/115800]  total: 13.97143, gradient: 0.00000, scale_inv: 13.97143
+epoch: 24,  3800/5790
+[115800/115800]  total: 17.56747, gradient: 0.00000, scale_inv: 17.56747
+epoch: 24,  3900/5790
+[115800/115800]  total: 15.01535, gradient: 0.00000, scale_inv: 15.01535
+epoch: 24,  4000/5790
+[115800/115800]  total: 15.67664, gradient: 0.00000, scale_inv: 15.67664
+epoch: 24,  4100/5790
+[115800/115800]  total: 18.60869, gradient: 0.00000, scale_inv: 18.60869
+epoch: 24,  4200/5790
+[115800/115800]  total: 21.14831, gradient: 0.00000, scale_inv: 21.14831
+epoch: 24,  4300/5790
+[115800/115800]  total: 17.47806, gradient: 0.00000, scale_inv: 17.47806
+epoch: 24,  4400/5790
+[115800/115800]  total: 14.94427, gradient: 0.00000, scale_inv: 14.94427
+epoch: 24,  4500/5790
+[115800/115800]  total: 17.88683, gradient: 0.00000, scale_inv: 17.88683
+epoch: 24,  4600/5790
+[115800/115800]  total: 15.45680, gradient: 0.00000, scale_inv: 15.45680
+epoch: 24,  4700/5790
+[115800/115800]  total: 16.94433, gradient: 0.00000, scale_inv: 16.94433
+epoch: 24,  4800/5790
+[115800/115800]  total: 20.17323, gradient: 0.00000, scale_inv: 20.17323
+epoch: 24,  4900/5790
+[115800/115800]  total: 16.54379, gradient: 0.00000, scale_inv: 16.54379
+epoch: 24,  5000/5790
+[115800/115800]  total: 16.81339, gradient: 0.00000, scale_inv: 16.81339
+epoch: 24,  5100/5790
+[115800/115800]  total: 20.91788, gradient: 0.00000, scale_inv: 20.91788
+epoch: 24,  5200/5790
+[115800/115800]  total: 17.11836, gradient: 0.00000, scale_inv: 17.11836
+epoch: 24,  5300/5790
+[115800/115800]  total: 16.91202, gradient: 0.00000, scale_inv: 16.91202
+epoch: 24,  5400/5790
+[115800/115800]  total: 16.49823, gradient: 0.00000, scale_inv: 16.49823
+epoch: 24,  5500/5790
+[115800/115800]  total: 16.77398, gradient: 0.00000, scale_inv: 16.77398
+epoch: 24,  5600/5790
+[115800/115800]  total: 17.33059, gradient: 0.00000, scale_inv: 17.33059
+epoch: 24,  5700/5790
+[115800/115800]  total: 17.21213, gradient: 0.00000, scale_inv: 17.21213
+=> learning decay... current lr: 0.000010
+epoch: 25,  100/5790
+[115800/115800]  total: 15.10544, gradient: 0.00000, scale_inv: 15.10544
+epoch: 25,  200/5790
+[115800/115800]  total: 16.71935, gradient: 0.00000, scale_inv: 16.71935
+epoch: 25,  300/5790
+[115800/115800]  total: 15.71641, gradient: 0.00000, scale_inv: 15.71641
+epoch: 25,  400/5790
+[115800/115800]  total: 17.63125, gradient: 0.00000, scale_inv: 17.63125
+epoch: 25,  500/5790
+[115800/115800]  total: 14.65091, gradient: 0.00000, scale_inv: 14.65091
+epoch: 25,  600/5790
+[115800/115800]  total: 17.25436, gradient: 0.00000, scale_inv: 17.25436
+epoch: 25,  700/5790
+[115800/115800]  total: 16.05024, gradient: 0.00000, scale_inv: 16.05024
+epoch: 25,  800/5790
+[115800/115800]  total: 15.33882, gradient: 0.00000, scale_inv: 15.33882
+epoch: 25,  900/5790
+[115800/115800]  total: 18.15631, gradient: 0.00000, scale_inv: 18.15631
+epoch: 25,  1000/5790
+[115800/115800]  total: 15.96115, gradient: 0.00000, scale_inv: 15.96115
+epoch: 25,  1100/5790
+[115800/115800]  total: 18.08913, gradient: 0.00000, scale_inv: 18.08913
+epoch: 25,  1200/5790
+[115800/115800]  total: 18.30158, gradient: 0.00000, scale_inv: 18.30158
+epoch: 25,  1300/5790
+[115800/115800]  total: 19.98450, gradient: 0.00000, scale_inv: 19.98450
+epoch: 25,  1400/5790
+[115800/115800]  total: 14.94574, gradient: 0.00000, scale_inv: 14.94574
+epoch: 25,  1500/5790
+[115800/115800]  total: 16.28124, gradient: 0.00000, scale_inv: 16.28124
+epoch: 25,  1600/5790
+[115800/115800]  total: 18.59409, gradient: 0.00000, scale_inv: 18.59409
+epoch: 25,  1700/5790
+[115800/115800]  total: 16.32662, gradient: 0.00000, scale_inv: 16.32662
+epoch: 25,  1800/5790
+[115800/115800]  total: 17.37879, gradient: 0.00000, scale_inv: 17.37879
+epoch: 25,  1900/5790
+[115800/115800]  total: 16.62566, gradient: 0.00000, scale_inv: 16.62566
+epoch: 25,  2000/5790
+[115800/115800]  total: 13.70239, gradient: 0.00000, scale_inv: 13.70239
+epoch: 25,  2100/5790
+[115800/115800]  total: 15.79692, gradient: 0.00000, scale_inv: 15.79692
+epoch: 25,  2200/5790
+[115800/115800]  total: 15.67425, gradient: 0.00000, scale_inv: 15.67425
+epoch: 25,  2300/5790
+[115800/115800]  total: 17.07267, gradient: 0.00000, scale_inv: 17.07267
+epoch: 25,  2400/5790
+[115800/115800]  total: 17.30762, gradient: 0.00000, scale_inv: 17.30762
+epoch: 25,  2500/5790
+[115800/115800]  total: 17.20776, gradient: 0.00000, scale_inv: 17.20776
+epoch: 25,  2600/5790
+[115800/115800]  total: 15.43460, gradient: 0.00000, scale_inv: 15.43460
+epoch: 25,  2700/5790
+[115800/115800]  total: 18.67454, gradient: 0.00000, scale_inv: 18.67454
+epoch: 25,  2800/5790
+[115800/115800]  total: 17.11676, gradient: 0.00000, scale_inv: 17.11676
+epoch: 25,  2900/5790
+[115800/115800]  total: 16.19957, gradient: 0.00000, scale_inv: 16.19957
+epoch: 25,  3000/5790
+[115800/115800]  total: 17.47489, gradient: 0.00000, scale_inv: 17.47489
+epoch: 25,  3100/5790
+[115800/115800]  total: 16.97913, gradient: 0.00000, scale_inv: 16.97913
+epoch: 25,  3200/5790
+[115800/115800]  total: 15.47470, gradient: 0.00000, scale_inv: 15.47470
+epoch: 25,  3300/5790
+[115800/115800]  total: 17.12362, gradient: 0.00000, scale_inv: 17.12362
+epoch: 25,  3400/5790
+[115800/115800]  total: 14.51736, gradient: 0.00000, scale_inv: 14.51736
+epoch: 25,  3500/5790
+[115800/115800]  total: 16.78099, gradient: 0.00000, scale_inv: 16.78099
+epoch: 25,  3600/5790
+[115800/115800]  total: 15.48310, gradient: 0.00000, scale_inv: 15.48310
+epoch: 25,  3700/5790
+[115800/115800]  total: 16.26588, gradient: 0.00000, scale_inv: 16.26588
+epoch: 25,  3800/5790
+[115800/115800]  total: 17.73012, gradient: 0.00000, scale_inv: 17.73012
+epoch: 25,  3900/5790
+[115800/115800]  total: 15.99497, gradient: 0.00000, scale_inv: 15.99497
+epoch: 25,  4000/5790
+[115800/115800]  total: 16.59316, gradient: 0.00000, scale_inv: 16.59316
+epoch: 25,  4100/5790
+[115800/115800]  total: 17.26762, gradient: 0.00000, scale_inv: 17.26762
+epoch: 25,  4200/5790
+[115800/115800]  total: 17.06007, gradient: 0.00000, scale_inv: 17.06007
+epoch: 25,  4300/5790
+[115800/115800]  total: 16.10274, gradient: 0.00000, scale_inv: 16.10274
+epoch: 25,  4400/5790
+[115800/115800]  total: 16.28837, gradient: 0.00000, scale_inv: 16.28837
+epoch: 25,  4500/5790
+[115800/115800]  total: 17.43511, gradient: 0.00000, scale_inv: 17.43511
+epoch: 25,  4600/5790
+[115800/115800]  total: 20.71467, gradient: 0.00000, scale_inv: 20.71467
+epoch: 25,  4700/5790
+[115800/115800]  total: 17.82968, gradient: 0.00000, scale_inv: 17.82968
+epoch: 25,  4800/5790
+[115800/115800]  total: 17.89458, gradient: 0.00000, scale_inv: 17.89458
+epoch: 25,  4900/5790
+[115800/115800]  total: 16.63386, gradient: 0.00000, scale_inv: 16.63386
+epoch: 25,  5000/5790
+[115800/115800]  total: 17.08711, gradient: 0.00000, scale_inv: 17.08711
+epoch: 25,  5100/5790
+[115800/115800]  total: 16.26410, gradient: 0.00000, scale_inv: 16.26410
+epoch: 25,  5200/5790
+[115800/115800]  total: 18.51608, gradient: 0.00000, scale_inv: 18.51608
+epoch: 25,  5300/5790
+[115800/115800]  total: 19.77528, gradient: 0.00000, scale_inv: 19.77528
+epoch: 25,  5400/5790
+[115800/115800]  total: 15.76062, gradient: 0.00000, scale_inv: 15.76062
+epoch: 25,  5500/5790
+[115800/115800]  total: 16.24026, gradient: 0.00000, scale_inv: 16.24026
+epoch: 25,  5600/5790
+[115800/115800]  total: 17.75973, gradient: 0.00000, scale_inv: 17.75973
+epoch: 25,  5700/5790
+[115800/115800]  total: 16.40388, gradient: 0.00000, scale_inv: 16.40388
+=> learning decay... current lr: 0.000010
+training is finished
