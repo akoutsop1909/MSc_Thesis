@@ -1,5 +1,6 @@
 # Monocular depth estimation using deep neural models
 
+The PDF file of the MSc thesis ```Monocular depth estimation using deep neural models.pdf``` is also available.
 ## Datasets
 * DIODE/Outdoor
 * KITTI Selection
