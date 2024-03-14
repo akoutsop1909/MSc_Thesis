@@ -6,21 +6,21 @@
 * IHU
 
 ## Training/Evaluation with BANet
-### Install
+### Installation
 
 ### Training
 
 ### Evaluation
 
 ## Training/Evaluation with LapDepth
-### Install
+### Installation
 
 ### Training
 
 ### Evaluation
 
 ## Training/Evaluation with PixelFormer
-### Install
+### Installation
 
 ### Training
 
