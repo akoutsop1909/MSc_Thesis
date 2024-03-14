@@ -7,6 +7,8 @@ The PDF file of the MSc thesis ```Monocular depth estimation using deep neural m
 * IHU
 
 ## Training/Evaluation with BANet
+### Dataset preparation
+
 ### Installation
 
 ### Training
@@ -14,6 +16,8 @@ The PDF file of the MSc thesis ```Monocular depth estimation using deep neural m
 ### Evaluation
 
 ## Training/Evaluation with LapDepth
+### Dataset preparation
+
 ### Installation
 
 ### Training
@@ -21,6 +25,8 @@ The PDF file of the MSc thesis ```Monocular depth estimation using deep neural m
 ### Evaluation
 
 ## Training/Evaluation with PixelFormer
+### Dataset preparation
+
 ### Installation
 
 ### Training
