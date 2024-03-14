@@ -1,2 +1,27 @@
-# Εκτίμηση χάρτη απόστασης (depth map estimation) με μία κάμερα και μεθόδους μηχανικής μάθησης
-Υπο Κατασκευή
+# Monocular depth estimation using deep neural models
+
+## Datasets
+* DIODE/Outdoor
+* KITTI Selection
+* IHU
+
+## Training/Evaluation with BANet
+### Install
+
+### Training
+
+### Evaluation
+
+## Training/Evaluation with LapDepth
+### Install
+
+### Training
+
+### Evaluation
+
+## Training/Evaluation with PixelFormer
+### Install
+
+### Training
+
+### Evaluation
