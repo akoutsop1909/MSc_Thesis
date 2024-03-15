@@ -3,7 +3,7 @@ This repository contains the tweaked code of BANet, LapDepth, and PixelFormer to
 
 The original GitHub repositories can be found [here](https://github.com/dg-enlens/banet-depth-prediction) (BANet), [here](https://github.com/tjqansthd/LapDepth-release) (LapDepth), and [here](https://github.com/ashutosh1807/PixelFormer) (PixelFormer).
 
-In summary, the MSc thesis compared BANet, LapDepth, and PixelFormer: three state-of-the-art deep learning models that estimate depth from a single image. The models were trained from scratch on DIODE/Outdoor with adjustments to the code to load the dataset. Different hyperparameters were tested  to find the combination that yields the best statistics for each model. The SILog loss and RMSE criteria ensured an objective evaluation. In addition, two more datasets (KITTI Selection and IHU) provided a subjective evaluation.
+In summary, the MSc thesis compared the above three state-of-the-art deep learning models that estimate depth from a single image. The models were trained from scratch on DIODE/Outdoor with adjustments to the code to load the dataset. Different hyperparameters were tested  to find the combination that yields the best statistics for each model. The SILog loss and RMSE criteria ensured an objective evaluation. In addition, two more datasets (KITTI Selection and IHU) provided a subjective evaluation.
 
 The PDF file of the MSc thesis ```Monocular depth estimation using deep neural models.pdf``` is also available.
 ## Datasets
@@ -18,7 +18,9 @@ KITTI Selection is the validation set of KITTI, mostly intended for autonomous d
 The dataset can be downloaded from [here](https://www.cvlibs.net/datasets/kitti/eval_depth.php?benchmark=depth_prediction).
 
 ### IHU (test)
+The IHU dataset was created specifically for this thesis. It contains 30 RGB images taken after a walk around the Alexandrian Campus of IHU on the 19th of October 2023 from 6 p.m. to 7:30 p.m. A Samsung Galaxy A13 5G smartphone was the only equipment. The aspect ratio was set to 4:3, resulting in 3060x4080 resolution RGB images. They were then resized to 1024x768 tottaling 4MB and DIODE’s resolution into consideration. Moreover, IHU depicts similar outdoor environments to DIODE/Outdoor with objects, such as vehicles, roads, trees, and signs.
 
+The resized dataset can be found in the ```IHU``` folder of this repository.
 ## Training/Evaluation with BANet
 ### Dataset preparation
 
