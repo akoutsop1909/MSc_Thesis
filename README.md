@@ -37,6 +37,7 @@ python3 main.py --train 1 --height 192 --width 256 --train_csv datasets/diode_tr
 
 ### Evaluation
 * Evaluate DIODE/Outdoor
+  1. Execute the evaluation command (modify [path_to_model]).
 ```
 python3 main.py --inference random --height 192 --width 256 --model [path_to_model] --val_csv datasets/diode_val.csv
 ```
@@ -44,16 +45,21 @@ python3 main.py --inference random --height 192 --width 256 --model [path_to_mod
   1. Open ```datasets_kitti_selection.ipynb``` from the ```scripts``` folder.
   2. Run **Import packages**, **Copy raw images to new location**, **Copy and convert depth png files to npy**, and **Create KITTI csv file (relative path)**.
   3. Open ```datasets_banet_csvs.ipynb``` from the ```scripts``` folder.
-  4. Modify the path to the DIODE folder in the **Define functions** code cell.
-  5. Run **Import packages**, **Defile functions**, and **Create KITTI selection csv file**.
+  4. Modify the path to the kitti_selection folder in the **Create KITTI selection csv file** code cell.
+  5. Run **Import packages** and **Create KITTI selection csv file**.
   6. Replace ```kitti_selection_banet.csv``` in ```models/BANet/datasets``` with the newly created csv file.
-  7. You can now execute the evaluation command.
+  7. You can now execute the evaluation command (modify [path_to_model]).
 ```
-python3 main.py --inference random --height 192 --width 256 --model models/model.pt --val_csv datasets/kitti_selection_banet.csv
+python3 main.py --inference random --height 192 --width 256 --model [path_to_model] --val_csv datasets/kitti_selection_banet.csv
 ```
 * Evaluate IHU
+  1. Open ```datasets_banet_csvs.ipynb``` from the ```scripts``` folder.
+  2. Modify the path to the ihu_resized folder in the **Create IHU csv file** code cell.
+  3. Run **Import packages** and **Create IHU csv file**.
+  4. Replace ```ihu_banet.csv``` in ```models/BANet/datasets``` with the newly created csv file.
+  5. You can now execute the evaluation command (modify [path_to_model].
 ```
-python3 main.py --inference random --height 192 --width 256 --model models/model.pt --val_csv datasets/ihu_banet.csv
+python3 main.py --inference random --height 192 --width 256 --model [path_to_model] --val_csv datasets/ihu_banet.csv
 ```
 
 ## Training/Evaluation with LapDepth
