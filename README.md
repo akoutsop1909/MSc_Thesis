@@ -23,12 +23,18 @@ The IHU dataset was created specifically for this thesis. It contains 30 RGB ima
 The resized dataset can be found in the ```IHU``` folder of this repository.
 ## Training/Evaluation with BANet
 ### Installation
+```
+conda create -n banet python=3.6.8 anaconda
+conda activate banet
+conda install pytorch==1.8.0 torchvision==0.9.0 torchaudio==0.8.0 cudatoolkit=10.2 -c pytorch
+pip install opencv-python==4.5.1.48 opencv-contrib-python==3.4.4.19
+```
 
 ### Training
 * Train BANet on DIODE/Outdoor
   1. Open ```datasets_banet_csvs.ipynb``` from the ```scripts``` folder.
   2. Modify the path to the DIODE folder in the **Define functions** code cell.
-  3. Run **Import packages**, **Defile functions**, and **Create DIODE/Outdoor CSV files**.
+  3. Run **Import packages**, **Define functions**, and **Create DIODE/Outdoor CSV files**.
   4. Replace ```diode_train.csv``` and ```diode_val.csv``` in ```models/BANet/datasets``` with the newly created csv files.
   5. You can now execute the training command.
 ```
