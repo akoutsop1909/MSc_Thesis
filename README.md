@@ -29,7 +29,7 @@ The resized dataset can be found in the ```IHU``` folder of this repository.
   1. Open ```datasets_banet_csvs.ipynb``` from the ```scripts``` folder.
   2. Modify the path to the DIODE folder in the **Define functions** code cell.
   3. Run **Import packages**, **Defile functions**, and **Create DIODE csv files**.
-  4. Replace ```diode_train.csv``` and ```diode_val.csv``` in```models/BANet/datasets``` with the newly created csv files.
+  4. Replace ```diode_train.csv``` and ```diode_val.csv``` in ```models/BANet/datasets``` with the newly created csv files.
   5. You can now execute the training command.
 ```
 python3 main.py --train 1 --height 192 --width 256 --train_csv datasets/diode_train.csv --val_csv datasets/diode_val.csv
@@ -45,15 +45,15 @@ python3 main.py --inference random --height 192 --width 256 --model [path_to_mod
   2. Run **Import packages**, **Copy raw images to new location**, **Copy and convert depth png files to npy**, and **Create KITTI csv file (relative path)**.
   3. Open ```datasets_banet_csvs.ipynb``` from the ```scripts``` folder.
   4. Modify the path to the DIODE folder in the **Define functions** code cell.
-  5. Run **Import packages**, **Defile functions**, and **Create DIODE csv files**.
-  6. Replace ```diode_train.csv``` and ```diode_val.csv``` in```models/BANet/datasets``` with the newly created csv files.
-  7. You can now execute the training command.
+  5. Run **Import packages**, **Defile functions**, and **Create KITTI selection csv file**.
+  6. Replace ```kitti_selection_banet.csv``` in ```models/BANet/datasets``` with the newly created csv file.
+  7. You can now execute the evaluation command.
 ```
-python3 main.py --inference random --height 192 --width 256 --model models/model.pt --val_csv datasets/diode_val.csv
+python3 main.py --inference random --height 192 --width 256 --model models/model.pt --val_csv datasets/kitti_selection_banet.csv
 ```
 * Evaluate IHU
 ```
-python3 main.py --inference random --height 192 --width 256 --model models/model.pt --val_csv datasets/diode_val.csv
+python3 main.py --inference random --height 192 --width 256 --model models/model.pt --val_csv datasets/ihu_banet.csv
 ```
 
 ## Training/Evaluation with LapDepth
