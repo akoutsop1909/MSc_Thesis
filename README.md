@@ -57,7 +57,7 @@ python3 main.py --inference random --height 192 --width 256 --model [path_to_mod
   2. Modify the path to the ihu_resized folder in the **Create IHU CSV file** code cell.
   3. Run **Import packages** and **Create IHU csv file**.
   4. Replace ```ihu_banet.csv``` in ```models/BANet/datasets``` with the newly created csv file.
-  5. You can now execute the evaluation command (modify [path_to_model].
+  5. You can now execute the evaluation command (modify [path_to_model]).
 ```
 python3 main.py --inference random --height 192 --width 256 --model [path_to_model] --val_csv datasets/ihu_banet.csv
 ```
