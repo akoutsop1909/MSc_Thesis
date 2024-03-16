@@ -27,7 +27,7 @@ The resized dataset can be found in the ```IHU``` folder of this repository.
 conda create -n banet python=3.6.8 anaconda
 conda activate banet
 conda install pytorch==1.8.0 torchvision==0.9.0 torchaudio==0.8.0 cudatoolkit=10.2 -c pytorch
-pip install opencv-python==4.5.1.48 opencv-contrib-python==3.4.4.19
+pip install tensorboard matplotlib progressbar2 pandas opencv-python==4.5.1.48 opencv-contrib-python==3.4.4.19
 ```
 
 ### Training
