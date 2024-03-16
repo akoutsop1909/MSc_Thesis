@@ -1,5 +1,5 @@
 # Monocular depth estimation using deep neural models
-This repository contains the tweaked code of BANet, LapDepth, and PixelFormer to train on DIODE/Outdoor. To run the models, it is recommended to install Conda. Instructions are provided [here](https://docs.anaconda.com/free/anaconda/). Alternatively, the link in the "about" section opens a google colab notebook (with links to other notebooks) to view training statistics and predicted depth maps as well as a brief description (link will be provided soon).
+This repository contains the tweaked code of BANet, LapDepth, and PixelFormer to train on DIODE/Outdoor. To run the models, it is recommended to install Conda. Instructions are provided [here](https://docs.anaconda.com/free/anaconda/). Alternatively, the link in the "about" section opens a google colab notebook (with links to other notebooks) to view datasets preparation and training results as well as a brief description (link will be provided soon).
 
 The original GitHub repositories can be found [here](https://github.com/dg-enlens/banet-depth-prediction) (BANet), [here](https://github.com/tjqansthd/LapDepth-release) (LapDepth), and [here](https://github.com/ashutosh1807/PixelFormer) (PixelFormer).
 
@@ -22,17 +22,41 @@ The IHU dataset was created specifically for this thesis. It contains 30 RGB ima
 
 The resized dataset can be found in the ```IHU``` folder of this repository.
 ## Training/Evaluation with BANet
-### Dataset preparation
-
 ### Installation
 
 ### Training
+* Train BANet on DIODE/Outdoor
+  1. Open ```datasets_banet_csvs.ipynb``` from the ```scripts``` folder.
+  2. Modify the path to the DIODE folder in the **Define functions** code cell.
+  3. Run **Import packages**, **Defile functions**, and **Create DIODE csv files**.
+  4. Replace ```diode_train.csv``` and ```diode_val.csv``` in```models/BANet/datasets``` with the newly created csv files.
+  5. You can now execute the training command.
+```
+python3 main.py --train 1 --height 192 --width 256 --train_csv datasets/diode_train.csv --val_csv datasets/diode_val.csv
+```
 
 ### Evaluation
+* Evaluate DIODE/Outdoor
+```
+python3 main.py --inference random --height 192 --width 256 --model [path_to_model] --val_csv datasets/diode_val.csv
+```
+* Evaluate KITTI Selection
+  1. Open ```datasets_kitti_selection.ipynb``` from the ```scripts``` folder.
+  2. Run **Import packages**, **Copy raw images to new location**, **Copy and convert depth png files to npy**, and **Create KITTI csv file (relative path)**.
+  3. Open ```datasets_banet_csvs.ipynb``` from the ```scripts``` folder.
+  4. Modify the path to the DIODE folder in the **Define functions** code cell.
+  5. Run **Import packages**, **Defile functions**, and **Create DIODE csv files**.
+  6. Replace ```diode_train.csv``` and ```diode_val.csv``` in```models/BANet/datasets``` with the newly created csv files.
+  7. You can now execute the training command.
+```
+python3 main.py --inference random --height 192 --width 256 --model models/model.pt --val_csv datasets/diode_val.csv
+```
+* Evaluate IHU
+```
+python3 main.py --inference random --height 192 --width 256 --model models/model.pt --val_csv datasets/diode_val.csv
+```
 
 ## Training/Evaluation with LapDepth
-### Dataset preparation
-
 ### Installation
 
 ### Training
@@ -40,8 +64,6 @@ The resized dataset can be found in the ```IHU``` folder of this repository.
 ### Evaluation
 
 ## Training/Evaluation with PixelFormer
-### Dataset preparation
-
 ### Installation
 
 ### Training
