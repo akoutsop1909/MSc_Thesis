@@ -52,6 +52,7 @@ python3 main.py --train 1 --height 192 --width 256 --train_csv datasets/diode_tr
 ```
 python3 main.py --inference random --height 192 --width 256 --model [path_to_model] --val_csv datasets/diode_val.csv
 ```
+
 * Evaluate KITTI Selection
   1. Open ```datasets_kitti_selection.ipynb``` from the ```scripts``` folder.
   2. Run **Import packages**, **Copy raw images to new location**, **Copy and convert depth PNG files to NPY**, and **Create KITTI Selection CSV file (relative path)**.
@@ -63,6 +64,7 @@ python3 main.py --inference random --height 192 --width 256 --model [path_to_mod
 ```
 python3 main.py --inference random --height 192 --width 256 --model [path_to_model] --val_csv datasets/kitti_selection_banet.csv
 ```
+
 * Evaluate IHU
   1. Open ```datasets_banet_csvs.ipynb``` from the ```scripts``` folder.
   2. Modify the path to the ihu_resized folder in the **Create IHU CSV file** code cell.
@@ -98,6 +100,33 @@ python train.py --distributed --val_in_train --epochs 45 --max_depth 300.0 --wei
 ```
 
 ### Evaluation
+* Evaluate DIODE/Outdoor
+  1. Execute the evaluation command (modify [path_to_model] and [path_to_data]).
+```
+python eval.py --model_dir [path_to_model] --img_save --evaluate --batch_size 1 --dataset KITTI --data_path [path_to_data] --gpu_num 0
+```
+
+* Evaluate KITTI Selection
+  1. Open ```datasets_kitti_selection.ipynb``` from the ```scripts``` folder.
+  2. Run **Import packages**, **Copy raw images to new location**, **Copy and convert depth PNG files to NPY**, and **Create KITTI Selection CSV file (relative path)**.
+  3. Open ```datasets_banet_csvs.ipynb``` from the ```scripts``` folder.
+  4. Modify the path to the kitti_selection folder in the **Create KITTI Selection CSV file** code cell.
+  5. Run **Import packages** and **Create KITTI Selection CSV file**.
+  6. Replace ```kitti_selection_banet.csv``` in ```models/BANet/datasets``` with the newly created csv file.
+  7. You can now execute the evaluation command (modify [path_to_model]).
+```
+python eval.py --model_dir [path_to_model] --img_save --evaluate --batch_size 1 --dataset KITTI --testfile_kitti ./datasets/kitti_selection.txt --data_path [path_to_data] --gpu_num 0
+```
+
+* Evaluate IHU
+  1. Open ```datasets_banet_csvs.ipynb``` from the ```scripts``` folder.
+  2. Modify the path to the ihu_resized folder in the **Create IHU CSV file** code cell.
+  3. Run **Import packages** and **Create IHU csv file**.
+  4. Replace ```ihu_banet.csv``` in ```models/BANet/datasets``` with the newly created csv file.
+  5. You can now execute the evaluation command (modify [path_to_model] and [path_to_data]).
+```
+python eval.py --model_dir [path_to_model] --img_save --evaluate --batch_size 1 --dataset KITTI --testfile_kitti ./datasets/ihu.txt --data_path [path_to_data] --gpu_num 0
+```
 
 ## Training/Evaluation with PixelFormer
 ### Installation
