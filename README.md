@@ -65,7 +65,7 @@ python3 main.py --inference random --height 192 --width 256 --model [path_to_mod
 python3 main.py --inference random --height 192 --width 256 --model [path_to_model] --val_csv datasets/kitti_selection_banet.csv
 ```
 > [!TIP]
-> Steps i. and ii. are the same for all three models, so you don't need to execute them again if you've already done it once.
+> Steps i. and ii. are the same for all three models, so you do not need to execute them again if you have already done it once.
 
 * Evaluate IHU
   1. Open ```datasets_banet_csvs.ipynb``` from the ```scripts``` folder.
@@ -116,7 +116,7 @@ python eval.py --model_dir [path_to_model] --img_save --evaluate --batch_size 1 
 python eval.py --model_dir [path_to_model] --img_save --evaluate --batch_size 1 --dataset KITTI --testfile_kitti ./datasets/kitti_selection.txt --data_path [path_to_DIODEASKITTI] --gpu_num 0
 ```
 > [!TIP]
-> Steps i. and ii. are the same for all three models, so you don't need to execute them again if you've already done it once.
+> Steps i. and ii. are the same for all three models, so you do not need to execute them again if you have already done it once.
 
 * Evaluate IHU
   1. Place the RGB images in ```DIODEASKITTI/2011_09_26/2011_09_26_drive_ihu_sync/image_02/data/```. You will need to create the folder structure manually.
