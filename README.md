@@ -29,6 +29,11 @@ conda activate banet
 conda install pytorch==1.8.0 torchvision==0.9.0 torchaudio==0.8.0 cudatoolkit=10.2 -c pytorch
 pip install tensorboard matplotlib progressbar2 pandas opencv-python==4.5.1.48 opencv-contrib-python==3.4.4.19
 ```
+> [!TIP]
+> To remove the environment, enter the following command.
+> ```
+> conda env remove -n banet
+> ```
 
 ### Training
 * Train BANet on DIODE/Outdoor
@@ -70,8 +75,27 @@ python3 main.py --inference random --height 192 --width 256 --model [path_to_mod
 
 ## Training/Evaluation with LapDepth
 ### Installation
-
+```
+conda create -n lapdepth python=3.7 anaconda
+conda activate lapdepth
+conda install pytorch==1.6.0 torchvision==0.7.0 cudatoolkit=9.2 -c pytorch
+pip install geffnet path IPython blessings progressbar
+```
+> [!TIP]
+> To remove the environment, enter the following command.
+> ```
+> conda env remove -n lapdepth
+> ```
 ### Training
+* Train LapDepth on DIODE/Outdoor
+  1. Open ```datasets_diodeaskitti.ipynb``` from the ```scripts``` folder and run all code cells.
+  2. Rename ```train_dataset.txt``` and ```val_dataset.txt``` to ```eigen_train_files_with_gt_dense.txt``` and ```eigen_test_files_with_gt_dense.txt``` respectively.
+  3. Replace ```eigen_train_files_with_gt_dense.txt``` and ```eigen_test_files_with_gt_dense.txt``` in ```models/LapDepth/datasets``` with the newly created txt files.
+  4. Use the new dataset ```DIODEASKITTI``` for training.
+  5. You can now execute the training command (modify [path_to_data]).
+```
+python train.py --distributed --val_in_train --epochs 45 --max_depth 300.0 --weight_decay 1e-1 --dataset KITTI --data_path [path_to_data] --gpu_num 0,1,2,3
+```
 
 ### Evaluation
 
