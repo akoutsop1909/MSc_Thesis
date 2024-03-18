@@ -128,7 +128,17 @@ python eval.py --model_dir [path_to_model] --img_save --evaluate --batch_size 1 
 
 ## Training/Evaluation with PixelFormer
 ### Installation
-
+```
+conda create -n pixelformer python=3.8
+conda activate pixelformer
+conda install pytorch==1.10.0 torchvision==0.11.0 torchaudio==0.10.0 cudatoolkit=10.2 -c pytorch
+pip install matplotlib tqdm tensorboardX timm mmcv-full -f https://download.openmmlab.com/mmcv/dist/cu102/torch1.10.0/index.html
+```
+> [!TIP]
+> To remove the environment, enter the following command.
+> ```
+> conda env remove -n pixelformer
+> ```
 ### Training
 
 ### Evaluation
