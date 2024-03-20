@@ -1,5 +1,5 @@
 # Monocular depth estimation using deep neural models
-This repository contains the tweaked code of BANet, LapDepth, and PixelFormer to train on DIODE/Outdoor. To run the models, it is recommended to install Conda. Instructions are provided [here](https://docs.anaconda.com/free/anaconda/). Alternatively, the link in the "about" section opens a google colab notebook (with links to other notebooks) to view datasets preparation and training results as well as a brief description (link will be provided soon).
+This repository contains the tweaked code of BANet, LapDepth, and PixelFormer to train on DIODE/Outdoor. To run the models, it is recommended to install Conda. Instructions [here](https://docs.anaconda.com/free/anaconda/). Alternatively, the link in the "about" section opens a google colab notebook (with links to other notebooks) to view datasets preparation and training results as well as a brief description (link will be provided soon).
 
 The original GitHub repositories can be found [here](https://github.com/dg-enlens/banet-depth-prediction) (BANet), [here](https://github.com/tjqansthd/LapDepth-release) (LapDepth), and [here](https://github.com/ashutosh1807/PixelFormer) (PixelFormer).
 
@@ -38,9 +38,9 @@ pip install tensorboard matplotlib progressbar2 pandas opencv-python==4.5.1.48 o
 ### Training
 * Train BANet on DIODE/Outdoor
   1. Open ```datasets_banet_csvs.ipynb``` from the ```scripts``` folder.
-  2. Modify the path to the DIODE folder in the **Define functions** code cell.
+  2. Modify the path to the ```DIODE``` folder in the **Define functions** code cell.
   3. Run **Import packages**, **Define functions**, and **Create DIODE/Outdoor CSV files**.
-  4. Replace ```diode_train.csv``` and ```diode_val.csv``` in ```models/BANet/datasets/``` with the newly created csv files.
+  4. Replace ```diode_train.csv``` and ```diode_val.csv``` in ```models/BANet/datasets/``` with the new CSV files.
   5. You can now execute the training command.
 ```
 python3 main.py --train 1 --height 192 --width 256 --train_csv datasets/diode_train.csv --val_csv datasets/diode_val.csv
@@ -55,23 +55,23 @@ python3 main.py --inference random --height 192 --width 256 --model [path_to_mod
 
 * Evaluate KITTI Selection
   1. Open ```datasets_kitti_selection.ipynb``` from the ```scripts``` folder.
-  2. Run **Import packages**, **Copy raw images to new location**, **Copy and convert depth PNG files to NPY**, and **Create KITTI Selection CSV file (relative path)**.
+  2. Run **Import packages**, **Set Current Working Directory**, **Copy raw images to new location**, **Copy and convert depth PNG files to NPY**, and **Create KITTI Selection CSV file (relative path)**.
   3. Open ```datasets_banet_csvs.ipynb``` from the ```scripts``` folder.
-  4. Modify the path to the kitti_selection folder in the **Create KITTI Selection CSV file** code cell.
+  4. Modify the path to the ```kitti_selection``` folder in the **Create KITTI Selection CSV file** code cell.
   5. Run **Import packages** and **Create KITTI Selection CSV file**.
-  6. Replace ```kitti_selection_banet.csv``` in ```models/BANet/datasets/``` with the newly created csv file.
+  6. Replace ```kitti_selection_banet.csv``` in ```models/BANet/datasets/``` with the new CSV file.
   7. You can now execute the evaluation command (modify [path_to_model]).
 ```
 python3 main.py --inference random --height 192 --width 256 --model [path_to_model] --val_csv datasets/kitti_selection_banet.csv
 ```
 > [!TIP]
-> Steps i. and ii. are the same for all three models, so you do not need to execute them again if you have already done it once.
+> Steps i. and ii. are the same for all three models, so you do not need to execute them again if you have already done so.
 
 * Evaluate IHU
   1. Open ```datasets_banet_csvs.ipynb``` from the ```scripts``` folder.
-  2. Modify the path to the ihu_resized folder in the **Create IHU CSV file** code cell.
-  3. Run **Import packages** and **Create IHU csv file**.
-  4. Replace ```ihu_banet.csv``` in ```models/BANet/datasets/``` with the newly created csv file.
+  2. Modify the path to the ```ihu_resized``` folder in the **Create IHU CSV file** code cell.
+  3. Run **Import packages** and **Create IHU CSV file**.
+  4. Replace ```ihu_banet.csv``` in ```models/BANet/datasets/``` with the new CSV file.
   5. You can now execute the evaluation command (modify [path_to_model]).
 ```
 python3 main.py --inference random --height 192 --width 256 --model [path_to_model] --val_csv datasets/ihu_banet.csv
@@ -116,7 +116,7 @@ python eval.py --model_dir [path_to_model] --img_save --evaluate --batch_size 1 
 python eval.py --model_dir [path_to_model] --img_save --evaluate --batch_size 1 --dataset KITTI --testfile_kitti ./datasets/kitti_selection.txt --data_path [path_to_DIODEASKITTI] --gpu_num 0
 ```
 > [!TIP]
-> Steps i. and ii. are the same for all three models, so you do not need to execute them again if you have already done it once.
+> Steps i. and ii. are the same for all three models, so you do not need to execute them again if you have already done so.
 
 * Evaluate IHU
   1. Place the RGB images in ```DIODEASKITTI/2011_09_26/2011_09_26_drive_ihu_sync/image_02/data/```. You will need to create the folder structure manually.
