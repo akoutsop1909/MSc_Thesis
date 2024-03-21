@@ -92,12 +92,15 @@ pip install geffnet path IPython blessings progressbar
 > ```
 ### Training
 * Train LapDepth on DIODE/Outdoor
-  1. Open ```datasets_diodeaskitti.ipynb``` from the ```scripts``` folder and run all code cells.
-  2. Use the new dataset ```DIODEASKITTI``` for training.
-  3. You can now execute the training command (modify [path_to_DIODEASKITTI]).
+  1. Place ```train_diodeaskitti.txt``` and ```val_diodeaskitti.txt``` from ```DIODEASKITTI``` into the ```DIODE``` folder.
+  2. Open ```datasets_diodeaskitti.ipynb``` from the ```scripts``` folder and run **Import packages**, **Define functions**, **Create DIODEASKITTI raw filder structure**, and **Create DIODEASKITTI depth folder structure**.
+  3. Use the new dataset ```DIODEASKITTI```.
+  4. You can now execute the training command (modify [path_to_DIODEASKITTI]).
 ```
 python train.py --distributed --val_in_train --epochs 45 --max_depth 300.0 --weight_decay 1e-1 --dataset KITTI --data_path [path_to_DIODEASKITTI] --gpu_num 0,1,2,3
 ```
+> [!TIP]
+> Steps i. and ii. are the same for LapDepth and PixelFormer, so you do not need to execute them again if you have already done so.
 
 ### Evaluation
 * Evaluate DIODE/Outdoor
@@ -108,9 +111,9 @@ python eval.py --model_dir [path_to_model] --img_save --evaluate --batch_size 1 
 
 * Evaluate KITTI Selection
   1. Open ```datasets_kitti_selection.ipynb``` from the ```scripts``` folder.
-  2. Run **Import packages**, **Copy raw images to new location**, **Copy and convert depth PNG files to NPY**, and **Create KITTI Selection CSV file (relative path)**.
-  3. Place the RGB images in ```DIODEASKITTI/2011_09_26/2011_09_26_drive_0000_sync/image_02/data/```. You will need to create the folder structure manually.
-  4. Place the PNG depth maps in ```DIODEASKITTI/data_depth_annotated/2011_09_26_drive_0000_sync/proj_depth/groundtruth/image_02/```. You will need to create the folder structure manually.
+  2. Run **Import packages**, **Set Current Working Directory**, **Copy raw images to new location**, **Copy and convert depth PNG files to NPY**, and **Create KITTI Selection CSV file (relative path)**.
+  3. Place the raw, RGB images into ```DIODEASKITTI/2011_09_26/2011_09_26_drive_0000_sync/image_02/data/```. You will need to create the folder structure manually.
+  4. Place the PNG depth maps into ```DIODEASKITTI/data_depth_annotated/2011_09_26_drive_0000_sync/proj_depth/groundtruth/image_02/```. You will need to create the folder structure manually.
   5. You can now execute the evaluation command (modify [path_to_model] and [path_to_DIODEASKITTI]).
 ```
 python eval.py --model_dir [path_to_model] --img_save --evaluate --batch_size 1 --dataset KITTI --testfile_kitti ./datasets/kitti_selection.txt --data_path [path_to_DIODEASKITTI] --gpu_num 0
@@ -119,8 +122,8 @@ python eval.py --model_dir [path_to_model] --img_save --evaluate --batch_size 1 
 > Steps i. and ii. are the same for all three models, so you do not need to execute them again if you have already done so.
 
 * Evaluate IHU
-  1. Place the RGB images in ```DIODEASKITTI/2011_09_26/2011_09_26_drive_ihu_sync/image_02/data/```. You will need to create the folder structure manually.
-  2. Place the fake PNG depth map in ```DIODEASKITTI/data_depth_annotated/2011_09_26_drive_ihu_sync/proj_depth/groundtruth/image_02/```. You will need to create the folder structure manually.
+  1. Place the RGB images into ```DIODEASKITTI/2011_09_26/2011_09_26_drive_ihu_sync/image_02/data/```. You will need to create the folder structure manually.
+  2. Place the fake PNG depth map into ```DIODEASKITTI/data_depth_annotated/2011_09_26_drive_ihu_sync/proj_depth/groundtruth/image_02/```. You will need to create the folder structure manually.
   3. You can now execute the evaluation command (modify [path_to_model] and [path_to_DIODEASKITTI]).
 ```
 python eval.py --model_dir [path_to_model] --img_save --evaluate --batch_size 1 --dataset KITTI --testfile_kitti ./datasets/ihu.txt --data_path [path_to_DIODEASKITTI] --gpu_num 0
@@ -140,5 +143,17 @@ pip install matplotlib tqdm tensorboardX timm mmcv-full -f https://download.open
 > conda env remove -n pixelformer
 > ```
 ### Training
+* Train PixelFormer on DIODE/Outdoor
+  1. Download ```swin_large_patch4_window7_224_22k.pth``` from [here](https://github.com/SwinTransformer/storage/releases/download/v1.0.0/swin_large_patch4_window7_224_22k.pth) and place it into ```models/PixelFormer/pretrained/```. 
+  2. Place ```train_diodeaskitti.txt``` and ```val_diodeaskitti.txt``` from ```DIODEASKITTI``` into the ```DIODE``` folder.
+  3. Open ```datasets_diodeaskitti.ipynb``` from the ```scripts``` folder and run **Import packages**, **Define functions**, **Create DIODEASKITTI raw filder structure**, and **Create DIODEASKITTI depth folder structure**.
+  4. Create a folder ```2011_09_26``` in ```DIODEASKITTI/data_depth_annotated/``` and place the ```2011_09_26_drive_xxxx_sync``` folders from ```data_depth_annotated``` into the new folder.
+  5. Use the new dataset ```DIODEASKITTI```. 
+  6. You can now execute the training command (modify [path_to_DIODEASKITTI]).
+```
+python pixelformer/train.py configs/arguments_train_kittieigen.txt
+```
+> [!TIP]
+> Steps ii. and iii. are the same for LapDepth and PixelFormer, so you do not need to execute them again if you have already done so.
 
 ### Evaluation
