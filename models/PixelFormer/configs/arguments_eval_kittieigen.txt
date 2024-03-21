@@ -5,8 +5,8 @@
 --input_width 256
 --max_depth 300
 
---data_path_eval /workspace/KITTI
---gt_path_eval /workspace/KITTI/data_depth_annotated
+--data_path_eval /workspace/DIODEASKITTI
+--gt_path_eval /workspace/DIODEASKITTI/data_depth_annotated
 --filenames_file_eval data_splits/eigen_test_files_with_gt.txt
 --min_depth_eval 1e-2
 --max_depth_eval 300
