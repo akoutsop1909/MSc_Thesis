@@ -148,8 +148,9 @@ pip install matplotlib tqdm tensorboardX timm mmcv-full -f https://download.open
   2. Place ```train_diodeaskitti.txt``` and ```val_diodeaskitti.txt``` from ```DIODEASKITTI``` into the ```DIODE``` folder.
   3. Open ```datasets_diodeaskitti.ipynb``` from the ```scripts``` folder and run **Import packages**, **Define functions**, **Create DIODEASKITTI raw filder structure**, and **Create DIODEASKITTI depth folder structure**.
   4. Create a folder ```2011_09_26``` in ```DIODEASKITTI/data_depth_annotated/``` and place the ```2011_09_26_drive_xxxx_sync``` folders from ```data_depth_annotated``` into the new folder.
-  5. Use the new dataset ```DIODEASKITTI```. 
-  6. You can now execute the training command (modify [path_to_DIODEASKITTI]).
+  5. Open ```arguments_train_kittieigen.txt``` from ```models/PixelFormer/configs/``` and modify the path to the ```DIODEASKITTI``` folder of the **data_path** and **data_path_eval** hyperparameters. Also modify the path to ```DIODEASKITTI/data_depth_annotated/``` of the **gt_path** and **gt_path_eval** hyperparameters.
+  6. Use the new dataset ```DIODEASKITTI```.
+  7. You can now execute the training command.
 ```
 python pixelformer/train.py configs/arguments_train_kittieigen.txt
 ```
