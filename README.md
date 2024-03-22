@@ -119,7 +119,8 @@ python eval.py --model_dir [path_to_model] --img_save --evaluate --batch_size 1 
 python eval.py --model_dir [path_to_model] --img_save --evaluate --batch_size 1 --dataset KITTI --testfile_kitti ./datasets/kitti_selection.txt --data_path [path_to_DIODEASKITTI] --gpu_num 0
 ```
 > [!TIP]
-> Steps i. and ii. are the same for all three models, so you do not need to execute them again if you have already done so.
+> Steps i. and ii. are the same for all three models, so you do not need to execute them again if you have already done so.<br>
+> Step iii. is also the same for LapDepth and PixelFormer.
 
 * Evaluate IHU
   1. Place the RGB images into ```DIODEASKITTI/2011_09_26/2011_09_26_drive_ihu_sync/image_02/data/```. You will need to create the folder structure manually.
@@ -158,3 +159,23 @@ python pixelformer/train.py configs/arguments_train_kittieigen.txt
 > Steps ii. and iii. are the same for LapDepth and PixelFormer, so you do not need to execute them again if you have already done so.
 
 ### Evaluation
+* Evaluate DIODE/Outdoor
+  1. Open ```arguments_eval_kittieigen.txt``` from ```models/PixelFormer/configs/``` and modify the path to the ```DIODEASKITTI``` folder of **data_path_eval**, the path to ```DIODEASKITTI/data_depth_annotated/``` of **gt_path_eval**, and the path to the model of **checkpoint_path**.
+  2. You can now execute the evaluation command.
+```
+python pixelformer/eval.py configs/arguments_eval_kittieigen.txt
+```
+
+* Evaluate KITTI Selection
+  1. Open ```datasets_kitti_selection.ipynb``` from the ```scripts``` folder.
+  2. Run **Import packages**, **Set Current Working Directory**, **Copy raw images to new location**, **Copy and convert depth PNG files to NPY**, and **Create KITTI Selection CSV file (relative path)**.
+  3. Place the raw, RGB images into ```DIODEASKITTI/2011_09_26/2011_09_26_drive_0000_sync/image_02/data/```. You will need to create the folder structure manually.
+  4. Place the PNG depth maps into ```DIODEASKITTI/data_depth_annotated/2011_09_26/2011_09_26_drive_0000_sync/proj_depth/groundtruth/image_02/```. You will need to create the folder structure manually.
+  5. Open ```arguments_eval_kittieigen.txt``` from ```models/PixelFormer/configs/``` and modify the path to the ```DIODEASKITTI``` folder of **data_path_eval**, the path to ```DIODEASKITTI/data_depth_annotated/``` of **gt_path_eval**, and the path to the model of **checkpoint_path**. Also set **filenames_file_eval** to ```data_splits/kitti_selection.txt```.
+  6. You can now execute the evaluation command.
+```
+python pixelformer/eval.py configs/arguments_eval_kittieigen.txt
+```
+> [!TIP]
+> Steps i. and ii. are the same for all three models, so you do not need to execute them again if you have already done so.<br>
+> Step iii. is also the same for LapDepth and PixelFormer.
