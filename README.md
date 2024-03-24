@@ -147,7 +147,7 @@ pip install matplotlib tqdm tensorboardX timm mmcv-full -f https://download.open
 * Train PixelFormer on DIODE/Outdoor
   1. Download ```swin_large_patch4_window7_224_22k.pth``` from [here](https://github.com/SwinTransformer/storage/releases/download/v1.0.0/swin_large_patch4_window7_224_22k.pth) and place it into ```models/PixelFormer/pretrained/```. 
   2. Place ```train_diodeaskitti.txt``` and ```val_diodeaskitti.txt``` from ```DIODEASKITTI``` into the ```DIODE``` folder.
-  3. Open ```datasets_diodeaskitti.ipynb``` from the ```scripts``` folder and run **Import packages**, **Define functions**, **Create DIODEASKITTI raw filder structure**, and **Create DIODEASKITTI depth folder structure**.
+  3. Open ```datasets_diodeaskitti.ipynb``` from the ```scripts``` folder and run **Import packages**, **Define functions**, **Create DIODEASKITTI raw folder structure**, and **Create DIODEASKITTI depth folder structure**.
   4. Create a folder ```2011_09_26``` in ```DIODEASKITTI/data_depth_annotated/``` and place the ```2011_09_26_drive_xxxx_sync``` folders from ```data_depth_annotated``` into the new folder.
   5. Open ```arguments_train_kittieigen.txt``` from ```models/PixelFormer/configs/``` and modify the path to the ```DIODEASKITTI``` folder of the **data_path** and **data_path_eval** hyperparameters. Also modify the path to ```DIODEASKITTI/data_depth_annotated/``` of the **gt_path** and **gt_path_eval** hyperparameters.
   6. Use the new dataset ```DIODEASKITTI```.
@@ -179,3 +179,14 @@ python pixelformer/eval.py configs/arguments_eval_kittieigen.txt
 > [!TIP]
 > Steps i. and ii. are the same for all three models, so you do not need to execute them again if you have already done so.<br>
 > Step iii. is also the same for LapDepth and PixelFormer.
+
+* Evaluate IHU
+  1. Place the RGB images into ```DIODEASKITTI/2011_09_26/2011_09_26_drive_ihu_sync/image_02/data/```. You will need to create the folder structure manually.
+  2. Place the fake PNG depth map into ```DIODEASKITTI/data_depth_annotated/2011_09_26/2011_09_26_drive_ihu_sync/proj_depth/groundtruth/image_02/```. You will need to create the folder structure manually.
+  3. Open ```arguments_eval_kittieigen.txt``` from ```models/PixelFormer/configs/``` and modify the path to the ```DIODEASKITTI``` folder of **data_path_eval**, the path to ```DIODEASKITTI/data_depth_annotated/``` of **gt_path_eval**, and the path to the model of **checkpoint_path**. Also set **filenames_file_eval** to ```data_splits/ihu.txt```.
+  4. You can now execute the evaluation command.
+```
+python pixelformer/eval.py configs/arguments_eval_kittieigen.txt
+```
+> [!TIP]
+> Step i. is the same for LapDepth and PixelFormer, so you do not need to execute it again if you have already done so.
