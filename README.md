@@ -92,15 +92,14 @@ pip install geffnet path IPython blessings progressbar
 > ```
 ### Training
 * Train LapDepth on DIODE/Outdoor
-  1. Place ```train_diodeaskitti.txt``` and ```val_diodeaskitti.txt``` from ```DIODEASKITTI``` into the ```DIODE``` folder.
-  2. Open ```datasets_diodeaskitti.ipynb``` from the ```scripts``` folder and run **Import packages**, **Define functions**, **Create DIODEASKITTI raw filder structure**, and **Create DIODEASKITTI depth folder structure**.
-  3. Use the new dataset ```DIODEASKITTI```.
-  4. You can now execute the training command (modify [path_to_DIODEASKITTI]).
+  1. Open ```datasets_diodeaskitti.ipynb``` from the ```scripts``` folder and run **Import packages**, **Define functions**, **Create DIODEASKITTI raw filder structure**, and **Create DIODEASKITTI depth folder structure**.
+  2. Use the new dataset ```DIODEASKITTI```.
+  3. You can now execute the training command (modify [path_to_DIODEASKITTI]).
 ```
 python train.py --distributed --val_in_train --epochs 45 --max_depth 300.0 --weight_decay 1e-1 --dataset KITTI --data_path [path_to_DIODEASKITTI] --gpu_num 0,1,2,3
 ```
 > [!TIP]
-> Steps i. and ii. are the same for LapDepth and PixelFormer, so you do not need to execute them again if you have already done so.
+> Step i. is the same for LapDepth and PixelFormer, so you do not need to execute it again if you have already done so.
 
 ### Evaluation
 * Evaluate DIODE/Outdoor
@@ -146,17 +145,16 @@ pip install matplotlib tqdm tensorboardX timm mmcv-full -f https://download.open
 ### Training
 * Train PixelFormer on DIODE/Outdoor
   1. Download ```swin_large_patch4_window7_224_22k.pth``` from [here](https://github.com/SwinTransformer/storage/releases/download/v1.0.0/swin_large_patch4_window7_224_22k.pth) and place it into ```models/PixelFormer/pretrained/```. 
-  2. Place ```train_diodeaskitti.txt``` and ```val_diodeaskitti.txt``` from ```DIODEASKITTI``` into the ```DIODE``` folder.
-  3. Open ```datasets_diodeaskitti.ipynb``` from the ```scripts``` folder and run **Import packages**, **Define functions**, **Create DIODEASKITTI raw folder structure**, and **Create DIODEASKITTI depth folder structure**.
-  4. Create a folder ```2011_09_26``` in ```DIODEASKITTI/data_depth_annotated/``` and place the ```2011_09_26_drive_xxxx_sync``` folders from ```data_depth_annotated``` into the new folder.
-  5. Open ```arguments_train_kittieigen.txt``` from ```models/PixelFormer/configs/``` and modify the path to the ```DIODEASKITTI``` folder of the **data_path** and **data_path_eval** hyperparameters. Also modify the path to ```DIODEASKITTI/data_depth_annotated/``` of the **gt_path** and **gt_path_eval** hyperparameters.
-  6. Use the new dataset ```DIODEASKITTI```.
-  7. You can now execute the training command.
+  2. Open ```datasets_diodeaskitti.ipynb``` from the ```scripts``` folder and run **Import packages**, **Define functions**, **Create DIODEASKITTI raw folder structure**, and **Create DIODEASKITTI depth folder structure**.
+  3. Create a folder ```2011_09_26``` in ```DIODEASKITTI/data_depth_annotated/``` and place the ```2011_09_26_drive_xxxx_sync``` folders from ```data_depth_annotated``` into the new folder.
+  4. Open ```arguments_train_kittieigen.txt``` from ```models/PixelFormer/configs/``` and modify the path to the ```DIODEASKITTI``` folder of the **data_path** and **data_path_eval** hyperparameters. Also modify the path to ```DIODEASKITTI/data_depth_annotated/``` of the **gt_path** and **gt_path_eval** hyperparameters.
+  5. Use the new dataset ```DIODEASKITTI```.
+  6. You can now execute the training command.
 ```
 python pixelformer/train.py configs/arguments_train_kittieigen.txt
 ```
 > [!TIP]
-> Steps ii. and iii. are the same for LapDepth and PixelFormer, so you do not need to execute them again if you have already done so.
+> Step ii. is the same for LapDepth and PixelFormer, so you do not need to execute it again if you have already done so.
 
 ### Evaluation
 * Evaluate DIODE/Outdoor
